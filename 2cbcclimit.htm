@@ -1,0 +1,551 @@
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Help File Web Version</title>
+    <link rel="icon" type="image/x-icon" href="webicon.jfif">
+<link rel="stylesheet" href="Css/discoCursor.css">
+
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin: 0;
+            padding: 0;
+            background: linear-gradient(180deg, #d0e6f9, #a3c6e0);
+            color: #2c3e50;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: flex-start;
+            min-height: 100vh;
+            overflow-y: auto;
+            transition: background-color 0.3s ease;
+        }
+
+        body.dark-mode {
+            background: linear-gradient(180deg, #8b8787, #1e1e1e);
+            color: #ffffff;
+         
+   table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 20px;
+            transition: transform 0.3s;
+        }
+
+        body.dark-mode table {
+            background-color: transparent;
+        }
+
+        body.dark-mode th, td {
+            background-color: rgba(59, 59, 59, 0.85);
+            color: #ecf0f1;
+            border-color: #555;
+        }
+
+        body.dark-mode tr:hover {
+            background-color: #2c3e50;
+        }
+
+        body.dark-mode main {
+            background-color: rgba(35, 35, 37, 0.80);
+        }
+
+        body.dark-mode nav a {
+            background-color: #2c3e50;
+        }
+
+        body.dark-mode nav a:hover {
+            background-color: #34495e;
+        }
+ div.clearfix {
+            background-color: ;
+
+        }
+
+
+
+
+
+        th, td {
+            border: 1px solid #bdc3c7;
+            padding: 15px;
+            text-align: left;
+            background-color: #3b3b3b;
+            border-radius: 5px;
+            transition: background-color 0.3s, transform 0.3s;
+        }
+
+        tr {
+            transition: transform 0.3s, background-color 0.3s, box-shadow 0.3s;
+        }
+
+        tr:hover {
+            background-color: #f2f2f2;
+            transform: scale(1.05);
+            box-shadow: 0 4px 20px rgba(52, 152, 219, 0.7);
+        }
+
+ main {
+            width: 90%;
+            max-width: 1200px;
+            margin: 20px auto;
+            background-color: #232325;
+            border-radius: 15px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.5);
+            padding: 20px;
+            animation: fadeIn 1.5s ease;
+        }
+
+ header {
+            background: linear-gradient(135deg, #892d00, #194c6e);
+            color: #ffffff;
+            width: 100%;
+            padding: 0px;
+            text-align: center;
+            box-shadow: 0 25px 50px rgba(0, 0, 0, 0.5);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            transition: background 0.3s ease;
+        }
+pre {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            white-space: pre-wrap; /* Allows wrapping */
+            overflow-wrap: break-word; /* Breaks long words */
+            color: white; /* Change the text color */
+            background-color: #007bff4f; /* Change the background color */
+            padding: 10px; /* Add padding for better readability */
+            border-radius: 5px; /* Add border radius for style */
+        }
+
+.tab button {
+  display: block;
+  background-color: #ffffff00;
+  color: white;
+  padding: 10px 14px;
+  width: 100%;
+  border: none;
+  outline: none;
+  text-align: left;
+  cursor: pointer;
+  font-size: 15px;
+}
+.tab button:hover {
+  background-color: #2b0000;
+}
+
+/* Create an active/current "tab button" class */
+.tab button.active {
+  background-color: #007bff4f;
+}
+
+
+   }
+
+
+        header {
+            background: linear-gradient(135deg, #005289, #6dd5ed);
+            color: #ffffff;
+            width: 100%;
+            padding: 0px;
+            text-align: center;
+            box-shadow: 0 25px 50px rgba(0, 0, 0, 0.5);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            transition: background 0.3s ease;
+        }
+
+        nav {
+            margin: 15px 0;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+
+        nav a {
+            background-color: #163449;
+            color: white;
+            padding: 10px 20px;
+            margin: 5px;
+            text-decoration: none;
+            border-radius: 5px;
+            box-shadow: 0 4px 10px rgba(52, 152, 219, 0.3);
+            transition: all 0.6s ease;
+            position: relative;
+            overflow: hidden;
+        }
+
+        nav a:hover {
+            background-color: #2980b9;
+            transform: translateY(-3px);
+        }
+
+        nav a::after {
+            content: '';
+            position: absolute;
+            background: rgba(255, 255, 255, 0.1);
+            height: 100%;
+            width: 100%;
+            left: 0;
+            top: 100%;
+            transition: all 0.3s ease;
+            z-index: 0;
+        }
+
+        nav a:hover::after {
+            top: 0;
+        }
+
+        .time {
+            font-size: 16px;
+            margin-top: 10px;
+            color: #white;
+        }
+
+        main {
+            width: 90%;
+            height: 100%;
+            max-width: 1200px;
+            margin: 20px auto;
+            background-color: #ecf0f1;
+            border-radius: 15px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.5);
+            padding: 20px;
+            animation: fadeIn 1.5s ease;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 20px;
+            transition: transform 0.3s;
+        }
+
+        th, td {
+            border: 1px solid #bdc3c7;
+            padding: 15px;
+            text-align: left;
+            background-color: #ffffff;
+            border-radius: 5px;
+            transition: background-color 0.3s, transform 0.3s;
+        }
+
+        tr {
+            transition: transform 0.3s, background-color 0.3s, box-shadow 0.3s;
+        }
+
+        tr:hover {
+            background-color: #f2f2f2;
+            transform: scale(1.05);
+            box-shadow: 0 4px 20px rgba(52, 152, 219, 0.7);
+        }
+
+        .button {
+            background-color: rgb(64, 171, 158, 0.0);
+            border-radius: 33px;
+            border: none;
+            color: black;
+            padding: 4px 10px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 12px;
+            margin: 4px 2px;
+            cursor: pointer;
+            -webkit-transition-duration: 0.4s; /* Safari */
+            transition-duration: 0.5s;
+        }
+
+        .button1:hover {
+            background-color: #005289;
+            box-shadow: 20px 12px 16px 18px rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);
+        }
+
+        pre {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            white-space: pre-wrap; /* Allows wrapping */
+            overflow-wrap: break-word; /* Breaks long words */
+            color: #34495e; /* Change the text color */
+            background-color: #ecf0f1; /* Change the background color */
+            padding: 10px; /* Add padding for better readability */
+            border-radius: 5px; /* Add border radius for style */
+        }
+
+        footer {
+            margin: 20px 0;
+            text-align: center;
+            font-size: 12px;
+            color: #34495e;
+        }
+
+#theme-toggle {
+            background-color: #2980b9;
+            color: white;
+            border: none;
+            padding: 10px;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        #theme-toggle:hover {
+            background-color: #1f6f8b;
+        }
+        /* Mobile Responsiveness */
+        @media screen and (max-width: 768px) {
+            body { font-size: 14px; }
+            main { width: 95%; padding: 10px; margin: 10px auto; }
+            nav { flex-direction: column; align-items: center; }
+            nav a { width: 80%; text-align: center; margin: 5px 0; }
+            table { font-size: 13px; }
+            th, td { padding: 8px; font-size: 12px; }
+            .button { padding: 2px 8px; }
+            .button img { width: 24px !important; height: 20px !important; }
+            pre { font-size: 12px; padding: 8px; overflow-x: auto; }
+            header h1 { font-size: 18px; padding: 10px; }
+        }
+        
+        @media screen and (max-width: 480px) {
+            body { font-size: 12px; }
+            main { width: 98%; padding: 5px; }
+            nav a { width: 90%; font-size: 14px; }
+            th, td { padding: 6px; font-size: 11px; }
+            .button img { width: 20px !important; height: 18px !important; }
+            pre { font-size: 11px; padding: 5px; }
+            header h1 { font-size: 16px; }
+        }
+    </style>
+
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+
+
+
+/* Style the tab */
+.tab {
+  float: left;
+  background-color: #f1f1f1;
+  width: 250px;
+  height: 70px;
+}
+
+/* Style the buttons inside the tab */
+.tab button {
+  display: block;
+  background-color: #ffffff00;
+  color: black;
+  padding: 10px 14px;
+  width: 100%;
+  border: none;
+  outline: none;
+  text-align: left;
+  cursor: pointer;
+  font-size: 15px;
+}
+
+/* Change background color of buttons on hover */
+.tab button:hover {
+  background-color: #ffffff00;
+}
+
+/* Create an active/current "tab button" class */
+.tab button.active {
+  background-color: #007bff4f;
+}
+
+/* Style the tab content */
+.tabcontent {
+  float: left;
+  padding: 0px 12px;
+  width: 70%;
+  border-left: none;
+  height: 400px;
+  display: none;
+}
+
+/* Clear floats after the tab */
+.clearfix::after {
+  content: "";
+  clear: both;
+  display: table;
+}
+</style>
+    <style type="text/css">
+        a.nounderline {text-decoration: none; }
+    </style>
+
+
+</head>
+
+<body onload="startTime()">
+  <header>
+<h1>Help File Web Version</h1>
+        <nav>
+<a href="2CannedBasic.htm" target="_self" style="background-color:#00a4ff; color:white";>Canned Basic</a>
+            <a href="2WhatsAppBOT.htm" target="_self";>WhatsApp BOT</a>
+            <a href="2internetbanking.htm" target="_self";>New Alfa App</a>
+            <a href="2linkscanned.htm" target="_self";>Links Canned</a>
+            <a href="2orbitscanned.htm" target="_self";>Orbits Canned</a>
+            <a href="2Walletcanned.htm" target="_self";>Wallet Canned</a>
+            <a href="2cannedmemo.htm" target="_self";>Canned Memo</a>
+            <a href="2leadoffering.htm" target="_self";>Lead Offering</a>
+	    <a href="2othercanned.htm" target="_self";><img style="width:30px; height:25px;" src="bulb.gif"></a>
+</nav>
+<nav>
+<a href="2cbcomplaint.htm" target="_self" style="width:70px; height:15px; font-size:10px";>Complaint</a>
+<a href="2cbordertrack.htm" target="_self" style="width:70px; height:15px; font-size:10px";>Order Track</a>
+<a href="2cbcnic.htm" target="_self" style="width:70px; height:15px; font-size:10px";>CNIC (Expiry)</a>
+<a href="2cbalfamall.htm" target="_self" style="width:70px; height:15px; font-size:10px";>Alfa Mall</a>
+<a href="2cbcclimit.htm" target="_self" style="width:70px; height:15px; font-size:10px; background-color:#00a4ff; color:white";>CC Limit</a>
+<a href="2cbdcfee.htm" target="_self" style="width:70px; height:15px; font-size:10px";>DC Fee</a>
+<a href="2cbdcreplacement.htm" target="_self" style="width:70px; height:15px; font-size:10px";>DC Replace</a>
+<a href="2cbccannualfee.htm" target="_self" style="width:70px; height:15px; font-size:10px";>CC Annual Fee</a>
+<a href="2cbccspending.htm" target="_self" style="width:70px; height:15px; font-size:10px";>CC Spending</a>
+<a href="2cbcclimit's.htm" target="_self" style="width:70px; height:15px; font-size:10px";>CC limit's</a>
+</nav>
+    <button id="theme-toggle" style="position: absolute; top: 20px; right: 20px; padding: 10px;">Switch Theme</button>
+
+<div class="time" id="demo">TIME</div>
+   </header> 
+<main>
+<pre id="eligibility" style="font-size:11px; font-family: bahnschrift;">Eligibility Criteria For Credit Card Limit Enhancement:
+
+CLI will occur for customers upon customer request (part of CF1/declaration form).
+At least 12 months’ credit card relationship is required in order to qualify.
+Card should be active & open, current or aging 1 at the time of limit increase.
+Only one CLI is allowed within a 12 months’ period.
+TAT processing of request is 9 Working days. Department calculate the TAT from date of request subject to Complete to completion of supporting documents.
+</pre>
+<button onclick="copy_to_clipboard('eligibility')" class="button button1"><img style="width:30px; height:25px;" src="copyiconn.jfif"></button><hr>
+
+<b id="carde" style="font-size:13px; font-family: bahnschrift;">Dear Customer, please confirm if you are a salaried person or a business person?</b><button onclick="copy_to_clipboard('carde')" class="button button1"><img style="width:30px; height:25px;" src="copyiconn.jfif"></button><br>
+<b id="cardu" style="font-size:13px; font-family: bahnschrift;">Muaziz Saarif, kindly confirm kjiye kya ap salaried person hain ya business person/self-employed?</b><button onclick="copy_to_clipboard('cardu')" class="button button1"><img style="width:30px; height:25px;" src="copyiconn.jfif"></button><hr>
+<div class="tab" style="background-color:#ffffff00";>
+  <button class="tablinks" onmouseover="openCity(event, 'London')">Salaried (English)</button>
+  <button class="tablinks" onmouseover="openCity(event, 'Paris')">Salaried (Urdu)</button>
+  <button class="tablinks" onmouseover="openCity(event, 'Selfemployed')">Self Employed (English)</button>
+  <button class="tablinks" onmouseover="openCity(event, 'Selfemployedu')">Self Employed (Urdu)</button>
+</div>
+
+<div id="London" class="tabcontent">
+<pre id="salaried" style="font-size:15px; font-family: bahnschrift;">Dear Customer, please follow the below mentioned process for limit enhancement.
+
+List of documents required for credit limit increase for salaried individuals are:
+At least 12 months’ credit card relationship is required in order to qualify.
+Fresh Income Documents verified and stamped (Salary Slip).
+Signed Annexure CF 1/declaration form available on http://www.sbp.org.pk/bprd/2009/Annex_C4.pdf.
+Latest six months duly signed & stamped salaried account bank statement.
+CNIC copy, salary slip/NTN copy, indemnity form, forward to department.
+You need to send a request to the BDU department, 23-H, Gulberg 2- 4th floor, Lahore. Along with that you have to write an application with your signatures to the Manager of customer service Bank Alfalah with the subject ‘Limit Enhancement’.
+</pre>
+<hr><button onclick="copy_to_clipboard('salaried')" class="button button1"><img style="width:30px; height:25px;" src="copyiconn.jfif"></button><hr>
+</div>
+
+<div id="Paris" class="tabcontent">
+<pre id="salariedu" style="font-size:15px; font-family: bahnschrift;">Muaziz Saarif, limit enhancement karny ke lye nechy darj process ko follow kjiye.
+
+Salaried person ki limit enhancement ki request ke lye nechy mentioned documents ki list ye hai.
+Qualify karny ke lye credit card ka 12 months ka relationship hona chaye.
+Fresh Income Documents jo ke verified aur stamped ho branch sy(Salary Slip).
+Signed Annexure CF 1/declaration form jo ke available hai is link par http://www.sbp.org.pk/bprd/2009/Annex_C4.pdf 
+Latest six months salaried account bank statement jo ke signed aur stamped ho.
+CNIC copy, salary slip/NTN copy, indemnity form, department ko forward kjiye.
+Apko BDU department 23-H, Gulbery 2-4th floor, Lahore, is addess par apni written application apni signature ke sath Manager of customer service Bank Alfalah ko bhejni hai js men apka subject hoga‘Limit Enhancement’.
+</pre>
+ <hr><button onclick="copy_to_clipboard('salariedu')" class="button button1"><img style="width:30px; height:25px;" src="copyiconn.jfif"></button><hr>
+</div>
+
+<div id="Selfemployed" class="tabcontent">
+<pre id="self" style="font-size:15px; font-family: bahnschrift;">Dear Customer, follow the below mentioned process for limit enhancement.
+
+List of documents required for credit limit increase for Self-employed are:
+Latest Six months duly signed and stamped (personal/business Account) Bank Statement.
+Proof of Business as mentioned below:
+Sole Proprietorship letter (In case of Sole Proprietor and Business Account Statement).
+Partnership Deed (In case of Partnership).
+Form A for private limited firm (PVT LTD) (form 29) also included in Pvt.
+Properly filled declaration form/CF1 (copy attached).
+You need to send a request to the BDU department, 23-H, Gulberg 2- 4th floor, Lahore. Along with that you have to write an application with your signatures to the Manager of customer service Bank Alfalah with the subject ‘Limit Enhancement’.
+</pre>
+ <hr><button onclick="copy_to_clipboard('self')" class="button button1"><img style="width:30px; height:25px;" src="copyiconn.jfif"></button><hr>
+</div>
+
+<div id="Selfemployedu" class="tabcontent">
+<pre id="selfu" style="font-size:15px; font-family: bahnschrift;">Muaziz Saarif, limit enhancement karny ke lye nechy darj process ko follow kjiye.
+
+Self-employed ki limit enhancement ki request ke lye nechy mentioned documents ki list ye hai.
+Latest Six months signed aur stamped (personal/business Account) Bank Statement.
+Sole Proprietorship letter(Sole Proprietor aur Business Account Statement ki soorat mein).
+Partnership Deed (Partnership ki soorat mein).
+Form A private limited firm (PVT LTD) ke lye (form 29) Pvt men bhi include hai.
+Properly filled declaration form/CF1 (attached copy ke sath).
+Apko BDU department 23-H, Gulbery 2-4th floor, Lahore, is addess par apni written application apni signature ke sath Manager of customer service Bank Alfalah ko bhejni hai js men apka subject hoga‘Limit Enhancement’.
+</pre> 
+ <hr><button onclick="copy_to_clipboard('selfu')" class="button button1"><img style="width:30px; height:25px;" src="copyiconn.jfif"></button><hr>
+</div>
+
+<div class="clearfix"></div>
+</main>
+<script>
+function openCity(evt, cityName) {
+  var i, tabcontent, tablinks;
+  tabcontent = document.getElementsByClassName("tabcontent");
+  for (i = 0; i < tabcontent.length; i++) {
+    tabcontent[i].style.display = "none";
+  }
+  tablinks = document.getElementsByClassName("tablinks");
+  for (i = 0; i < tablinks.length; i++) {
+    tablinks[i].className = tablinks[i].className.replace(" active", "");
+  }
+  document.getElementById(cityName).style.display = "block";
+  evt.currentTarget.className += " active";
+}
+</script>
+<footer>
+    <script>
+        // Theme Switcher Logic
+        const savedTheme = localStorage.getItem('theme');
+        if (savedTheme === 'dark') {
+            document.body.classList.add('dark-mode');
+        }
+
+        const themeToggleButton = document.getElementById('theme-toggle');
+        themeToggleButton.addEventListener('click', () => {
+            document.body.classList.toggle('dark-mode');
+            if (document.body.classList.contains('dark-mode')) {
+                localStorage.setItem('theme', 'dark');
+            } else {
+                localStorage.setItem('theme', 'light');
+            }
+        });
+
+        // Time Function
+        setInterval(myTimer, 1000);
+        function myTimer() {
+            const d = new Date();
+            document.getElementById("demo").innerHTML = d.toLocaleTimeString();
+        }
+
+        // Copy to Clipboard Function
+        function copy_to_clipboard(elm_id) {
+            const text = document.getElementById(elm_id).innerText;
+            navigator.clipboard.writeText(text);
+        }
+    </script>
+  </footer>
+
+
+<script src="js/discoCursor.js"></script>
+
+
+
+</body>
+</html>
+
+

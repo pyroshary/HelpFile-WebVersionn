@@ -1,0 +1,21 @@
+Debit Card Activation via ATM:
+You can activate your debit card by visiting any Bank Alfalah ATM with your Alfalah Debit Card, CNIC number and your registered mobile number.
+• Insert your Alfalah Debit Card into the Bank Alfalah ATM Machine.
+• Click ‘OK’ when the ATM machine ask you to activate your Debit Card.
+• Enter your 13-digit CNIC number.
+• Enter your date of birth (DD-MM-YYYY).
+• You will receive a 4-digit OTP on your registered mobile number, enter the OTP and proceed.
+• Enter a 4-digit ATM PIN of your choice using the keypad.
+• Re-enter the ATM PIN for validation.
+• You will receive the confirmation message for the Activation of Debit Card, also you will be intimated via SMS.
+
+Debit Card Activation via ATM:
+Ap apna debit card activate kar sakte hen by visiting any Bank Alfalah ATM. Alfalah Debit Card, CNIC number aur registered mobile number ke sath ATM visit karna hoga.
+• Alfalah Debit Card insert karen Bank Alfalah ATM Machine men.
+• Click ‘OK’ when the ATM machine ask you to activate your Debit Card.
+• Apna 13-digits ka CNIC number enter karen.
+• Apni date of birth enter karen (DD-MM-YYYY).
+• Apke pas registered mobile number pe OTP receive hoga. OTP enter karen ATM men phir proceed karden.
+• Phir ap apni marzi ka PIN code type karen.
+• Phir ap wohi PIN code dubara enter karen for validation.
+• Phir apko confirmation message receive hoga Debit Card activation ka, aur SMS ke zariye bhi intimate kiya jaega.

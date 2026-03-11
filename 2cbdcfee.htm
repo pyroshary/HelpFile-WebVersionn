@@ -1,0 +1,522 @@
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Help File Web Version</title>
+    <link rel="icon" type="image/x-icon" href="webicon.jfif">
+<link rel="stylesheet" href="Css/discoCursor.css">
+
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin: 0;
+            padding: 0;
+            background: linear-gradient(180deg, #d0e6f9, #a3c6e0);
+            color: #2c3e50;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: flex-start;
+            min-height: 100vh;
+            overflow-y: auto;
+            transition: background-color 0.3s ease;
+        }
+        body.dark-mode {
+            background: linear-gradient(180deg, #8b8787, #1e1e1e);
+            color: #ffffff;
+         
+   table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 20px;
+            transition: transform 0.3s;
+        }
+
+        body.dark-mode table {
+            background-color: transparent;
+        }
+
+        body.dark-mode th, td {
+            background-color: rgba(59, 59, 59, 0.85);
+            color: #ecf0f1;
+            border-color: #555;
+        }
+
+        body.dark-mode tr:hover {
+            background-color: #2c3e50;
+        }
+
+        body.dark-mode main {
+            background-color: rgba(35, 35, 37, 0.80);
+        }
+
+        body.dark-mode nav a {
+            background-color: #2c3e50;
+        }
+
+        body.dark-mode nav a:hover {
+            background-color: #34495e;
+        }
+ div.clearfix {
+            background-color: ;
+
+        }
+
+
+
+
+
+        th, td {
+            border: 1px solid #bdc3c7;
+            padding: 15px;
+            text-align: left;
+            background-color: #3b3b3b;
+            border-radius: 5px;
+            transition: background-color 0.3s, transform 0.3s;
+        }
+
+        tr {
+            transition: transform 0.3s, background-color 0.3s, box-shadow 0.3s;
+        }
+
+        tr:hover {
+            background-color: #f2f2f2;
+            transform: scale(1.05);
+            box-shadow: 0 4px 20px rgba(52, 152, 219, 0.7);
+        }
+
+ main {
+            width: 90%;
+            max-width: 1200px;
+            margin: 20px auto;
+            background-color: #232325;
+            border-radius: 15px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.5);
+            padding: 20px;
+            animation: fadeIn 1.5s ease;
+        }
+
+ header {
+            background: linear-gradient(135deg, #892d00, #194c6e);
+            color: #ffffff;
+            width: 100%;
+            padding: 0px;
+            text-align: center;
+            box-shadow: 0 25px 50px rgba(0, 0, 0, 0.5);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            transition: background 0.3s ease;
+        }
+pre {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            white-space: pre-wrap; /* Allows wrapping */
+            overflow-wrap: break-word; /* Breaks long words */
+            color: white; /* Change the text color */
+            background-color: #007bff4f; /* Change the background color */
+            padding: 10px; /* Add padding for better readability */
+            border-radius: 5px; /* Add border radius for style */
+        }
+
+.tab button {
+  display: block;
+  background-color: #ffffff00;
+  color: white;
+  padding: 10px 14px;
+  width: 100%;
+  border: none;
+  outline: none;
+  text-align: left;
+  cursor: pointer;
+  font-size: 15px;
+}
+.tab button:hover {
+  background-color: #2b0000;
+}
+
+/* Create an active/current "tab button" class */
+.tab button.active {
+  background-color: #007bff4f;
+}
+
+
+   }
+
+
+        header {
+            background: linear-gradient(135deg, #005289, #6dd5ed);
+            color: #ffffff;
+            width: 100%;
+            padding: 0px;
+            text-align: center;
+            box-shadow: 0 25px 50px rgba(0, 0, 0, 0.5);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            transition: background 0.3s ease;
+        }
+
+        nav {
+            margin: 15px 0;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+
+        nav a {
+            background-color: #163449;
+            color: white;
+            padding: 10px 20px;
+            margin: 5px;
+            text-decoration: none;
+            border-radius: 5px;
+            box-shadow: 0 4px 10px rgba(52, 152, 219, 0.3);
+            transition: all 0.6s ease;
+            position: relative;
+            overflow: hidden;
+        }
+
+        nav a:hover {
+            background-color: #2980b9;
+            transform: translateY(-3px);
+        }
+
+        nav a::after {
+            content: '';
+            position: absolute;
+            background: rgba(255, 255, 255, 0.1);
+            height: 100%;
+            width: 100%;
+            left: 0;
+            top: 100%;
+            transition: all 0.3s ease;
+            z-index: 0;
+        }
+
+        nav a:hover::after {
+            top: 0;
+        }
+
+        .time {
+            font-size: 16px;
+            margin-top: 10px;
+            color: #white;
+        }
+
+        main {
+            width: 90%;
+            height: 100%;
+            max-width: 1200px;
+            margin: 20px auto;
+            background-color: #ecf0f1;
+            border-radius: 15px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.5);
+            padding: 20px;
+            animation: fadeIn 1.5s ease;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 20px;
+            transition: transform 0.3s;
+        }
+
+        th, td {
+            border: 1px solid #bdc3c7;
+            padding: 15px;
+            text-align: left;
+            background-color: #ffffff;
+            border-radius: 5px;
+            transition: background-color 0.3s, transform 0.3s;
+        }
+
+        tr {
+            transition: transform 0.3s, background-color 0.3s, box-shadow 0.3s;
+        }
+
+        tr:hover {
+            background-color: #f2f2f2;
+            transform: scale(1.05);
+            box-shadow: 0 4px 20px rgba(52, 152, 219, 0.7);
+        }
+
+        .button {
+            background-color: rgb(64, 171, 158, 0.0);
+            border-radius: 33px;
+            border: none;
+            color: black;
+            padding: 4px 10px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 12px;
+            margin: 4px 2px;
+            cursor: pointer;
+            -webkit-transition-duration: 0.4s; /* Safari */
+            transition-duration: 0.5s;
+        }
+
+        .button1:hover {
+            background-color: #005289;
+            box-shadow: 20px 12px 16px 18px rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);
+        }
+
+        pre {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            white-space: pre-wrap; /* Allows wrapping */
+            overflow-wrap: break-word; /* Breaks long words */
+            color: #34495e; /* Change the text color */
+            background-color: #ecf0f1; /* Change the background color */
+            padding: 10px; /* Add padding for better readability */
+            border-radius: 5px; /* Add border radius for style */
+        }
+
+        footer {
+            margin: 20px 0;
+            text-align: center;
+            font-size: 12px;
+            color: #34495e;
+        }
+#theme-toggle {
+            background-color: #2980b9;
+            color: white;
+            border: none;
+            padding: 10px;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        #theme-toggle:hover {
+            background-color: #1f6f8b;
+        }
+        /* Mobile Responsiveness */
+        @media screen and (max-width: 768px) {
+            body { font-size: 14px; }
+            main { width: 95%; padding: 10px; margin: 10px auto; }
+            nav { flex-direction: column; align-items: center; }
+            nav a { width: 80%; text-align: center; margin: 5px 0; }
+            table { font-size: 13px; }
+            th, td { padding: 8px; font-size: 12px; }
+            .button { padding: 2px 8px; }
+            .button img { width: 24px !important; height: 20px !important; }
+            pre { font-size: 12px; padding: 8px; overflow-x: auto; }
+            header h1 { font-size: 18px; padding: 10px; }
+        }
+        
+        @media screen and (max-width: 480px) {
+            body { font-size: 12px; }
+            main { width: 98%; padding: 5px; }
+            nav a { width: 90%; font-size: 14px; }
+            th, td { padding: 6px; font-size: 11px; }
+            .button img { width: 20px !important; height: 18px !important; }
+            pre { font-size: 11px; padding: 5px; }
+            header h1 { font-size: 16px; }
+        }
+    </style>
+
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+
+
+
+/* Style the tab */
+.tab {
+  float: left;
+  background-color: #f1f1f1;
+  width: 250px;
+  height: 70px;
+}
+
+/* Style the buttons inside the tab */
+.tab button {
+  display: block;
+  background-color: #ffffff00;
+  color: black;
+  padding: 10px 14px;
+  width: 100%;
+  border: none;
+  outline: none;
+  text-align: left;
+  cursor: pointer;
+  font-size: 15px;
+}
+
+/* Change background color of buttons on hover */
+.tab button:hover {
+  background-color: #ffffff00;
+}
+
+/* Create an active/current "tab button" class */
+.tab button.active {
+  background-color: #007bff4f;
+}
+
+/* Style the tab content */
+.tabcontent {
+  float: left;
+  padding: 0px 12px;
+  width: 70%;
+  border-left: none;
+  height: 400px;
+  display: none;
+}
+
+/* Clear floats after the tab */
+.clearfix::after {
+  content: "";
+  clear: both;
+  display: table;
+}
+</style>
+    <style type="text/css">
+        a.nounderline {text-decoration: none; }
+    </style>
+
+</head>
+
+<body onload="startTime()">
+  <header>
+<h1>Help File Web Version</h1>
+        <nav>
+<a href="2CannedBasic.htm" target="_self" style="background-color:#00a4ff; color:white";>Canned Basic</a>
+            <a href="2WhatsAppBOT.htm" target="_self";>WhatsApp BOT</a>
+            <a href="2internetbanking.htm" target="_self";>New Alfa App</a>
+            <a href="2linkscanned.htm" target="_self";>Links Canned</a>
+            <a href="2orbitscanned.htm" target="_self";>Orbits Canned</a>
+            <a href="2Walletcanned.htm" target="_self";>Wallet Canned</a>
+            <a href="2cannedmemo.htm" target="_self";>Canned Memo</a>
+            <a href="2leadoffering.htm" target="_self";>Lead Offering</a>
+	    <a href="2othercanned.htm" target="_self";><img style="width:30px; height:25px;" src="bulb.gif"></a>
+</nav>
+<nav>
+<a href="2cbcomplaint.htm" target="_self" style="width:70px; height:15px; font-size:10px";>Complaint</a>
+<a href="2cbordertrack.htm" target="_self" style="width:70px; height:15px; font-size:10px";>Order Track</a>
+<a href="2cbcnic.htm" target="_self" style="width:70px; height:15px; font-size:10px";>CNIC (Expiry)</a>
+<a href="2cbalfamall.htm" target="_self" style="width:70px; height:15px; font-size:10px";>Alfa Mall</a>
+<a href="2cbcclimit.htm" target="_self" style="width:70px; height:15px; font-size:10px";>CC Limit</a>
+<a href="2cbdcfee.htm" target="_self" style="width:70px; height:15px; font-size:10px; background-color:#00a4ff; color:white";>DC Fee</a>
+<a href="2cbdcreplacement.htm" target="_self" style="width:70px; height:15px; font-size:10px";>DC Replace</a>
+<a href="2cbccannualfee.htm" target="_self" style="width:70px; height:15px; font-size:10px";>CC Annual Fee</a>
+<a href="2cbccspending.htm" target="_self" style="width:70px; height:15px; font-size:10px";>CC Spending</a>
+<a href="2cbcclimit's.htm" target="_self" style="width:70px; height:15px; font-size:10px";>CC limit's</a>
+</nav>
+    <button id="theme-toggle" style="position: absolute; top: 20px; right: 20px; padding: 10px;">Switch Theme</button>
+
+<div class="time" id="demo">TIME</div>
+   </header> 
+<main>
+<div class="tab" style="background-color:#ffffff00";>
+  <button class="tablinks" onmouseover="openCity(event, 'dcfeeeng')">Debit Card Fee (English)</button>
+  <button class="tablinks" onmouseover="openCity(event, 'dcfeeu')">Debit Card Fee (Urdu)</button>
+  <button class="tablinks" onmouseover="openCity(event, 'suppdcfeeeng')">Supp DC Fee (English)</button>
+  <button class="tablinks" onmouseover="openCity(event, 'suppdcfeeu')">Supp DC Fee (Urdu)</button>
+</div>
+
+<div id="dcfeeeng" class="tabcontent">
+<hr><pre id="dcfeee" style="font-size:15px; font-family: bahnschrift;">Dear Customer, VISA Classic debit card Issuance/Annual charges are PKR 3500 + %FED.
+VISA Gold debit card Issuance/Annual charges are PKR 5000 + %FED.
+Pehchaan Debit Card Issuance/Annual charges are PKR 5000 + %FED.
+Pay Pak debit card Issuance/Annual charges are PKR 2800 + %FED.
+VISA Platinum debit card Issuance/Annual charges are PKR 10,000 + FED.
+VISA Signature debit card Issuance/Annual charges are PKR 22,000 + %FED.
+</pre><button onclick="copy_to_clipboard('dcfeee')" class="button button1"><img style="width:30px; height:25px;" src="copyiconn.jfif"></button><hr>
+<pre id="dcfeee1" style="font-size:15px; font-family: bahnschrift;">Dear Customer, Virtual debit card Issuance charges are PKR 200 + FED.</pre><button onclick="copy_to_clipboard('dcfeee1')" class="button button1"><img style="width:30px; height:25px;" src="copyiconn.jfif"></button><hr>
+</div>
+
+<div id="dcfeeu" class="tabcontent">
+<hr><pre id="dcfeeue" style="font-size:15px; font-family: bahnschrift;">Muaziz Saarif, VISA Classic debit card ke Issuance/Annual charges hen PKR 3500 + FED.
+VISA Gold debit card ke Issuance/Annual charges hen PKR 5000 + FED.
+Pehchaan Debit Card ke Issuance/Annual charges hen PKR 5000 + FED.
+Pay Pak debit card ke Issuance/Annual charges he PKR 2800 + FED.
+VISA Platinum debit card Issuance/Annual charges hen PKR 10,000 + FED.
+VISA Signature debit card ke Issuance/Annual charges he PKR 22,000 + FED.
+</pre><button onclick="copy_to_clipboard('dcfeeue')" class="button button1"><img style="width:30px; height:25px;" src="copyiconn.jfif"></button><hr>
+<pre id="dcfeeeu2" style="font-size:15px; font-family: bahnschrift;">Muaziz Saarif, Virtual debit card ke Issuance charges he PKR 200 + FED.</pre><button onclick="copy_to_clipboard('dcfeeeu2')" class="button button1"><img style="width:30px; height:25px;" src="copyiconn.jfif"></button><hr>
+</div>
+
+<div id="suppdcfeeeng" class="tabcontent">
+<hr><pre id="supp" style="font-size:15px; font-family: bahnschrift;">Dear Customer, VISA Classic supplementary debit card Issuance/Annual charges are PKR 1750 + FED.
+VISA Gold supplementary debit card Issuance/Annual charges are PKR 2500 + FED.
+Pehchaan Debit Card supplementary debit card Issuance/Annual charges are PKR 2500 + FED.
+Pay Pak supplementary debit card Issuance/Annual charges are PKR 1400 + FED.
+VISA Platinum supplementary debit card Issuance/Annual charges are PKR 5000 + FED.
+VISA Signature supplementary debit card Issuance/Annual charges are PKR 11000 + FED.
+</pre><button onclick="copy_to_clipboard('supp')" class="button button1"><img style="width:30px; height:25px;" src="copyiconn.jfif"></button><hr>
+</div>
+
+<div id="suppdcfeeu" class="tabcontent">
+<hr><pre id="suppu" style="font-size:15px; font-family: bahnschrift;">Muaziz Saarif, VISA Classic supplementary debit card ke Issuance/Annual charges he PKR 1750 + FED.
+VISA Gold supplementary debit card ke Issuance/Annual charges he PKR 2500 + FED.
+Pehchaan Debit Card supplementary debit card ke Issuance/Annual charges he PKR 2500 + FED.
+Pay Pak supplementary debit card Issuance/Annual charges he PKR 1400 + FED.
+VISA Platinum supplementary debit card Issuance/Annual charges hen PKR 5000 + FED.
+VISA Signature supplementary debit card ke Issuance/Annual charges he PKR 11000 + FED.
+</pre><button onclick="copy_to_clipboard('suppu')" class="button button1"><img style="width:30px; height:25px;" src="copyiconn.jfif"></button><hr>
+</div>
+
+
+<div class="clearfix"></div>
+</main>
+
+
+
+
+<script>
+function openCity(evt, cityName) {
+  var i, tabcontent, tablinks;
+  tabcontent = document.getElementsByClassName("tabcontent");
+  for (i = 0; i < tabcontent.length; i++) {
+    tabcontent[i].style.display = "none";
+  }
+  tablinks = document.getElementsByClassName("tablinks");
+  for (i = 0; i < tablinks.length; i++) {
+    tablinks[i].className = tablinks[i].className.replace(" active", "");
+  }
+  document.getElementById(cityName).style.display = "block";
+  evt.currentTarget.className += " active";
+}
+</script>
+<footer>
+    <script>
+        // Theme Switcher Logic
+        const savedTheme = localStorage.getItem('theme');
+        if (savedTheme === 'dark') {
+            document.body.classList.add('dark-mode');
+        }
+
+        const themeToggleButton = document.getElementById('theme-toggle');
+        themeToggleButton.addEventListener('click', () => {
+            document.body.classList.toggle('dark-mode');
+            if (document.body.classList.contains('dark-mode')) {
+                localStorage.setItem('theme', 'dark');
+            } else {
+                localStorage.setItem('theme', 'light');
+            }
+        });
+
+        // Time Function
+        setInterval(myTimer, 1000);
+        function myTimer() {
+            const d = new Date();
+            document.getElementById("demo").innerHTML = d.toLocaleTimeString();
+        }
+
+        // Copy to Clipboard Function
+        function copy_to_clipboard(elm_id) {
+            const text = document.getElementById(elm_id).innerText;
+            navigator.clipboard.writeText(text);
+        }
+    </script>
+  </footer>
+<script src="js/discoCursor.js"></script>
+
+</body>
+</html>
+
+

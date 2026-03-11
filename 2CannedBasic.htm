@@ -1,0 +1,598 @@
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Help File Web Version</title>
+    <link rel="icon" type="image/x-icon" href="webicon.jfif">
+<link rel="stylesheet" href="Css/discoCursor.css">
+
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin: 0;
+            padding: 0;
+            background: linear-gradient(180deg, rgba(208, 230, 249, 0.75), rgba(163, 198, 224, 0.75));
+            background-size: cover;
+            background-position: center, center;
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+            color: #2c3e50;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: flex-start;
+            min-height: 100vh;
+            overflow-y: auto;
+            transition: background-color 0.3s ease;
+        }
+        body.dark-mode {
+            background: linear-gradient(180deg, rgba(139, 135, 135, 0.70), rgba(30, 30, 30, 0.70));
+            background-size: cover;
+            background-position: center, center;
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+            color: #ffffff;
+         
+   table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 20px;
+            transition: transform 0.3s;
+        }
+
+        body.dark-mode table {
+            background-color: transparent;
+        }
+
+        body.dark-mode th, td {
+            background-color: rgba(59, 59, 59, 0.85);
+            color: #ecf0f1;
+            border-color: #555;
+        }
+
+        body.dark-mode tr:hover {
+            background-color: #2c3e50;
+        }
+
+        body.dark-mode main {
+            background-color: rgba(35, 35, 37, 0.80);
+        }
+
+        body.dark-mode nav a {
+            background-color: #2c3e50;
+        }
+
+        body.dark-mode nav a:hover {
+            background-color: #34495e;
+        }
+ div.clearfix {
+            background-color: ;
+
+        }
+
+
+
+
+
+        th, td {
+            border: 1px solid #bdc3c7;
+            padding: 15px;
+            text-align: left;
+            background-color: #3b3b3b;
+            border-radius: 5px;
+            transition: background-color 0.3s, transform 0.3s;
+        }
+
+        tr {
+            transition: transform 0.3s, background-color 0.3s, box-shadow 0.3s;
+        }
+
+        tr:hover {
+            background-color: #f2f2f2;
+            transform: scale(1.05);
+            box-shadow: 0 4px 20px rgba(52, 152, 219, 0.7);
+        }
+
+ main {
+            width: 90%;
+            max-width: 1200px;
+            margin: 20px auto;
+            background-color: #232325;
+            border-radius: 15px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.5);
+            padding: 20px;
+            animation: fadeIn 1.5s ease;
+        }
+
+ header {
+            background: linear-gradient(135deg, #892d00, #194c6e);
+            color: #ffffff;
+            width: 100%;
+            padding: 0px;
+            text-align: center;
+            box-shadow: 0 25px 50px rgba(0, 0, 0, 0.5);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            transition: background 0.3s ease;
+        }
+pre {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            white-space: pre-wrap; /* Allows wrapping */
+            overflow-wrap: break-word; /* Breaks long words */
+            color: white; /* Change the text color */
+            background-color: #1e0a00; /* Change the background color */
+            padding: 10px; /* Add padding for better readability */
+            border-radius: 5px; /* Add border radius for style */
+        }
+
+.tab button {
+  display: block;
+  background-color: #ffffff00;
+  color: white;
+  padding: 10px 14px;
+  width: 100%;
+  border: none;
+  outline: none;
+  text-align: left;
+  cursor: pointer;
+  font-size: 15px;
+}
+.tab button:hover {
+  background-color: #2b0000;
+}
+
+
+
+   }
+
+        header {
+            background: linear-gradient(135deg, #005289, #6dd5ed);
+            color: #ffffff;
+            width: 100%;
+            padding: 0px;
+            text-align: center;
+            box-shadow: 0 25px 50px rgba(0, 0, 0, 0.5);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            transition: background 0.3s ease;
+        }
+
+        nav {
+            margin: 15px 0;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+
+        nav a {
+            background-color: #163449;
+            color: white;
+            padding: 10px 20px;
+            margin: 5px;
+            text-decoration: none;
+            border-radius: 5px;
+            box-shadow: 0 4px 10px rgba(52, 152, 219, 0.3);
+            transition: all 0.6s ease;
+            position: relative;
+            overflow: hidden;
+        }
+
+        nav a:hover {
+            background-color: #2980b9;
+            transform: translateY(-3px);
+        }
+
+        nav a::after {
+            content: '';
+            position: absolute;
+            background: rgba(255, 255, 255, 0.1);
+            height: 100%;
+            width: 100%;
+            left: 0;
+            top: 100%;
+            transition: all 0.3s ease;
+            z-index: 0;
+        }
+
+        nav a:hover::after {
+            top: 0;
+        }
+
+        .time {
+            font-size: 16px;
+            margin-top: 10px;
+            color: #white;
+        }
+
+        main {
+            width: 90%;
+            max-width: 1200px;
+            margin: 20px auto;
+            background-color: rgba(236, 240, 241, 0.85);
+            border-radius: 15px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.5);
+            padding: 20px;
+            animation: fadeIn 1.5s ease;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 20px;
+            transition: transform 0.3s;
+        }
+
+        th, td {
+            border: 1px solid #bdc3c7;
+            padding: 15px;
+            text-align: left;
+            background-color: rgba(255, 255, 255, 0.85);
+            border-radius: 5px;
+            transition: background-color 0.3s, transform 0.3s;
+        }
+
+        tr {
+            transition: transform 0.3s, background-color 0.3s, box-shadow 0.3s;
+        }
+
+        tr:hover {
+            background-color: #f2f2f2;
+            transform: scale(1.05);
+            box-shadow: 0 4px 20px rgba(52, 152, 219, 0.7);
+        }
+
+        .button {
+            background-color: rgb(64, 171, 158, 0.0);
+            border-radius: 33px;
+            border: none;
+            color: black;
+            padding: 4px 10px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 12px;
+            margin: 4px 2px;
+            cursor: pointer;
+            -webkit-transition-duration: 0.4s; /* Safari */
+            transition-duration: 0.5s;
+        }
+
+        .button1:hover {
+            background-color: #005289;
+            box-shadow: 20px 12px 16px 18px rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);
+        }
+
+        pre {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            white-space: pre-wrap; /* Allows wrapping */
+            overflow-wrap: break-word; /* Breaks long words */
+            color: #34495e; /* Change the text color */
+            background-color: #ecf0f1; /* Change the background color */
+            padding: 10px; /* Add padding for better readability */
+            border-radius: 5px; /* Add border radius for style */
+        }
+
+        footer {
+            margin: 20px 0;
+            text-align: center;
+            font-size: 12px;
+            color: #34495e;
+        }
+#theme-toggle {
+            background-color: #2980b9;
+            color: white;
+            border: none;
+            padding: 10px;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        #theme-toggle:hover {
+            background-color: #1f6f8b;
+        }
+
+        /* Mobile Responsiveness */
+        @media screen and (max-width: 768px) {
+            body {
+                font-size: 14px;
+            }
+            
+            main {
+                width: 95%;
+                padding: 10px;
+                margin: 10px auto;
+            }
+            
+            nav {
+                flex-direction: column;
+                align-items: center;
+            }
+            
+            nav a {
+                width: 80%;
+                text-align: center;
+                margin: 5px 0;
+            }
+            
+            table {
+                font-size: 13px;
+            }
+            
+            th, td {
+                padding: 8px;
+                font-size: 12px;
+            }
+            
+            .button {
+                padding: 2px 8px;
+            }
+            
+            .button img {
+                width: 24px !important;
+                height: 20px !important;
+            }
+            
+            pre {
+                font-size: 12px;
+                padding: 8px;
+                overflow-x: auto;
+            }
+            
+            header h1 {
+                font-size: 18px;
+                padding: 10px;
+            }
+        }
+        
+        @media screen and (max-width: 480px) {
+            body {
+                font-size: 12px;
+            }
+            
+            main {
+                width: 98%;
+                padding: 5px;
+            }
+            
+            nav a {
+                width: 90%;
+                font-size: 14px;
+            }
+            
+            th, td {
+                padding: 6px;
+                font-size: 11px;
+            }
+            
+            .button img {
+                width: 20px !important;
+                height: 18px !important;
+            }
+            
+            pre {
+                font-size: 11px;
+                padding: 5px;
+            }
+            
+            header h1 {
+                font-size: 16px;
+            }
+        }
+
+    </style>
+    <style type="text/css">
+        a.nounderline {text-decoration: none; }
+    </style>
+
+</head>
+
+<body onload="startTime()">
+  <header>
+    <h1>Help File Web Version</h1>
+    <nav>
+<a href="2CannedBasic.htm" target="_self" style="background-color:#00a4ff; color:white";>Canned Basic</a>
+            <a href="2WhatsAppBOT.htm" target="_self";>WhatsApp BOT</a>
+            <a href="2internetbanking.htm" target="_self";>New Alfa App</a>
+            <a href="2linkscanned.htm" target="_self";>Links Canned</a>
+            <a href="2orbitscanned.htm" target="_self";>Orbits Canned</a>
+            <a href="2Walletcanned.htm" target="_self";>Wallet Canned</a>
+            <a href="2cannedmemo.htm" target="_self";>Canned Memo</a>
+            <a href="2leadoffering.htm" target="_self";>Lead Offering</a>
+            <a href="2socialmediaresponses.htm" target="_self";>Social Media Responses</a>
+	    <a href="2othercanned.htm" target="_self";><img style="width:30px; height:25px;" src="bulb.gif"></a>
+</nav>
+<nav>
+<a href="2cbcomplaint.htm" target="_self" style="width:70px; height:15px; font-size:10px";>Complaint</a>
+<a href="2cbordertrack.htm" target="_self" style="width:70px; height:15px; font-size:10px";>Order Track</a>
+<a href="2cbcnic.htm" target="_self" style="width:70px; height:15px; font-size:10px";>CNIC (Expiry)</a>
+<a href="2cbalfamall.htm" target="_self" style="width:70px; height:15px; font-size:10px";>Alfa Mall</a>
+<a href="2cbcclimit.htm" target="_self" style="width:70px; height:15px; font-size:10px";>CC Limit</a>
+<a href="2cbdcfee.htm" target="_self" style="width:70px; height:15px; font-size:10px";>DC Fee</a>
+<a href="2cbdcreplacement.htm" target="_self" style="width:70px; height:15px; font-size:10px";>DC Replace</a>
+<a href="2cbccannualfee.htm" target="_self" style="width:70px; height:15px; font-size:10px";>CC Annual Fee</a>
+<a href="2cbccspending.htm" target="_self" style="width:70px; height:15px; font-size:10px";>CC Spending</a>
+<a href="2cbcclimit's.htm" target="_self" style="width:70px; height:15px; font-size:10px";>CC limit's</a>
+</nav>
+    <button id="theme-toggle" style="position: absolute; top: 20px; right: 20px; padding: 10px;">Switch Theme</button>
+
+<div class="time" id="demo">TIME</div>
+   </header> 
+
+<main>
+<table> 
+<tr><td><b id="one">Dear Customer, 2 working days required for account activation & then 2 working days required for data updating on account then after that you can register yourself on Alfa app.</b><button onclick="copy_to_clipboard('one')"  class="button button1"><img style="width:30px; height:25px;" src="copyiconn.jfif"></button><br><br>
+<i id="two">Muaziz Saarif, account activate honay main 2 working days ka time lagta ha tu Abhi wait karain os kay bad 2 workings days’ time lagta ha data update honay main phir is time bad ap register kariye ga.</i><button onclick="copy_to_clipboard('two')"  class="button button1"><img style="width:30px; height:25px;" src="copyiconn.jfif"></button></td></tr>
+	<tr><td><b id="three">Dear Customer, kindly call our helpline to know your username, or reset your password. Our helpline number is 021/042 111 225 111.
+Or you can also follow 4 easy steps by going to the “Forgot Credentials” in order to know your username or reset Password.
+Tap on 1. Sign In 2. Forgot Credentials 3. Select Registration Source (Account – Wallet – Other Bank**) 4. Enter CNIC and Email 5. Enter OTAC.</b>
+<button onclick="copy_to_clipboard('three')"  class="button button1"><img style="width:30px; height:25px;" src="copyiconn.jfif"></button>
+</td></tr>
+
+	<tr><td><b id="four">Dear Customer, apologies this channel is only for basic information and assistance. This channel provides information on products, guidance over queries regarding banking products like account, cards digital banking loan products etc. However, we cannot access a customer's profile without verifying a customer, which requires a call. This is for your own security. Kindly call at our helpline in order to confirm the status in this regard. Our helpline number is 021/042 111 225 111.
+</b><button onclick="copy_to_clipboard('four')"  class="button button1"><img style="width:30px; height:25px;" src="copyiconn.jfif"></button></td></tr>
+	<tr><td><b id="five">Dear Customer, we're extremely sorry to inform you that we don't have access to check customer details. </b><button onclick="copy_to_clipboard('five')"  class="button button1"><img style="width:30px; height:25px;" src="copyiconn.jfif"></button><br><br>
+<i id="six">Muaziz Saarif, bohot mazrat chahenge hamare pas details check karne ki access nahi hoti he, is hawale se janne ke liye apko hamari helpline 021/042 111 225 111 pe rabta karna hoga.</i>
+<button onclick="copy_to_clipboard('six')"  class="button button1"><img style="width:30px; height:25px;" src="copyiconn.jfif"></button>
+</td></tr>
+	
+</td></tr>
+	<tr><td><b id="seven">A conventional Account is either a Saving Account or Current Account that allows money to be remit by the Account holder.whereas, Islamic Banking is defined as a Banking system which is in consonance with the spirit, character and the value system of Islam governed by the principles laid down by Islamic Shariah.
+</b><button onclick="copy_to_clipboard('seven')"  class="button button1"><img style="width:30px; height:25px;" src="copyiconn.jfif"></button></td></tr>
+	<tr><td><b id="8">Dear Customer, we apologize this channel cannot take call back request. Please call at our 24/7 help line regarding your issue.</b><button onclick="copy_to_clipboard('8')"  class="button button1"><img style="width:30px; height:25px;" src="copyiconn.jfif"></button><br><br>
+<i id="9">Muaziz Saarif, hum bohot mazrat chahenge call back is channel ke zariye possible nahi he. Apko is hawale se khud rabta karna hoga hamari 24/7 service helpline 021/042 111 225 111 pe.</i><button onclick="copy_to_clipboard('9')"  class="button button1"><img style="width:30px; height:25px;" src="copyiconn.jfif"></button>
+</td></tr>
+	<tr><td><b id="10">Dear Customer, please confirm the reason to arrange a callback?</b><button onclick="copy_to_clipboard('10')"  class="button button1"><img style="width:30px; height:25px;" src="copyiconn.jfif"></button><br><br>
+<i id="11">Muaziz Saarif, ap kis hawaly sy call back chahty hain?</i><button onclick="copy_to_clipboard('11')"  class="button button1"><img style="width:30px; height:25px;" src="copyiconn.jfif"></button>
+</td></tr>
+	<tr><td><b id="12">Dear Customer, your details have been forwarded to the concerned department, we will get back to you within 24 hours.</b><button onclick="copy_to_clipboard('12')"  class="button button1"><img style="width:30px; height:25px;" src="copyiconn.jfif"></button><br><br>
+<i id="13">Muaziz Saarif, Shukriiya apni details provide krny ke lye. Intizar kijiyga hamara concern department/officer apsy contact krelga 24 hours men.</i><button onclick="copy_to_clipboard('13')"  class="button button1"><img style="width:30px; height:25px;" src="copyiconn.jfif"></button>
+</td></tr>
+	<tr><td><b id="14">There might be waiting on helpline right now, there is a possibility that our all agents are busy due to high call volume. We request you to please wait on call or try after some time.We're sorry for the inconvenience. </b><button onclick="copy_to_clipboard('14')"  class="button button1"><img style="width:30px; height:25px;" src="copyiconn.jfif"></button><br><br>
+<i id="15">Muaziz Saarif, ho sakta ha calls ka ratio ziyada ho, please kuch der bad dubara try karlen. Takleef ke lye bhut mazrat chahengy.</i><button onclick="copy_to_clipboard('15')"  class="button button1"><img style="width:30px; height:25px;" src="copyiconn.jfif"></button>
+</td></tr>
+	<tr><td><b id="16">Kindly call at helpline for the network update or you can go to write message and type MNP and send it to 8287 from your mobile.
+</b><button onclick="copy_to_clipboard('16')"  class="button button1"><img style="width:30px; height:25px;" src="copyiconn.jfif"></button></td></tr>
+	<tr><td><b id="17">Its mean whenever bank deducts any type of charges, FED must be applied.
+</b><button onclick="copy_to_clipboard('17')"  class="button button1"><img style="width:30px; height:25px;" src="copyiconn.jfif"></button></td></tr>
+	<tr><td><b>Dear Customer, If you pay your Bank Alfalah credit card payment of Rs. 10,000/- from other bank then you will charge Rs. 10/- .<br>
+On the payment of Rs. 10,000/- to Rs. 100,000/- then you will charge Rs. 25/- .<br>
+On the payment of Rs. 100,000/- to Rs. 250,000/- department will charge you Rs. 50/- .<br>
+On the payment of Rs. 250,000/- to 1 Million department will charge you Rs. 100/- .<br>
+And on the payment of above 1 Million department will charge Rs. 200/- .
+</b></td></tr>
+	<tr><td><b id="18">In order to cancel the card permanently, you will first have to clear all the dues. Once all the dues are cleared, then you will have to call (042/021-111-225-111) in order to give them request for credit card cancellation.</b><button onclick="copy_to_clipboard('18')"  class="button button1"><img style="width:30px; height:25px;" src="copyiconn.jfif"></button><br><br>
+<i id="19">Muaziz Saarif, credit card cancel karwane ke liye pehle apko total dues pay karne honge. Jab tamam dues pay ho jayenge phir apko hamari helpline 021/042 111 225 111 par call kar ke credit card cancel karwane ki request forward karwani hogi.</i><button onclick="copy_to_clipboard('19')"  class="button button1"><img style="width:30px; height:25px;" src="copyiconn.jfif"></button>
+</td></tr>
+	 <tr>
+ <td>
+ <b id="20">If you didn't clear your bill not even minimum within stipulated time i.e. 21 days, then late payment charges will be 2500 + FED, also markup will be charged and that will be 0.12% daily markup is charged from the date of transactions on the total outstanding amount. If you deposit the partial amount then the markup will be charged till the date of partial payment on the total outstanding. Then the markup will be charged on the remaining amount after the date of partial payment made.</b>
+ <button onclick="copy_to_clipboard('20')" class="button button1">
+ <img style="width:30px; height:25px;" src="copyiconn.jfif">
+ </button>
+ </td>
+ </tr>
+ <tr>
+ <td>
+ <b id="25">Moazziz sarif, agar aap apne credit ka bill due date per ya usse pehle pay kardete hain toh bank aap ko koi charges nahi charged karta. Incase agar aap bill pay nahi karte hain toh bank aap ko late payment charged karega jo kay PKR 2500 + 16% FED aur mark-up charged karta hai jo kay aap ki tamam single transaction per 0.12 % charge hoga or transaction date se charged hoga aur yeh mark-up aap kay outstanding amount per charged hoga. Mazeed agar aap bill ka sirf minimum amount pay karenge toh bank ko late payment charge nahi karega baqi mark-up wesi charge hoga jesa kay aap ko bataya gaya hai.</b>
+ <button onclick="copy_to_clipboard('25')" class="button button1">
+ <img style="width:30px; height:25px;" src="copyiconn.jfif">
+ </button>
+</td>
+</tr>
+
+	<tr><td><b id="21">In ultra-card you have to select two categories out of 6 categories, and on that two categories you will be awarded cash back, according to the monthly spending as cash back will be 7% of the monthly spending or 750RS whichever is lower / per category.
+</b><button onclick="copy_to_clipboard('21')"  class="button button1"><img style="width:30px; height:25px;" src="copyiconn.jfif"></button></td></tr>
+	<tr><td><b id="26">Please note that with reference to BPRD circular no.3 of 2018 virtual currencies are not allowed by SBP. Virtual currencies like Bitcoin, Litecoin, Pakcoin, Onecoin, Dascoin, Pay Diamond etc. or initial Coin Offerings (ICO) tokens are not legal tenders, issued or guaranteed by the Government of Pakistan. SBP has not authorized any individual or entity for the issuance, sale, purchase, exchange or investment in any such Virtual currencies/Coins/Tokens in Pakistan.
+</b><button onclick="copy_to_clipboard('26')"  class="button button1"><img style="width:30px; height:25px;" src="copyiconn.jfif"></button></td></tr>
+	<tr><td><b><u>Helpline Numbers:</u></b><br><br>
+Our helpline number for General Banking is 021-111-225-111 and 042-111-225-111 .<br>
+Our helpline number for Platinum is 0800-22225 .<br>
+Our helpline number for Alfa is 021-111-225-224 .<br>
+Our helpline number for American Express is 021-111-226-111 and 042-111-226-111 .<br>
+Our helpline number for Premier Banking is 021-111-225-226 .<br>
+Our helpline number for Roshan Digital Account is 0092-21-111-225-226 .<br>
+Our helpline number for Branchless Banking is 021-111-225-229 .<br>
+Our helpline number for BISP is 021-111-427-111 .
+</td></tr>
+	<tr><td><b id="23">On cash withdrawal using your credit card, you will be charged either PKR 1,200 + FED or 3% of the withdrawal amount (whichever is higher) as a cash advance fee. Also you'll be charged 0.12% daily mark up from the date of transaction until you clear your total outstanding.</b><button onclick="copy_to_clipboard('23')"  class="button button1"><img style="width:30px; height:25px;" src="copyiconn.jfif"></button><br>
+<b>Foreign Currency Transactions processed through foreign merchants: 5% of the transaction amount and PKR 0.4 per US dollar conversion.</b><br>
+<b>Advance tax (section 236Y) also exempted on transactions done through Debit or Credit card on web or internationally. E.g. Netflix, Alibaba etc.</b><br>
+<b>Service Fee: 3.50% per month (42% Annual Percentage Rate).
+</b></td></tr>
+	<tr><td><b><u>Replacement/Upgradation Fee:</u><br>
+BASIC Classic , Gold , Ultra , AMEX Credit Card (REPLACEMENT/UPGRADATION) fee: 1000/- + FED.<br>
+SUPPL Classic , Gold , Ultra , AMEX Credit Card (REPLACEMENT/UPGRADATION) fee: 1000/ + FED.<br>
+BASIC Platinum , Optimus, Premier Platinum Credit Card (REPLACEMENT/UPGRADATION) fee: 2000/- + FED.<br>
+SUPP Platinum , Optimus, Premier Platinum Credit Card (REPLACEMENT/UPGRADATION) fee: 1000/- + FED.
+</b></td></tr>
+	<tr><td><b><u>Other Fee:</u><br>
+Step by Step/Credit on Phone to SBS Processing Charges: Rs. 1000/- or 2.5% of transaction amount, whichever is higher.<br>
+Step by Step/Credit on Phone to SBS Premature Settlement Charges: 5% on balance amount or Rs. 1,000/-, whichever is higher.<br>
+ Over-limit Fee: 2% of the over-limit amount or Rs. 1,600/-, whichever is higher.<br>
+ Credit Cover Premium: Up to 0.85% of outstanding amount.<br>
+ Utility Bill Payment from Credit Card: Rs. 35/- per utility bill (below Rs. 5,000/- through Call, Direct Debit) OR Rs. 55/- per utility bill (above Rs. 5,000/- through Call, Direct Debit).<br>
+ BTF Processing Fee: Rs. 600/- or 2.5% of transaction amount, whichever is higher.<br>
+Shapes Fee: Rs. 2,200/- + FED (10 Free visits in a month on Premier signature debit card and Premier Platinum credit card , 6 visits free on 30,000/ spending and 12 visits free on 60,000/- spending in a month on signature debit card and platinum credit card.).
+</b></td></tr>
+	<tr><td><b><u>CDM CASH DEPOSIT PROCESS:</u><br></b></td></tr>
+<tr><td><b>Cash Deposit into Bank Alfalah Account:</b><br>
+1. Select Deposit to Alfalah� from the main screen.<br>
+2. Enter CNIC and provide thumb impression for biometric verification.<br>
+3. Enter Bank Alfalah Account number and Mobile number.<br>
+4. Validate account details. <br>
+5. Deposit cash into the machine and verify cash count on screen and press deposit.<br>
+6. Collect receipt on successful transaction.<br>
+</td></tr>
+<tr><td><b>Cash Deposit into Other Bank Account:</b><br>
+1. Select Deposit to Alfalah’ from the main screen.<br>
+2. Enter CNIC and provide thumb impression for biometric verification.<br>
+3. Select desired bank from the given list.<br>
+4. Enter Bank Alfalah Account number and Mobile number.<br>
+5. Validate account details.<br>
+6. Deposit cash into the machine and verify cash count on screen and press deposit.<br>
+7. Collect receipt on successful transaction.
+</td></tr>
+
+<tr><td><b>Bank Alfalah Cash Deposit Machine - Charges:</b><br>
+Dear Customer, if you deposit amount to Bank Alfalah account then charges will not apply.<br><br>
+
+If you deposit amount to other bank account then below mentioned charges will apply accordingly:<br>
+Other Bank Accounts Up to Rs. 10,000	PKR 100 + 16% FED<br>
+Other Bank Accounts Rs. 10,001 to 100,000	PKR 150 + 16% FED<br>
+Other Bank Accounts Rs. 100,001 to 250,000	PKR 300 + 16% FED<br>
+Other Bank Accounts Rs. 250,001 to 500,000	PKR 500 + 16% FED<br>
+Other Bank Accounts Rs. 500,001 and above	PKR 1,000 + 16% FED or 0.1%, whichever is higher
+
+
+</td></tr>
+
+
+</table>
+</main>
+
+<footer>
+    <script>
+        // Theme Switcher Logic
+        const savedTheme = localStorage.getItem('theme');
+        if (savedTheme === 'dark') {
+            document.body.classList.add('dark-mode');
+        }
+
+        const themeToggleButton = document.getElementById('theme-toggle');
+        themeToggleButton.addEventListener('click', () => {
+            document.body.classList.toggle('dark-mode');
+            if (document.body.classList.contains('dark-mode')) {
+                localStorage.setItem('theme', 'dark');
+            } else {
+                localStorage.setItem('theme', 'light');
+            }
+        });
+
+        // Time Function
+        setInterval(myTimer, 1000);
+        function myTimer() {
+            const d = new Date();
+            document.getElementById("demo").innerHTML = d.toLocaleTimeString();
+        }
+
+        // Copy to Clipboard Function
+        function copy_to_clipboard(elm_id) {
+            const text = document.getElementById(elm_id).innerText;
+            navigator.clipboard.writeText(text);
+        }
+    </script>
+  </footer>
+
+<script src="js/discoCursor.js"></script>
+
+</body>
+</html>
+
+

@@ -1,0 +1,632 @@
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Help File Web Version</title>
+    <link rel="icon" type="image/x-icon" href="webicon.jfif">
+<link rel="stylesheet" href="Css/discoCursor.css">
+
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin: 0;
+            padding: 0;
+            background: linear-gradient(180deg, rgba(208, 230, 249, 0.75), rgba(163, 198, 224, 0.75));
+            background-size: cover;
+            background-position: center, center;
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+            color: #2c3e50;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: flex-start;
+            min-height: 100vh;
+            overflow-y: auto;
+            transition: background-color 0.3s ease;
+        }
+        body.dark-mode {
+            background: linear-gradient(180deg, rgba(139, 135, 135, 0.70), rgba(30, 30, 30, 0.70));
+            background-size: cover;
+            background-position: center, center;
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+            color: #ffffff;
+        }
+
+        body.dark-mode table {
+            background-color: transparent;
+        }
+
+        body.dark-mode th, td {
+            background-color: rgba(59, 59, 59, 0.85);
+            color: #ecf0f1;
+            border-color: #555;
+        }
+
+        body.dark-mode tr:hover {
+            background-color: #2c3e50;
+        }
+
+        body.dark-mode main {
+            background-color: rgba(35, 35, 37, 0.80);
+        }
+
+        body.dark-mode nav a {
+            background-color: #2c3e50;
+        }
+
+        body.dark-mode nav a:hover {
+            background-color: #34495e;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 20px;
+            transition: transform 0.3s;
+        }
+
+        th, td {
+            border: 1px solid #bdc3c7;
+            padding: 15px;
+            text-align: left;
+            background-color: rgba(255, 255, 255, 0.85);
+            border-radius: 5px;
+            transition: background-color 0.3s, transform 0.3s;
+        }
+
+        tr {
+            transition: transform 0.3s, background-color 0.3s, box-shadow 0.3s;
+        }
+
+        tr:hover {
+            background-color: #f2f2f2;
+            transform: scale(1.05);
+            box-shadow: 0 4px 20px rgba(52, 152, 219, 0.7);
+        }
+
+        main {
+            width: 90%;
+            max-width: 1200px;
+            margin: 20px auto;
+            background-color: rgba(236, 240, 241, 0.85);
+            border-radius: 15px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.5);
+            padding: 20px;
+            animation: fadeIn 1.5s ease;
+        }
+
+        header {
+            background: linear-gradient(135deg, #005289, #6dd5ed);
+            color: #ffffff;
+            width: 100%;
+            padding: 0px;
+            text-align: center;
+            box-shadow: 0 25px 50px rgba(0, 0, 0, 0.5);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            transition: background 0.3s ease;
+        }
+
+        nav {
+            margin: 15px 0;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+
+        nav a {
+            background-color: #163449;
+            color: white;
+            padding: 10px 20px;
+            margin: 5px;
+            text-decoration: none;
+            border-radius: 5px;
+            box-shadow: 0 4px 10px rgba(52, 152, 219, 0.3);
+            transition: all 0.6s ease;
+            position: relative;
+            overflow: hidden;
+        }
+
+        nav a:hover {
+            background-color: #2980b9;
+            transform: translateY(-3px);
+        }
+
+        .time {
+            font-size: 16px;
+            margin-top: 10px;
+            color: #white;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+
+        .button {
+            background-color: rgb(64, 171, 158, 0.0);
+            border-radius: 33px;
+            border: none;
+            color: black;
+            padding: 4px 10px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 12px;
+            margin: 4px 2px;
+            cursor: pointer;
+            -webkit-transition-duration: 0.4s;
+            transition-duration: 0.5s;
+        }
+
+        .button1:hover {
+            background-color: #005289;
+            box-shadow: 20px 12px 16px 18px rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);
+        }
+
+        footer {
+            margin: 20px 0;
+            text-align: center;
+            font-size: 12px;
+            color: #34495e;
+        }
+
+        #theme-toggle {
+            background-color: #2980b9;
+            color: white;
+            border: none;
+            padding: 10px;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        #theme-toggle:hover {
+            background-color: #1f6f8b;
+        }
+
+        .category-header {
+            background: linear-gradient(135deg, #005289, #6dd5ed);
+            color: white;
+            padding: 10px 15px;
+            border-radius: 5px;
+            margin-top: 20px;
+            margin-bottom: 10px;
+            font-weight: bold;
+            font-size: 16px;
+        }
+
+        pre {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            white-space: pre-wrap;
+            overflow-wrap: break-word;
+            color: #34495e;
+            background-color: #ecf0f1;
+            padding: 10px;
+            border-radius: 5px;
+            margin: 5px 0;
+        }
+    </style>
+    <style type="text/css">
+        a.nounderline {text-decoration: none; }
+    </style>
+
+</head>
+
+<body onload="startTime()">
+  <header>
+<h1>Help File Web Version</h1>
+    <nav>
+<a href="2CannedBasic.htm" target="_self">Canned Basic</a>
+        <a href="2WhatsAppBOT.htm" target="_self">WhatsApp BOT</a>
+        <a href="2internetbanking.htm" target="_self">New Alfa App</a>
+        <a href="2linkscanned.htm" target="_self">Links Canned</a>
+        <a href="2orbitscanned.htm" target="_self">Orbits Canned</a>
+        <a href="2Walletcanned.htm" target="_self">Wallet Canned</a>
+        <a href="2cannedmemo.htm" target="_self">Canned Memo</a>
+        <a href="2leadoffering.htm" target="_self">Lead Offering</a>
+        <a href="2socialmediaresponses.htm" target="_self" style="background-color:#00a4ff; color:white;">Social Media Responses</a>
+        <a href="2othercanned.htm" target="_self"><img style="width:30px; height:25px;" src="bulb.gif"></a>
+    </nav>
+    <button id="theme-toggle" style="position: absolute; top: 20px; right: 20px; padding: 10px;">Switch Theme</button>
+
+    <div class="time" id="demo">TIME</div>
+   </header>
+
+<main>
+
+<div class="category-header">General Responses</div>
+<table>
+<tr><td><button onclick="copy_to_clipboard('sm1')" class="button button1"><img style="width:30px; height:25px;" src="copyiconn.jfif"></button></td><td><pre id="sm1">Hello, thank you for getting in touch. How may we help you?</pre></td></tr>
+<tr><td><button onclick="copy_to_clipboard('sm2')" class="button button1"><img style="width:30px; height:25px;" src="copyiconn.jfif"></button></td><td><pre id="sm2">Walaikum Assalam. Thank you for getting in touch. How may we help you?</pre></td></tr>
+<tr><td><button onclick="copy_to_clipboard('sm3')" class="button button1"><img style="width:30px; height:25px;" src="copyiconn.jfif"></button></td><td><pre id="sm3">Hello, thank you for getting in touch. Kindly share your proposal at contactus@bankalfalah.com</pre></td></tr>
+<tr><td><button onclick="copy_to_clipboard('sm4')" class="button button1"><img style="width:30px; height:25px;" src="copyiconn.jfif"></button></td><td><pre id="sm4">Hello, thank you for getting in touch. Please share your query with us via inbox, so that we can assist you accordingly.</pre></td></tr>
+<tr><td><button onclick="copy_to_clipboard('sm5')" class="button button1"><img style="width:30px; height:25px;" src="copyiconn.jfif"></button></td><td><pre id="sm5">Thank You for your interest, you will be contacted if you are shortlisted. Please stay tuned to our page for all latest updates.</pre></td></tr>
+<tr><td><button onclick="copy_to_clipboard('sm6')" class="button button1"><img style="width:30px; height:25px;" src="copyiconn.jfif"></button></td><td><pre id="sm6">Dear customer as per our telephonic conversation your issue has been escalated to relevant team for urgent resolution. Your patience in this regard is much appreciated.</pre></td></tr>
+<tr><td><button onclick="copy_to_clipboard('sm7')" class="button button1"><img style="width:30px; height:25px;" src="copyiconn.jfif"></button></td><td><pre id="sm7">Dear Customer we have tried to contact you multiple times on your provided number, but unfortunately contact was not established. Please confirm your availability via inbox, so we can assist you accordingly.</pre></td></tr>
+<tr><td><button onclick="copy_to_clipboard('sm8')" class="button button1"><img style="width:30px; height:25px;" src="copyiconn.jfif"></button></td><td><pre id="sm8">Dear Customer, your suggestion is extremely valuable to us, and we will forward it to the appropriate team for consideration.</pre></td></tr>
+<tr><td><button onclick="copy_to_clipboard('sm9')" class="button button1"><img style="width:30px; height:25px;" src="copyiconn.jfif"></button></td><td><pre id="sm9">Muaziz Sarif, Bank Alfalah se raabta karne ka shukriya. Ap ki suggestion hamare liye intehai keemti hai or hm ise concern department ko forward karenge consideration k liye.</pre></td></tr>
+</table>
+
+<div class="category-header">Credit Card Eligibility</div>
+<table>
+<tr><td><button onclick="copy_to_clipboard('sm10')" class="button button1"><img style="width:30px; height:25px;" src="copyiconn.jfif"></button></td><td><pre id="sm10">Hello, thank you for getting in touch. Please note only Bank Alfalah credit card holders are eligible to purchase products on installment. To get the most up-to-date information on pricing, available services and bookings, please contact the Bank Alfalah helpline at 021-111-225-111.</pre></td></tr>
+</table>
+
+<div class="category-header">Job Seekers</div>
+<table>
+<tr><td><button onclick="copy_to_clipboard('sm11')" class="button button1"><img style="width:30px; height:25px;" src="copyiconn.jfif"></button></td><td><pre id="sm11">Hello,
+
+We appreciate your interest in Bank Alfalah. We kindly invite you to explore our career portal for the latest job openings at Bank Alfalah, as we are an equal opportunity employer. Please note that only shortlisted candidates will be contacted by the Bank Alfalah HR team. For current openings, please visit the link given below.
+https://www.bankalfalah.com/careers/career-opportunities</pre></td></tr>
+</table>
+
+<div class="category-header">Schedule of Charges</div>
+<table>
+<tr><td><button onclick="copy_to_clipboard('sm12')" class="button button1"><img style="width:30px; height:25px;" src="copyiconn.jfif"></button></td><td><pre id="sm12">Hello, thank you for getting in touch. Kindly visit the mentioned link in order to get information of Bank Alfalah's Debit card charges https://www.bankalfalah.com/digital-banking/schedule-of-charges/
+</pre></td></tr>
+</table>
+
+<div class="category-header">Mera Ghar (Islamic)</div>
+<table>
+<tr><td><button onclick="copy_to_clipboard('sm13')" class="button button1"><img style="width:30px; height:25px;" src="copyiconn.jfif"></button></td><td><pre id="sm13">Hello, thank you for reaching out to us. Please visit the below-mentioned link to apply or to get complete information regarding Bank Alfalah Islamic Home Finance - Mera Ghar Mera Ashiana.
+https://www.bankalfalah.com/islamic/home-musharakah/mera-ghar-mera-ashiana/</pre></td></tr>
+</table>
+
+<div class="category-header">Mera Ghar (Conventional)</div>
+<table>
+<tr><td><button onclick="copy_to_clipboard('sm14')" class="button button1"><img style="width:30px; height:25px;" src="copyiconn.jfif"></button></td><td><pre id="sm14">Hello, thank you for reaching out to us. Please visit the below-mentioned link to apply or to get complete information regarding Bank Alfalah Home Loan - Mera Ghar Mera Ashiana.
+https://www.bankalfalah.com/personal-banking/loans/mera-ghar-mera-ashiana/</pre></td></tr>
+</table>
+
+<div class="category-header">Roshan Apni Car (Conventional)</div>
+<table>
+<tr><td><button onclick="copy_to_clipboard('sm15')" class="button button1"><img style="width:30px; height:25px;" src="copyiconn.jfif"></button></td><td><pre id="sm15">Hello, thank you for getting in touch. Kindly visit the mentioned link in order apply and to get information of RDA – Roshan Apni Car : https://www.bankalfalah.com/roshan-apni-car/
+</pre></td></tr>
+</table>
+
+<div class="category-header">Roshan Apni Car (Islamic)</div>
+<table>
+<tr><td><button onclick="copy_to_clipboard('sm16')" class="button button1"><img style="width:30px; height:25px;" src="copyiconn.jfif"></button></td><td><pre id="sm16">Hello, thank you for getting in touch. Kindly visit the mentioned link in order apply and to get information of RDA – Roshan Apni Car(Islamic):
+https://www.bankalfalah.com/islamic/personal-banking/bank-alfalah-islamic-roshan-apni-car/
+</pre></td></tr>
+</table>
+
+<div class="category-header">Discount</div>
+<table>
+<tr><td><button onclick="copy_to_clipboard('sm17')" class="button button1"><img style="width:30px; height:25px;" src="copyiconn.jfif"></button></td><td><pre id="sm17">Hello, thank you for getting in touch. Kindly visit the mentioned link in order to get information of Bank Alfalah Discounts and Privileges: https://www.bankalfalah.com/conventional/discounts-privileges/
+</pre></td></tr>
+</table>
+
+<div class="category-header">Shapes</div>
+<table>
+<tr><td><button onclick="copy_to_clipboard('sm18')" class="button button1"><img style="width:30px; height:25px;" src="copyiconn.jfif"></button></td><td><pre id="sm18">Hello, thank you for getting in touch. Kindly visit the mentioned link in order to get information of Shapes
+https://www.bankalfalah.com/personal-banking/cards/privileges-discounts/shapes/
+</pre></td></tr>
+</table>
+
+<div class="category-header">Credit Card</div>
+<table>
+<tr><td><button onclick="copy_to_clipboard('sm19')" class="button button1"><img style="width:30px; height:25px;" src="copyiconn.jfif"></button></td><td><pre id="sm19">Hello, thank you for getting in touch. Kindly visit the mentioned link in order to apply and to get information about credit card.
+https://www.bankalfalah.com/personal-banking/credit-cards/
+</pre></td></tr>
+</table>
+
+<div class="category-header">Amex Card</div>
+<table>
+<tr><td><button onclick="copy_to_clipboard('sm20')" class="button button1"><img style="width:30px; height:25px;" src="copyiconn.jfif"></button></td><td><pre id="sm20">Hello, thank you for getting in touch. Kindly visit the mentioned link in order to get information and to apply Bank Alfalah American Express Credit Card:
+https://www.bankalfalah.com/personal-banking/credit-cards/american-express-gold-credit-card
+</pre></td></tr>
+</table>
+
+<div class="category-header">MasterCard Optimus Credit Card</div>
+<table>
+<tr><td><button onclick="copy_to_clipboard('sm21')" class="button button1"><img style="width:30px; height:25px;" src="copyiconn.jfif"></button></td><td><pre id="sm21">Hello, thank you for getting in touch. Kindly visit the mentioned link in order to get information and to apply Bank Alfalah MasterCard Optimus Credit Card: https://www.bankalfalah.com/personal-banking/credit-cards/mastercard-optimus-credit-card
+</pre></td></tr>
+</table>
+
+<div class="category-header">Annual Fee Reversal</div>
+<table>
+<tr><td><button onclick="copy_to_clipboard('sm22')" class="button button1"><img style="width:30px; height:25px;" src="copyiconn.jfif"></button></td><td><pre id="sm22">Hello, thank you for getting in touch. Kindly visit the mentioned link in order to get information about credit card Annual Fee Spend Reversal Criteria.
+https://www.bankalfalah.com/credit-cards/bank-alfalah-credit-cards-annual-fee-spend-reversal-criteria/
+</pre></td></tr>
+</table>
+
+<div class="category-header">ORBITS</div>
+<table>
+<tr><td><button onclick="copy_to_clipboard('sm23')" class="button button1"><img style="width:30px; height:25px;" src="copyiconn.jfif"></button></td><td><pre id="sm23">Hello, thank you for getting in touch. Kindly visit the mentioned link in order to get information about orbit.
+https://www.bankalfalah.com/digital-banking/earn-orbit-rewards/ .
+</pre></td></tr>
+</table>
+
+<div class="category-header">Auto Loan</div>
+<table>
+<tr><td><button onclick="copy_to_clipboard('sm24')" class="button button1"><img style="width:30px; height:25px;" src="copyiconn.jfif"></button></td><td><pre id="sm24">Hello, thank you for getting in touch. Kindly visit the mentioned link in order to apply and get information of Bank Alfalah Auto Loan:
+https://www.bankalfalah.com/personal-banking/loans/auto-loan/ .
+and click on the below-mentioned 'Calculator Link' to view the estimated installment plans regarding Bank Alfalah Auto Loan: https://www.bankalfalah.com/personal-banking/loans/auto-loan/</pre></td></tr>
+</table>
+
+<div class="category-header">Pehchan Home Loan</div>
+<table>
+<tr><td><button onclick="copy_to_clipboard('sm25')" class="button button1"><img style="width:30px; height:25px;" src="copyiconn.jfif"></button></td><td><pre id="sm25">Hello, thank you for getting in touch. This special home finance facility is exclusively for female Pehchaan Account Holders for more details you can contact us in DM and to apply kindly visit Bank Alfalah Home Loan: http://www.bankalfalah.com/personal-banking/loans/alfalah-home-finance/
+</pre></td></tr>
+</table>
+
+<div class="category-header">For KIA CARS</div>
+<table>
+<tr><td><button onclick="copy_to_clipboard('sm26')" class="button button1"><img style="width:30px; height:25px;" src="copyiconn.jfif"></button></td><td><pre id="sm26">Hello, thank you for getting in touch. Bank Alfalah, in collaboration with KIA, brings you flexible rental plans on the Kia Picanto and Stonic. Don't miss out on this limited time offer!
+Terms & Conditions apply.
+For bookings and further details, visit your nearest dealership or check our website https://bit.ly/42wVoXh
+Please go through the below link in order to apply or to get the details Bank Alfalah Islamic Auto Finance.
+https://www.bankalfalah.com/islamic-banking/consumer-banking/alfalah-islamic-auto-finance/
+
+</pre></td></tr>
+</table>
+
+<div class="category-header">Career/Job</div>
+<table>
+<tr><td><button onclick="copy_to_clipboard('sm27')" class="button button1"><img style="width:30px; height:25px;" src="copyiconn.jfif"></button></td><td><pre id="sm27">Hello, thank you for getting in touch. Kindly visit the mentioned link in order to apply and get information regarding Bank Alfalah Career Opportunities.
+https://www.bankalfalah.com/careers/ .
+</pre></td></tr>
+</table>
+
+<div class="category-header">Career/Job (Urdu)</div>
+<table>
+<tr><td><button onclick="copy_to_clipboard('sm28')" class="button button1"><img style="width:30px; height:25px;" src="copyiconn.jfif"></button></td><td><pre id="sm28">Muaziz Saarif, Bank Alfalah Raabta karne ke liye shukriya. Job se related maloomat hasil karne ka liye ya job ka liye apply karne ka liye neechy diye gai link par visit karein.
+https://www.bankalfalah.com/careers/ .
+</pre></td></tr>
+</table>
+
+<div class="category-header">Account Opening</div>
+<table>
+<tr><td><button onclick="copy_to_clipboard('sm29')" class="button button1"><img style="width:30px; height:25px;" src="copyiconn.jfif"></button></td><td><pre id="sm29">Hello, thank you for getting in touch. Kindly visit the mentioned link in order to apply and get information regarding Bank Alfalah Account Opening:  rapid.bankalfalah.com/AlfalahRapidPROD/Home.aspx
+</pre></td></tr>
+</table>
+
+<div class="category-header">Credit Card Ultra Cashback</div>
+<table>
+<tr><td><button onclick="copy_to_clipboard('sm30')" class="button button1"><img style="width:30px; height:25px;" src="copyiconn.jfif"></button></td><td><pre id="sm30">Hello, thank you for getting in touch. Kindly visit the mentioned link in order to apply and get information regarding Bank Alfalah Ultra Cashback Card : https://www.bankalfalah.com/personal-banking/credit-cards/visa-ultra-cashback-card
+</pre></td></tr>
+</table>
+
+<div class="category-header">Techwiz Program</div>
+<table>
+<tr><td><button onclick="copy_to_clipboard('sm31')" class="button button1"><img style="width:30px; height:25px;" src="copyiconn.jfif"></button></td><td><pre id="sm31">Hello, thank you for your interest in the Bank Alfalah Techwiz Program—a golden opportunity for fresh graduates in Computer Science, Software Engineering, or IT to grow, learn, and rise through a structured career path. Apply now
+https://lnkd.in/g-bnzjY
+and take the first step towards a future full of growth! </pre></td></tr>
+</table>
+
+<div class="category-header">ALFA MALL</div>
+<table>
+<tr><td><button onclick="copy_to_clipboard('sm32')" class="button button1"><img style="width:30px; height:25px;" src="copyiconn.jfif"></button></td><td><pre id="sm32">Hello, thank you for getting in touch. Kindly visit the mentioned link in order to get complete information in this regard.
+http://www.bankalfalah.com/personal-banking/cards/instalment-products/ .
+For booking kindly contact helpline 021 111 225 111.
+</pre></td></tr>
+</table>
+
+<div class="category-header">ALFA MALL (Urdu)</div>
+<table>
+<tr><td><button onclick="copy_to_clipboard('sm33')" class="button button1"><img style="width:30px; height:25px;" src="copyiconn.jfif"></button></td><td><pre id="sm33">Hello, Bank Alfalah Raabta karne ke liye shukriya. Bara-e-meherbani note karein ke agar aap products installments par kharidna chahte hain to aap ke paas Bank Alfalah Credit Card hona zaroori hai. Bara-e-meherbani neeche diye gaye link par jaa kar Bank Alfalah SBS Installment Plans ki mukammal maloomat hasil karein.
+https://www.bankalfalah.com/personal-banking/cards/instalment-products
+Booking aur tafseelat ke liye, barah-e-karam 021 111 225 111 par call karein.</pre></td></tr>
+</table>
+
+<div class="category-header">Pehchaan Finance</div>
+<table>
+<tr><td><button onclick="copy_to_clipboard('sm34')" class="button button1"><img style="width:30px; height:25px;" src="copyiconn.jfif"></button></td><td><pre id="sm34">Hello, thank you for getting in touch. Kindly visit the mentioned link in order to apply and get information of Bank Alfalah Pehchaan Finance : https://www.bankalfalah.com/info/personal-banking/bankalfalah-pechaan-finance-loan/ and click on the below-mentioned 'Calculator Link' to view the estimated installment plans regarding Bank Alfalah : https://www.bankalfalah.com/info/personal-banking/alfalah-pehchaan-finance-calculator/</pre></td></tr>
+</table>
+
+<div class="category-header">Islamic Solar</div>
+<table>
+<tr><td><button onclick="copy_to_clipboard('sm35')" class="button button1"><img style="width:30px; height:25px;" src="copyiconn.jfif"></button></td><td><pre id="sm35">Hello, thank you for getting in touch. Kindly visit the mentioned link in order to apply and get information of Bank Alfalah Islamic Green Finance
+https://www.bankalfalah.com/islamic/consumer-banking/alfalah-islamic-green-finance/
+</pre></td></tr>
+</table>
+
+<div class="category-header">Home Musharakah</div>
+<table>
+<tr><td><button onclick="copy_to_clipboard('sm36')" class="button button1"><img style="width:30px; height:25px;" src="copyiconn.jfif"></button></td><td><pre id="sm36">Hello, thank you for getting in touch. Kindly visit the mentioned link in order to apply and get information Bank Alfalah Home Musharakah : https://www.bankalfalah.com/islamic/personal-banking/bank-alfalah-islamic-home-musharakah/
+</pre></td></tr>
+</table>
+
+<div class="category-header">Home Loan Conventional</div>
+<table>
+<tr><td><button onclick="copy_to_clipboard('sm37')" class="button button1"><img style="width:30px; height:25px;" src="copyiconn.jfif"></button></td><td><pre id="sm37">Hello, thank you for getting in touch. Kindly visit the mentioned link in order to apply and get information Bank Alfalah Home Loan: https://www.bankalfalah.com/personal-banking/loans/home-finance/ and click on the below-mentioned 'Calculator Link' to view the estimated installment plans regarding Bank Alfalah Home Loan: https://www.bankalfalah.com/personal-banking/loans/home-finance/</pre></td></tr>
+</table>
+
+<div class="category-header">Prime Minister's Youth Business</div>
+<table>
+<tr><td><button onclick="copy_to_clipboard('sm38')" class="button button1"><img style="width:30px; height:25px;" src="copyiconn.jfif"></button></td><td><pre id="sm38">Dear Customer, you can apply for Prime Minister's Youth Business Loan Scheme by visiting nearest Bank Alfalah branch, through below mentioned link, by calling at helpline or you can contact us in dm so we can arrange call back for you from relevant team. Our helpline number is 021/042 111 225 111.
+Simply fill the form at the following link/ address and submit: https://kamyabjawan.gov.pk/bankform/newapplicantform
+Please visit the mentioned link in order to get information about Prime Minister's Youth Business Loan Scheme (PMYB)
+https://www.bankalfalah.com/business-banking/sme-loans/prime-ministers-kamyab-jawan-youth-entrepreneurship-scheme/</pre></td></tr>
+</table>
+
+<div class="category-header">Roshan Apna Ghar Islamic</div>
+<table>
+<tr><td><button onclick="copy_to_clipboard('sm39')" class="button button1"><img style="width:30px; height:25px;" src="copyiconn.jfif"></button></td><td><pre id="sm39">Hello, thank you for getting in touch. Kindly visit the mentioned link in order to apply and get information of RDA – Roshan Apna Ghar : https://www.bankalfalah.com/islamic/personal-banking/bank-alfalah-islamic-roshan-apna-ghar/
+and click on the below-mentioned 'Calculator Link' to view the estimated installment plans regarding RDA – Roshan Apna Ghar : https://www.bankalfalah.com/islamic-banking/rda-roshan-apna-ghar-calculator/</pre></td></tr>
+</table>
+
+<div class="category-header">Islamic Auto Loan</div>
+<table>
+<tr><td><button onclick="copy_to_clipboard('sm40')" class="button button1"><img style="width:30px; height:25px;" src="copyiconn.jfif"></button></td><td><pre id="sm40">Hello, thank you for getting in touch. Kindly visit the mentioned link in order to apply and get information of Bank Alfalah Islamic Auto Finance
+https://www.bankalfalah.com/islamic-banking/bank-alfalah-islamic-auto-finance/
+and click on the below-mentioned 'Calculator Link' to view the estimated installment plans regarding Bank Alfalah Islamic Auto Finance:
+https://www.bankalfalah.com/islamic-banking/consumer-banking/alfalah-islamic-auto-finance-calculator</pre></td></tr>
+</table>
+
+<div class="category-header">Personal Loan</div>
+<table>
+<tr><td><button onclick="copy_to_clipboard('sm41')" class="button button1"><img style="width:30px; height:25px;" src="copyiconn.jfif"></button></td><td><pre id="sm41">Hello, thank you for getting in touch. Kindly visit the mentioned link in order to apply and get information of Bank Alfalah Personal Loan
+https://www.bankalfalah.com/personal-banking/loans/alfalah-personal-loan/ and click on the below-mentioned 'Calculator Link' to view the estimated installment plans regarding Bank Alfalah Personal Loan : https://www.bankalfalah.com/personal-banking/loans/alfalah-personal-loan/</pre></td></tr>
+</table>
+
+<div class="category-header">Job Related</div>
+<table>
+<tr><td><button onclick="copy_to_clipboard('sm42')" class="button button1"><img style="width:30px; height:25px;" src="copyiconn.jfif"></button></td><td><pre id="sm42">Thank You for your interest, you will be contacted if you are shortlisted.
+Thank you for contacting Bank Alfalah. Selected candidates will be contacted by our HR team.</pre></td></tr>
+</table>
+
+<div class="category-header">Issue Resolved</div>
+<table>
+<tr><td><button onclick="copy_to_clipboard('sm43')" class="button button1"><img style="width:30px; height:25px;" src="copyiconn.jfif"></button></td><td><pre id="sm43">Dear Customer, with reference to our discussion, your issue has been resolved.
+If you have any further concerns or you may require any assistance, please do not hesitate to contact us.
+</pre></td></tr>
+<tr><td><button onclick="copy_to_clipboard('sm44')" class="button button1"><img style="width:30px; height:25px;" src="copyiconn.jfif"></button></td><td><pre id="sm44">Muaziz sarif, hamari call par baat ke mutabiq, aap ka masla hal ho chuka hai. Agar aap ko aage bhi koi sawal ho ya koi assistance darkaar ho, to aap hum se kisi bhi waqt rabta kar sakte hain
+
+</pre></td></tr>
+</table>
+
+<div class="category-header">Credit Card Limit Enhancement</div>
+<table>
+<tr><td><button onclick="copy_to_clipboard('sm45')" class="button button1"><img style="width:30px; height:25px;" src="copyiconn.jfif"></button></td><td><pre id="sm45">Hello, thank you for getting in touch. Increase your Credit Line with ease and enjoy greater purchasing power, flexibility, and financial security! Simply text "CLI" to 8287 and unlock a higher credit limit today.
+
+Terms & Conditions Apply.</pre></td></tr>
+</table>
+
+<div class="category-header">Asking for Registered Contact Number</div>
+<table>
+<tr><td><button onclick="copy_to_clipboard('sm46')" class="button button1"><img style="width:30px; height:25px;" src="copyiconn.jfif"></button></td><td><pre id="sm46">Hello, we totally understand your frustration and sincerely apologize for the inconvenience caused. Please provide us your contact details via DM so we can sort this out for you.</pre></td></tr>
+<tr><td><button onclick="copy_to_clipboard('sm47')" class="button button1"><img style="width:30px; height:25px;" src="copyiconn.jfif"></button></td><td><pre id="sm47">Dear Customer, we apologize for the inconvenience that you are facing. Please share your registered mobile number via inbox/DM so that we can assist you accordingly.</pre></td></tr>
+<tr><td><button onclick="copy_to_clipboard('sm48')" class="button button1"><img style="width:30px; height:25px;" src="copyiconn.jfif"></button></td><td><pre id="sm48">Hi. We really do apologies for the inconvenience and understand your frustration. Please share your contact information via inbox so that we may look into the matter for you.</pre></td></tr>
+</table>
+
+<div class="category-header">On Follow up Complaint</div>
+<table>
+<tr><td><button onclick="copy_to_clipboard('sm49')" class="button button1"><img style="width:30px; height:25px;" src="copyiconn.jfif"></button></td><td><pre id="sm49">Dear customer, we sincerely apologize for the delay. We are following up on your complaint with our relevant teams and will make sure that the issue is sorted out as soon as possible.</pre></td></tr>
+<tr><td><button onclick="copy_to_clipboard('sm50')" class="button button1"><img style="width:30px; height:25px;" src="copyiconn.jfif"></button></td><td><pre id="sm50">Dear Customer, we apologize for the inconvenience you have experienced. we would like to inform you that your case has already been escalated to the relevant department for priority resolution. We are also in follow-up with the teams in this regard.</pre></td></tr>
+</table>
+
+<div class="category-header">Known Application Issue</div>
+<table>
+<tr><td><button onclick="copy_to_clipboard('sm51')" class="button button1"><img style="width:30px; height:25px;" src="copyiconn.jfif"></button></td><td><pre id="sm51">Dear Customer, we understand the hassle you must have gone through & sincerely apologize for the inconvenience. We are aware of the issue and have notified our technical teams to look into this at the earliest. Your patience would be highly appreciated.</pre></td></tr>
+</table>
+
+<div class="category-header">SBS & Alfa Mall Links</div>
+<table>
+<tr><td><button onclick="copy_to_clipboard('sm52')" class="button button1"><img style="width:30px; height:25px;" src="copyiconn.jfif"></button></td><td><pre id="sm52">SBS Link: https://www.bankalfalah.com/personal-banking/cards/instalment-products/step-by-step-instalment-plans
+
+Alfa Mall Link: https://alfamall.com/</pre></td></tr>
+</table>
+
+<div class="category-header">SBS Promotion (English)</div>
+<table>
+<tr><td><button onclick="copy_to_clipboard('sm53')" class="button button1"><img style="width:30px; height:25px;" src="copyiconn.jfif"></button></td><td><pre id="sm53">Hello, thank you for getting in touch. Please visit the below link in order to get the complete product details and installment schedule:
+https://www.bankalfalah.com/personal-banking/cards/instalment-products/step-by-step-instalment-plans.
+For product booking please call 021/042 111 225 111 or forward your request through our WhatsApp Channel or inbox us your details so we can assist you accordingly.</pre></td></tr>
+</table>
+
+<div class="category-header">SBS Promotion (Urdu)</div>
+<table>
+<tr><td><button onclick="copy_to_clipboard('sm54')" class="button button1"><img style="width:30px; height:25px;" src="copyiconn.jfif"></button></td><td><pre id="sm54">Muaziz Saarif, Bank Alfalah Raabta karne ke liye shukriya. Products se related information or installment plan jan'ne ke liye ap diye gaye link ko visit karsakte hain.
+https://www.bankalfalah.com/personal-banking/cards/instalment-products/step-by-step-instalment-plans.
+Mazeed product book krne k liye ap helpline (021 111 225 111) par raabta kar sakte hain, ya WhatsApp Banking istemal karte hue bhi request forward kar sakte hain ya aap hamain apni contact details inbox kar dijiye taa ke hum aap ko guide kar saken.</pre></td></tr>
+</table>
+
+<div class="category-header">Alfa Mall (English)</div>
+<table>
+<tr><td><button onclick="copy_to_clipboard('sm55')" class="button button1"><img style="width:30px; height:25px;" src="copyiconn.jfif"></button></td><td><pre id="sm55">Hello, thank you for reaching out to us. Please visit the below link in order to get complete product details and installment schedule:
+https://alfamall.com/
+For further details, you can inbox us, so we may assist you further in this regard.</pre></td></tr>
+</table>
+
+<div class="category-header">Alfa Mall (Urdu)</div>
+<table>
+<tr><td><button onclick="copy_to_clipboard('sm56')" class="button button1"><img style="width:30px; height:25px;" src="copyiconn.jfif"></button></td><td><pre id="sm56">Muaziz Saarif, Bank Alfalah Raabta karne ke liye shukriya. Product ki details or Installment se related information jan'ne ke liye ap diye gaye link ko visit karsakte hain.
+https://alfamall.com/
+Mazeed tafseelat k liye ap hm se inbox me rabta kr skte hain.</pre></td></tr>
+</table>
+
+<div class="category-header">Complaint & Suggestion</div>
+<table>
+<tr><td><button onclick="copy_to_clipboard('sm57')" class="button button1"><img style="width:30px; height:25px;" src="copyiconn.jfif"></button></td><td><pre id="sm57">Muaziz Sarif, Bank Alfalah se raabta karne ka shukriya. Ap apni complaint k hawale se details inbox me share kijiye ta k hm ap ko mukammal rehnumai faraham kr sken.</pre></td></tr>
+<tr><td><button onclick="copy_to_clipboard('sm58')" class="button button1"><img style="width:30px; height:25px;" src="copyiconn.jfif"></button></td><td><pre id="sm58">Dear Customer, please elaborate on your query via inbox so that we can assist you appropriately.</pre></td></tr>
+<tr><td><button onclick="copy_to_clipboard('sm59')" class="button button1"><img style="width:30px; height:25px;" src="copyiconn.jfif"></button></td><td><pre id="sm59">Dear Customer, your suggestion is extremely valuable to us, and we will forward it to the appropriate team for consideration.</pre></td></tr>
+<tr><td><button onclick="copy_to_clipboard('sm60')" class="button button1"><img style="width:30px; height:25px;" src="copyiconn.jfif"></button></td><td><pre id="sm60">Muaziz Sarif, Bank Alfalah se raabta karne ka shukriya. Ap ki suggestion hamare liye intehai keemti hai or hm ise concern department ko forward karenge consideration k liye.</pre></td></tr>
+</table>
+
+<div class="category-header">Positive Feedback</div>
+<table>
+<tr><td><button onclick="copy_to_clipboard('sm61')" class="button button1"><img style="width:30px; height:25px;" src="copyiconn.jfif"></button></td><td><pre id="sm61">Dear Customer, we are grateful for your kind words.</pre></td></tr>
+<tr><td><button onclick="copy_to_clipboard('sm62')" class="button button1"><img style="width:30px; height:25px;" src="copyiconn.jfif"></button></td><td><pre id="sm62">Dear Customer, your kind words are much appreciated.</pre></td></tr>
+<tr><td><button onclick="copy_to_clipboard('sm63')" class="button button1"><img style="width:30px; height:25px;" src="copyiconn.jfif"></button></td><td><pre id="sm63">Dear Customer, thank you for sharing your experience with us.</pre></td></tr>
+<tr><td><button onclick="copy_to_clipboard('sm64')" class="button button1"><img style="width:30px; height:25px;" src="copyiconn.jfif"></button></td><td><pre id="sm64">Dear Customer, we appreciate your feedback and are delighted to know you enjoyed our [product/service].</pre></td></tr>
+<tr><td><button onclick="copy_to_clipboard('sm65')" class="button button1"><img style="width:30px; height:25px;" src="copyiconn.jfif"></button></td><td><pre id="sm65">Dear Customer, thank you so much for taking the time to leave us feedback</pre></td></tr>
+</table>
+
+<div class="category-header">Negative Feedback</div>
+<table>
+<tr><td><button onclick="copy_to_clipboard('sm66')" class="button button1"><img style="width:30px; height:25px;" src="copyiconn.jfif"></button></td><td><pre id="sm66">Dear Customer, we are sorry to hear you had a frustrating experience, but we really appreciate you bringing this issue to our attention. Please share your registered mobile number via inbox/DM so that we can assist you accordingly.</pre></td></tr>
+<tr><td><button onclick="copy_to_clipboard('sm67')" class="button button1"><img style="width:30px; height:25px;" src="copyiconn.jfif"></button></td><td><pre id="sm67">Dear Customer, we would like to learn more about your incident. Please share your registered mobile number via inbox/DM so we can hear about your experience and take the proper next steps.</pre></td></tr>
+<tr><td><button onclick="copy_to_clipboard('sm68')" class="button button1"><img style="width:30px; height:25px;" src="copyiconn.jfif"></button></td><td><pre id="sm68">Hello, we totally understand your frustration and sincerely apologize for the inconvenience caused. Please provide us your contact details via DM so we can sort this out for you.</pre></td></tr>
+<tr><td><button onclick="copy_to_clipboard('sm69')" class="button button1"><img style="width:30px; height:25px;" src="copyiconn.jfif"></button></td><td><pre id="sm69">Dear Customer, we apologize for the inconvenience that you are facing. Please share your registered mobile number via inbox/DM so that we can assist you accordingly.</pre></td></tr>
+<tr><td><button onclick="copy_to_clipboard('sm70')" class="button button1"><img style="width:30px; height:25px;" src="copyiconn.jfif"></button></td><td><pre id="sm70">Hi. We really do apologies for the inconvenience and understand your frustration. Please share your contact information via inbox so that we may look into the matter for you.</pre></td></tr>
+</table>
+
+<div class="category-header">Standard Response For LinkedIn</div>
+<table>
+<tr><td><button onclick="copy_to_clipboard('sm71')" class="button button1"><img style="width:30px; height:25px;" src="copyiconn.jfif"></button></td><td><pre id="sm71">Dear Customer, We sincerely apologize for the inconvenience you have experienced. To assist you better, please inbox/DM us your active contact number on our official pages by using the below-mentioned links or you can also provide your contact details in comments as well. We will be happy to assist you.
+
+The links of our official pages are as follow:
+Bank Alfalah's Official Facebook Page: https://www.facebook.com/BankAlfalahOfficial
+Bank Alfalah's Official Instagram Page: https://www.instagram.com/bank_alfalah/?hl=en
+Bank Alfalah's Official Twitter Page: https://twitter.com/BankAlfalahPAK
+Please feel free to mention us in your post by tagging @Bank Alfalah Limited  and adding the hashtag #BankAlfalah</pre></td></tr>
+</table>
+
+<div class="category-header">Standard Response For Facebook</div>
+<table>
+<tr><td><button onclick="copy_to_clipboard('sm72')" class="button button1"><img style="width:30px; height:25px;" src="copyiconn.jfif"></button></td><td><pre id="sm72">Dear Customer, To assist you better, please inbox/DM us your active contact number so, I could engage Bank Alfalah's Social Media team for redressed of your complaint/query or you may also reach out to our official pages by using below-mentioned links or drop us a message via Inbox/DM for support, thanks.
+
+The links of our official pages are as follow:
+Bank Alfalah's Official Facebook Page: https://web.facebook.com/BankAlfalahOfficial
+Bank Alfalah's Official Instagram Page: https://www.instagram.com/bank_alfalah/?hl=en
+Bank Alfalah's Official Twitter Page: https://twitter.com/BankAlfalahPAK
+
+Please feel free to mention us in your post by tagging @Bank Alfalah and adding the hashtag #BankAlfalah</pre></td></tr>
+</table>
+
+</main>
+
+<footer>
+    <script>
+        // Theme Switcher Logic
+        const savedTheme = localStorage.getItem('theme');
+        if (savedTheme === 'dark') {
+            document.body.classList.add('dark-mode');
+        }
+
+        const themeToggleButton = document.getElementById('theme-toggle');
+        themeToggleButton.addEventListener('click', () => {
+            document.body.classList.toggle('dark-mode');
+            if (document.body.classList.contains('dark-mode')) {
+                localStorage.setItem('theme', 'dark');
+            } else {
+                localStorage.setItem('theme', 'light');
+            }
+        });
+
+        // Time Function
+        setInterval(myTimer, 1000);
+        function myTimer() {
+            const d = new Date();
+            document.getElementById("demo").innerHTML = d.toLocaleTimeString();
+        }
+
+        // Copy to Clipboard Function
+        function copy_to_clipboard(elm_id) {
+            const text = document.getElementById(elm_id).innerText;
+            navigator.clipboard.writeText(text);
+        }
+    </script>
+  </footer>
+
+<script src="js/discoCursor.js"></script>
+
+</body>
+</html>
+
+

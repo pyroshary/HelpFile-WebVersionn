@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Chat Support HelpFile </title>
+    <link rel="icon" type="image/x-icon" href="webicon.jfif">
+    <link rel="stylesheet" href="Css/discoCursor.css">
+
+    <style>
+        /* General body styles */
+        body {
+            background: linear-gradient(rgba(208, 230, 249, 0.75), rgba(163, 198, 224, 0.75));
+            background-size: cover;
+            background-position: center, center;
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+            font-family: 'Arial', sans-serif;
+            color: #333;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            overflow: hidden;
+        }
+
+        /* Container styling */
+        .container {
+            background-color: rgba(255, 255, 255, 0.9);
+            border-radius: 15px;
+            padding: 40px;
+            box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+            max-width: 600px;
+            width: 100%;
+            text-align: center;
+            transform: scale(1);
+            transition: transform 0.5s ease-in-out;
+        }
+
+        /* Hover effect for container */
+        .container:hover {
+            transform: scale(1.05);
+        }
+
+        /* Header styles */
+        h1 {
+            font-size: 3em;
+            font-weight: 700;
+            color: #2c3e50;
+            margin-bottom: 20px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        /* Underline animation for header */
+        h1 u {
+            text-decoration: none;
+            position: relative;
+        }
+
+        h1 u::after {
+            content: "";
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            height: 3px;
+            background-color: #e74c3c;
+            animation: underlineAnimation 0.6s ease-in-out infinite alternate;
+        }
+
+        @keyframes underlineAnimation {
+            0% { width: 0; }
+            100% { width: 100%; }
+        }
+
+        /* Button styles */
+        a {
+            background-color: #e74c3c;
+            color: white;
+            padding: 18px 30px;
+            text-align: center;
+            text-decoration: none;
+            border-radius: 30px;
+            transition: all 0.3s ease;
+            font-size: 20px;
+            font-weight: 600;
+            display: inline-block;
+            margin-top: 30px;
+        }
+
+        /* Button hover effect */
+        a:hover, a:active {
+            background-color: #c0392b;
+            transform: translateY(-5px);
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+        }
+
+        /* Small screen responsiveness */
+        @media screen and (max-width: 768px) {
+            h1 {
+                font-size: 2.2em;
+            }
+
+            a {
+                padding: 15px 25px;
+                font-size: 18px;
+            }
+
+            .container {
+                padding: 25px;
+                max-width: 90%;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <h1><u>WELCOME</u><br>Help File Web Version</h1>
+        <a href="Greeting.html" target="_self"><b>Next</b></a>
+    </div>
+
+    <script src="js/discoCursor.js"></script>
+</body>
+</html>
+

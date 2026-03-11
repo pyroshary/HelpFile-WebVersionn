@@ -1,0 +1,678 @@
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Help File Web Version</title>
+    <link rel="icon" type="image/x-icon" href="webicon.jfif">
+<link rel="stylesheet" href="Css/discoCursor.css">
+
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin: 0;
+            padding: 0;
+            background: linear-gradient(180deg, #d0e6f9, #a3c6e0);
+            color: #2c3e50;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: flex-start;
+            min-height: 100vh;
+            overflow-y: auto;
+            transition: background-color 0.3s ease;
+        }
+        body.dark-mode {
+            background: linear-gradient(180deg, #8b8787, #1e1e1e);
+            color: #ffffff;
+         
+   table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 20px;
+            transition: transform 0.3s;
+        }
+
+        body.dark-mode table {
+            background-color: transparent;
+        }
+
+        body.dark-mode th, td {
+            background-color: rgba(59, 59, 59, 0.85);
+            color: #ecf0f1;
+            border-color: #555;
+        }
+
+        body.dark-mode tr:hover {
+            background-color: #2c3e50;
+        }
+
+        body.dark-mode main {
+            background-color: rgba(35, 35, 37, 0.80);
+        }
+
+        body.dark-mode nav a {
+            background-color: #2c3e50;
+        }
+
+        body.dark-mode nav a:hover {
+            background-color: #34495e;
+        }
+ div.clearfix {
+            background-color: ;
+
+        }
+
+
+
+
+
+        th, td {
+            border: 1px solid #bdc3c7;
+            padding: 15px;
+            text-align: left;
+            background-color: #3b3b3b;
+            border-radius: 5px;
+            transition: background-color 0.3s, transform 0.3s;
+        }
+
+        tr {
+            transition: transform 0.3s, background-color 0.3s, box-shadow 0.3s;
+        }
+
+        tr:hover {
+            background-color: #f2f2f2;
+            transform: scale(1.05);
+            box-shadow: 0 4px 20px rgba(52, 152, 219, 0.7);
+        }
+
+ main {
+            width: 90%;
+            max-width: 1200px;
+            margin: 20px auto;
+            background-color: #232325;
+            border-radius: 15px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.5);
+            padding: 20px;
+            animation: fadeIn 1.5s ease;
+        }
+
+ header {
+            background: linear-gradient(135deg, #892d00, #194c6e);
+            color: #ffffff;
+            width: 100%;
+            padding: 0px;
+            text-align: center;
+            box-shadow: 0 25px 50px rgba(0, 0, 0, 0.5);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            transition: background 0.3s ease;
+        }
+pre {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            white-space: pre-wrap; /* Allows wrapping */
+            overflow-wrap: break-word; /* Breaks long words */
+            color: white; /* Change the text color */
+            background-color: #007bff4f; /* Change the background color */
+            padding: 10px; /* Add padding for better readability */
+            border-radius: 5px; /* Add border radius for style */
+        }
+
+.tab button {
+  display: block;
+  background-color: #ffffff00;
+  color: white;
+  padding: 10px 14px;
+  width: 100%;
+  border: none;
+  outline: none;
+  text-align: left;
+  cursor: pointer;
+  font-size: 15px;
+}
+.tab button:hover {
+  background-color: #2b0000;
+}
+/* Create an active/current "tab button" class */
+.tab button.active {
+  background-color: #007bff4f;
+}
+
+
+
+   }
+
+      
+
+
+        header {
+            background: linear-gradient(135deg, #005289, #6dd5ed);
+            color: #ffffff;
+            width: 100%;
+            padding: 0px;
+            text-align: center;
+            box-shadow: 0 25px 50px rgba(0, 0, 0, 0.5);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            transition: background 0.3s ease;
+        }
+
+        nav {
+            margin: 15px 0;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+
+        nav a {
+            background-color: #163449;
+            color: white;
+            padding: 10px 20px;
+            margin: 5px;
+            text-decoration: none;
+            border-radius: 5px;
+            box-shadow: 0 4px 10px rgba(52, 152, 219, 0.3);
+            transition: all 0.6s ease;
+            position: relative;
+            overflow: hidden;
+        }
+
+        nav a:hover {
+            background-color: #2980b9;
+            transform: translateY(-3px);
+        }
+
+        nav a::after {
+            content: '';
+            position: absolute;
+            background: rgba(255, 255, 255, 0.1);
+            height: 100%;
+            width: 100%;
+            left: 0;
+            top: 100%;
+            transition: all 0.3s ease;
+            z-index: 0;
+        }
+
+        nav a:hover::after {
+            top: 0;
+        }
+
+        .time {
+            font-size: 16px;
+            margin-top: 10px;
+            color: #white;
+        }
+
+        main {
+            width: 90%;
+            height: 70%;
+            max-width: 1200px;
+            margin: 20px auto;
+            background-color: #ecf0f1;
+            border-radius: 15px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.5);
+            padding: 20px;
+            animation: fadeIn 1.5s ease;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 20px;
+            transition: transform 0.3s;
+        }
+
+        th, td {
+            border: 1px solid #bdc3c7;
+            padding: 15px;
+            text-align: left;
+            background-color: #ffffff;
+            border-radius: 5px;
+            transition: background-color 0.3s, transform 0.3s;
+        }
+
+        tr {
+            transition: transform 0.3s, background-color 0.3s, box-shadow 0.3s;
+        }
+
+        tr:hover {
+            background-color: #f2f2f2;
+            transform: scale(1.05);
+            box-shadow: 0 4px 20px rgba(52, 152, 219, 0.7);
+        }
+
+        .button {
+            background-color: rgb(64, 171, 158, 0.0);
+            border-radius: 33px;
+            border: none;
+            color: black;
+            padding: 4px 10px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 12px;
+            margin: 4px 2px;
+            cursor: pointer;
+            -webkit-transition-duration: 0.4s; /* Safari */
+            transition-duration: 0.5s;
+        }
+
+        .button1:hover {
+            background-color: #005289;
+            box-shadow: 20px 12px 16px 18px rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);
+        }
+
+        pre {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            white-space: pre-wrap; /* Allows wrapping */
+            overflow-wrap: break-word; /* Breaks long words */
+            color: #34495e; /* Change the text color */
+            background-color: #ecf0f1; /* Change the background color */
+            padding: 10px; /* Add padding for better readability */
+            border-radius: 5px; /* Add border radius for style */
+        }
+
+        footer {
+            margin: 20px 0;
+            text-align: center;
+            font-size: 12px;
+            color: #34495e;
+        }
+
+#theme-toggle {
+            background-color: #2980b9;
+            color: white;
+            border: none;
+            padding: 10px;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        #theme-toggle:hover {
+            background-color: #1f6f8b;
+        }
+        /* Mobile Responsiveness */
+        @media screen and (max-width: 768px) {
+            body { font-size: 14px; }
+            main { width: 95%; padding: 10px; margin: 10px auto; }
+            nav { flex-direction: column; align-items: center; }
+            nav a { width: 80%; text-align: center; margin: 5px 0; }
+            table { font-size: 13px; }
+            th, td { padding: 8px; font-size: 12px; }
+            .button { padding: 2px 8px; }
+            .button img { width: 24px !important; height: 20px !important; }
+            pre { font-size: 12px; padding: 8px; overflow-x: auto; }
+            header h1 { font-size: 18px; padding: 10px; }
+        }
+        
+        @media screen and (max-width: 480px) {
+            body { font-size: 12px; }
+            main { width: 98%; padding: 5px; }
+            nav a { width: 90%; font-size: 14px; }
+            th, td { padding: 6px; font-size: 11px; }
+            .button img { width: 20px !important; height: 18px !important; }
+            pre { font-size: 11px; padding: 5px; }
+            header h1 { font-size: 16px; }
+        }
+    </style>
+
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+
+
+
+/* Style the tab */
+.tab {
+  float: left;
+  background-color: #f1f1f1;
+  width: 300px;
+  height: 70px;
+}
+
+/* Style the buttons inside the tab */
+.tab button {
+  display: block;
+  background-color: #ffffff00;
+  color: black;
+  padding: 10px 14px;
+  width: 100%;
+  border: none;
+  outline: none;
+  text-align: left;
+  cursor: pointer;
+  font-size: 15px;
+}
+
+/* Change background color of buttons on hover */
+.tab button:hover {
+  background-color: #ffffff00;
+}
+
+/* Create an active/current "tab button" class */
+.tab button.active {
+  background-color: #007bff4f;
+}
+
+/* Style the tab content */
+.tabcontent {
+  float: left;
+  padding: 0px 12px;
+  width: 70%;
+  border-left: none;
+  height: 400px;
+  display: none;
+}
+
+/* Clear floats after the tab */
+.clearfix::after {
+  content: "";
+  clear: both;
+  display: table;
+}
+</style>
+    <style type="text/css">
+        a.nounderline {text-decoration: none; }
+    </style>
+
+
+</head>
+
+<body onload="startTime()">
+  <header>
+<h1>Help File Web Version</h1>
+        <nav>
+<a href="2CannedBasic.htm" target="_self";>Canned Basic</a>
+<a href="2WhatsAppBOT.htm" target="_self";>WhatsApp BOT</a>
+<a href="2internetbanking.htm" target="_self";>New Alfa App</a>
+<a href="2linkscanned.htm" target="_self";>Links Canned</a>
+<a href="2orbitscanned.htm" target="_self";>Orbits Canned</a>
+<a href="2Walletcanned.htm" target="_self";>Wallet Canned</a>
+<a href="2cannedmemo.htm" target="_self"">Canned Memo</a>
+<a href="2leadoffering.htm" target="_self" style="background-color:#00a4ff; color:white";>Lead Offering</a>
+<a href="2socialmediaresponses.htm" target="_self">Social Media Responses</a>
+<a href="2othercanned.htm" target="_self";><img style="width:30px; height:25px;" src="bulb.gif"></a>
+</nav>
+    <button id="theme-toggle" style="position: absolute; top: 20px; right: 20px; padding: 10px;">Switch Theme</button>
+
+<div class="time" id="demo">TIME</div>
+   </header> 
+<main><div class="tab" style="background-color:#ffffff00;">
+  <button class="tablinks" onmouseover="openCity(event, '1')">Auto Loan and Home Loan Lead (English)</button>
+  <button class="tablinks" onmouseover="openCity(event, '2')">Auto Loan and Home Loan Lead (Urdu)</button>
+  <button class="tablinks" onmouseover="openCity(event, '7')">Personal Loan Lead (English)</button>
+  <button class="tablinks" onmouseover="openCity(event, '8')">Personal Loan Lead (Urdu)</button>
+  <button class="tablinks" onmouseover="openCity(event, '3')">Credit Card Lead Format: (English)</button>
+  <button class="tablinks" onmouseover="openCity(event, '4')">Credit Card Lead Format: (Urdu)</button>
+  <button class="tablinks" onmouseover="openCity(event, '5')">RAG/RAC Lead Format: (English)</button>
+  <button class="tablinks" onmouseover="openCity(event, '6')">RAG/RAC Lead Format: (Urdu)</button>
+  <button class="tablinks" onmouseover="openCity(event, '9')">POS Machine Lead (English)</button>
+  <button class="tablinks" onmouseover="openCity(event, '10')">POS Machine Lead (Urdu)</button>
+</div>
+
+<!-- 1. Auto & Home Loan (English) -->
+<div id="1" class="tabcontent" style="color:midnightblue;">
+<hr><pre id="loan1" style="font-size:15px; font-family: bahnschrift;">Dear Customer, if you are interested to apply, then please share your mentioned details so same can be forwarded to our relevant team.
+Customer Name
+Contact Number
+Email Address
+City
+Loan Type
+CNIC#
+Salaried/Self Employed
+Salary/Income
+Age
+
+Then our concern team will contact you within 24 to 48 hours.
+
+And you can also apply through nearest branch , WhatsApp ,Rapid, Website, Alfa or through our helpline 021/042 111 225 111.
+Kindly note that you have to visit conventional branch if you want to apply for conventional auto or home loan and Islamic branch if you want to apply for Islamic auto or home loan.
+
+<b>LINKS</b> for <b>conventional loan</b> : https://rapid.bankalfalah.com/AlfalahRapidPROD/Loan_Selection.aspx and for <b>Islamic loan</b> https://rapid.bankalfalah.com/AlfalahRapidPROD/Index.aspx
+</pre><button onclick="copy_to_clipboard('loan1')" class="button button1" data-sound="sound1"><img style="width:30px; height:25px;" src="copyiconn.jfif"></button><hr>
+<pre id="loan11" style="font-size:15px; font-family: bahnschrift;">Dear Customer, thank you for providing details our sales representative will contact you within 24 to 48 working hours.</pre><button onclick="copy_to_clipboard('loan11')" class="button button1" data-sound="sound1"><img style="width:30px; height:25px;" src="copyiconn.jfif"></button><hr>
+</div>
+
+<!-- 2. Auto & Home Loan (Urdu) -->
+<div id="2" class="tabcontent" style="color:midnightblue;">
+<hr><pre id="loan2" style="font-size:15px; font-family: bahnschrift;">Muaziz Saarif, agar ap interested hen to apni details share karden phir hum apki details relevant team ko forward kardenge.
+Customer Name
+Contact Number
+Email Address
+City
+Loan Type
+CNIC#
+Salaried/Self Employed
+Salary/Income
+Age
+
+Phir apko hamari team ki janib se 24 to 48 hours men contact karliya jaega.
+
+Iske ilawa ap nearest branch , Rapid, WhatsApp , Website aur hamari helpline 021/042 111 225 111 ke zariye bhi apply kar sakte hen.
+Moaziz Sarif Agar ap conventional loan apply karne chatein to apko conventional branch jana hota aur agar ap Islamic loan apply karna chatein to apko Islamic branch jana hoga.
+<b>LINKS</b> conventional loan liye : https://rapid.bankalfalah.com/AlfalahRapidPROD/Loan_Selection.aspx aur Islamic loan ka liye https://rapid.bankalfalah.com/AlfalahRapidPROD/Index.aspx
+
+</pre><button onclick="copy_to_clipboard('loan2')" class="button button1" data-sound="sound1"><img style="width:30px; height:25px;" src="copyiconn.jfif"></button><hr>
+<pre id="loan22" style="font-size:15px; font-family: bahnschrift;">Muaziz Saarif, thank you ab apko hamare department ki janib se 24 to 48 working hours men contact karke guide kiya jaega.</pre><button onclick="copy_to_clipboard('loan22')" class="button button1" data-sound="sound1"><img style="width:30px; height:25px;" src="copyiconn.jfif"></button><hr>
+</div>
+<!-- 7. Personal Loan Lead (English) -->
+<div id="7" class="tabcontent" style="color:midnightblue;">
+<hr><pre id="loan7" style="font-size:15px; font-family: bahnschrift;">Dear Customer, if you are interested to apply personal loan, then please share your mentioned details so same can be forwarded to our relevant team.
+Customer Name
+Contact Number
+Email Address
+City
+Loan Type
+CNIC#
+Salaried/Self Employed
+Salary/Income
+Age
+
+Then our concern team will contact you within 24 to 48 hours.
+
+And you can also apply through the nearest Conventional branch , WhatsApp ,Rapid, Website, Alfa or through our helpline 021/042 111 225 111.
+
+<b>LINKS</b> : https://rapid.bankalfalah.com/AlfalahRapidPROD/Loan_Selection.aspx
+</pre><button onclick="copy_to_clipboard('loan7')" class="button button1" data-sound="sound1"><img style="width:30px; height:25px;" src="copyicon.png"></button><hr>
+<pre id="loan77" style="font-size:15px; font-family: bahnschrift;">Dear Customer, thank you for providing details our sales representative will contact you within 24 to 48 working hours.</pre><button onclick="copy_to_clipboard('loan77')" class="button button1" data-sound="sound1"><img style="width:30px; height:25px;" src="copyiconn.jfif"></button><hr>
+</div>
+
+<!-- 8. Personal Loan Lead (Urdu) -->
+<div id="8" class="tabcontent" style="color:midnightblue;">
+<hr><pre id="loan8" style="font-size:15px; font-family: bahnschrift;">Muaziz Saarif, agar ap personal loan apply karne chatein hen to apni details share karden phir hum apki details relevant team ko forward kardenge.
+Customer Name
+Contact Number
+Email Address
+City
+Loan Type
+CNIC#
+Salaried/Self Employed
+Salary/Income
+Age
+
+Phir apko hamari team ki janib se 24 to 48 hours men contact karliya jaega.
+
+Iske ilawa ap qareebi Conventional branch , Rapid, WhatsApp , Website aur hamari helpline 021/042 111 225 111 ke zariye bhi apply kar sakte hen.
+<b>LINKS</b> : https://rapid.bankalfalah.com/AlfalahRapidPROD/Loan_Selection.aspx
+</pre><button onclick="copy_to_clipboard('loan8')" class="button button1" data-sound="sound1"><img style="width:30px; height:25px;" src="copyiconn.jfif"></button><hr>
+<pre id="loan88" style="font-size:15px; font-family: bahnschrift;">Muaziz Saarif, thank you ab apko hamare department ki janib se 24 to 48 working hours men contact karke guide kiya jaega.</pre><button onclick="copy_to_clipboard('loan88')" class="button button1" data-sound="sound1"><img style="width:30px; height:25px;" src="copyiconn.jfif"></button><hr>
+</div>
+
+<div id="3" class="tabcontent" style="color:midnightblue";>
+<hr><pre id="loan3" style="font-size:15px; font-family: bahnschrift;">Dear Customer, if you are interested to apply, then please share your mentioned details so same can be forwarded to our relevant team.
+Customer Name
+Contact Number
+Email Address
+City
+CNIC#
+Salaried/Self Employed
+Salary/Income
+Age
+
+Then our concern team will contact you within 24 to 48 hours.
+
+Or you can also apply for bank alfalah credit card through conventional branch, internet banking, Alfa App, helpline 021/042 111 225 111, Rapid, and through the given links in this regard.
+https://www.bankalfalah.com/personal-banking/credit-cards/ and 
+https://rapid.bankalfalah.com/AlfalahRapidPROD/Credit_Card.aspx?cardId=1</pre><button onclick="copy_to_clipboard('loan3')" class="button button1"  data-sound="sound1"><img style="width:30px; height:25px;" src="copyiconn.jfif"></button><hr>
+<pre id="loan33" style="font-size:15px; font-family: bahnschrift;">Dear Customer, thank you for providing details our sales representative will contact you within 24 to 48 working hours.</pre><button onclick="copy_to_clipboard('loan33')" class="button button1"  data-sound="sound1"><img style="width:30px; height:25px;" src="copyiconn.jfif"></button><hr>
+</div>
+
+<div id="4" class="tabcontent" style="color:midnightblue";>
+<hr><pre id="loan4" style="font-size:15px; font-family: bahnschrift;">Muaziz Saarif, agar ap interested hen to apni details share karden phir hum apki details relevant team ko forward kardenge.
+Customer Name
+Contact Number
+Email Address
+City
+CNIC#
+Salaried/Self Employed
+Salary/Income
+Age
+
+Phir apko hamari team ki janib se 24 to 48 hours men contact karliya jaega.
+
+Iske ilawa ap credit card ke liye apply kar sakte hen conventional branch ke zariye internet banking ke zariye hamari helpline 021/042 111 225 111 ke zariye, Alfa App Rapid ka zariye ya phir diye gae link ke zariye bhi apply kar sakte hen.
+https://www.bankalfalah.com/personal-banking/credit-cards/
+https://rapid.bankalfalah.com/AlfalahRapidPROD/Credit_Card.aspx?cardId=1.</pre><button onclick="copy_to_clipboard('loan4')" class="button button1"  data-sound="sound1"><img style="width:30px; height:25px;" src="copyiconn.jfif"></button><hr>
+<pre id="loan44" style="font-size:15px; font-family: bahnschrift;">Muaziz Saarif, thank you ab apko hamare department ki janib se 24 to 48 working hours men contact karke guide kiya jaega.</pre><button onclick="copy_to_clipboard('loan44')" class="button button1"  data-sound="sound1"><img style="width:30px; height:25px;" src="copyiconn.jfif"></button><hr>
+</div>
+
+<div id="5" class="tabcontent" style="color:midnightblue";>
+<hr><pre id="loan5" style="font-size:15px; font-family: bahnschrift;">Dear Customer, if you are interested to apply, then please share your mentioned details so same can be forwarded to our relevant team.
+Customer Name
+Contact Number
+Email Address
+Loan Type (Roshan Apni Car / Apna Ghar)
+Salaried/Self Employed
+Salary/Income
+County
+City to avail in Pakistan
+RDA Account Number
+CNIC#(if available)
+
+Then our concern team will contact you within 24 to 48 hours.</pre><button onclick="copy_to_clipboard('loan5')" class="button button1"  data-sound="sound1"><img style="width:30px; height:25px;" src="copyiconn.jfif"></button><hr>
+<pre id="loan55" style="font-size:15px; font-family: bahnschrift;">Dear Customer, thank you for providing details our sales representative will contact you within 24 to 48 working hours.</pre><button onclick="copy_to_clipboard('loan55')" class="button button1"  data-sound="sound1"><img style="width:30px; height:25px;" src="copyiconn.jfif"></button><hr>
+</div>
+
+<div id="6" class="tabcontent" style="color:midnightblue";>
+<hr><pre id="loan6" style="font-size:15px; font-family: bahnschrift;">Muaziz Saarif, agar ap interested hen to apni details share karden phir hum apki details relevant team ko forward kardenge.
+Customer Name
+Contact Number
+Email Address
+Loan Type (Roshan Apni Car / Apna Ghar)
+Salaried/Self Employed
+Salary/Income
+County
+City to avail in Pakistan
+RDA Account Number
+CNIC#(if available)
+
+Phir apko hamari team ki janib se 24 to 48 hours men contact karliya jaega.</pre><button onclick="copy_to_clipboard('loan6')" class="button button1"  data-sound="sound1"><img style="width:30px; height:25px;" src="copyiconn.jfif"></button><hr>
+<pre id="loan66" style="font-size:15px; font-family: bahnschrift;">Muaziz Saarif,</b> thank you ab apko hamare department ki janib se 24 to 48 working hours men contact karke guide kiya jaega.</pre><button onclick="copy_to_clipboard('loan66')" class="button button1"  data-sound="sound1"><img style="width:30px; height:25px;" src="copyiconn.jfif"></button><hr>
+</div>
+
+<!-- 9. POS Machine Lead (English) -->
+<div id="9" class="tabcontent" style="color:midnightblue;">
+<hr><pre id="pos9" style="font-size:15px; font-family: bahnschrift;">Dear Customer, kindly share the below details so we may arrange call back from POS machine team, they will guide you further in this regard.
+NAME: 
+CNIC: 
+CONTACT: 
+CITY: 
+SHOP NAME: 
+</pre><button onclick="copy_to_clipboard('pos9')" class="button button1" data-sound="sound1"><img style="width:30px; height:25px;" src="copyiconn.jfif"></button><hr>
+<pre id="pos99" style="font-size:15px; font-family: bahnschrift;">Dear Customer, thank you for providing details our sales representative will contact you within 24 to 48 working hours.</pre><button onclick="copy_to_clipboard('pos99')" class="button button1" data-sound="sound1"><img style="width:30px; height:25px;" src="copyiconn.jfif"></button><hr>
+</div>
+
+<!-- 10. POS Machine Lead (Urdu) -->
+<div id="10" class="tabcontent" style="color:midnightblue;">
+<hr><pre id="pos10" style="font-size:15px; font-family: bahnschrift;">Muaziz Saarif, kindly neeche di gayi details share karden taake hum POS machine team ki janib se apko call back arrange karwa saken, woh apko mazeed guide karenge.
+NAME: 
+CNIC: 
+CONTACT: 
+CITY: 
+SHOP NAME: 
+</pre><button onclick="copy_to_clipboard('pos10')" class="button button1" data-sound="sound1"><img style="width:30px; height:25px;" src="copyiconn.jfif"></button><hr>
+<pre id="pos100" style="font-size:15px; font-family: bahnschrift;">Muaziz Saarif, thank you ab apko hamare department ki janib se 24 to 48 working hours men contact karke guide kiya jaega.</pre><button onclick="copy_to_clipboard('pos100')" class="button button1" data-sound="sound1"><img style="width:30px; height:25px;" src="copyiconn.jfif"></button><hr>
+</div>
+
+
+
+<div class="clearfix"></div>
+</main>
+<script>
+function openCity(evt, cityName) {
+  var i, tabcontent, tablinks;
+  tabcontent = document.getElementsByClassName("tabcontent");
+  for (i = 0; i < tabcontent.length; i++) {
+    tabcontent[i].style.display = "none";
+  }
+  tablinks = document.getElementsByClassName("tablinks");
+  for (i = 0; i < tablinks.length; i++) {
+    tablinks[i].className = tablinks[i].className.replace(" active", "");
+  }
+  document.getElementById(cityName).style.display = "block";
+  evt.currentTarget.className += " active";
+}
+</script>
+
+<audio id="sound1" src="\\10.144.66.128\Syed Danish\HELP FILE WEB VERSION\calc.mp3" preload="auto"></audio>
+		
+
+    <script>
+        const buttons = document.querySelectorAll('.button1');
+
+        buttons.forEach(button => {
+            button.addEventListener('click', () => {
+                const soundId = button.getAttribute('data-sound');
+                const sound = document.getElementById(soundId);
+                sound.currentTime = 0; // Reset sound to start
+                sound.play(); // Play the sound
+            });
+        });
+    </script>
+<footer>
+    <script>
+        // Theme Switcher Logic
+        const savedTheme = localStorage.getItem('theme');
+        if (savedTheme === 'dark') {
+            document.body.classList.add('dark-mode');
+        }
+
+        const themeToggleButton = document.getElementById('theme-toggle');
+        themeToggleButton.addEventListener('click', () => {
+            document.body.classList.toggle('dark-mode');
+            if (document.body.classList.contains('dark-mode')) {
+                localStorage.setItem('theme', 'dark');
+            } else {
+                localStorage.setItem('theme', 'light');
+            }
+        });
+
+        // Time Function
+        setInterval(myTimer, 1000);
+        function myTimer() {
+            const d = new Date();
+            document.getElementById("demo").innerHTML = d.toLocaleTimeString();
+        }
+
+        // Copy to Clipboard Function
+        function copy_to_clipboard(elm_id) {
+            const text = document.getElementById(elm_id).innerText;
+            navigator.clipboard.writeText(text);
+        }
+    </script>
+  </footer>
+
+<script src="js/discoCursor.js"></script>
+
+
+
+</body>
+</html>
+
+

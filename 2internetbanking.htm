@@ -1,0 +1,915 @@
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Help File Web Version</title>
+    <link rel="icon" type="image/x-icon" href="webicon.jfif">
+<link rel="stylesheet" href="Css/discoCursor.css">
+
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin: 0;
+            padding: 0;
+            background: linear-gradient(180deg, #d0e6f9, #a3c6e0);
+            color: #2c3e50;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: flex-start;
+            min-height: 100vh;
+            overflow-y: auto;
+            transition: background-color 0.3s ease;
+        }
+
+        body.dark-mode {
+            background: linear-gradient(180deg, #8b8787, #1e1e1e);
+            color: #ffffff;
+         
+   table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 20px;
+            transition: transform 0.3s;
+        }
+
+        body.dark-mode table {
+            background-color: transparent;
+        }
+
+        body.dark-mode th, td {
+            background-color: rgba(59, 59, 59, 0.85);
+            color: #ecf0f1;
+            border-color: #555;
+        }
+
+        body.dark-mode tr:hover {
+            background-color: #2c3e50;
+        }
+
+        body.dark-mode main {
+            background-color: rgba(35, 35, 37, 0.80);
+        }
+
+        body.dark-mode nav a {
+            background-color: #2c3e50;
+        }
+
+        body.dark-mode nav a:hover {
+            background-color: #34495e;
+        }
+ div.clearfix {
+            background-color: ;
+
+        }
+
+
+
+
+
+        th, td {
+            border: 1px solid #bdc3c7;
+            padding: 15px;
+            text-align: left;
+            background-color: #3b3b3b;
+            border-radius: 5px;
+            transition: background-color 0.3s, transform 0.3s;
+        }
+
+        tr {
+            transition: transform 0.3s, background-color 0.3s, box-shadow 0.3s;
+        }
+
+        tr:hover {
+            background-color: #f2f2f2;
+            transform: scale(1.05);
+            box-shadow: 0 4px 20px rgba(52, 152, 219, 0.7);
+        }
+
+ main {
+            width: 90%;
+            max-width: 1200px;
+            margin: 20px auto;
+            background-color: #232325;
+            border-radius: 15px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.5);
+            padding: 20px;
+            animation: fadeIn 1.5s ease;
+        }
+
+ header {
+            background: linear-gradient(135deg, #892d00, #194c6e);
+            color: #ffffff;
+            width: 100%;
+            padding: 0px;
+            text-align: center;
+            box-shadow: 0 25px 50px rgba(0, 0, 0, 0.5);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            transition: background 0.3s ease;
+        }
+pre {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            white-space: pre-wrap; /* Allows wrapping */
+            overflow-wrap: break-word; /* Breaks long words */
+            color: white; /* Change the text color */
+            background-color: #007bff4f; /* Change the background color */
+            padding: 10px; /* Add padding for better readability */
+            border-radius: 5px; /* Add border radius for style */
+        }
+
+.tab button {
+  display: block;
+  background-color: #ffffff00;
+  color: white;
+  padding: 10px 14px;
+  width: 100%;
+  border: none;
+  outline: none;
+  text-align: left;
+  cursor: pointer;
+  font-size: 15px;
+}
+.tab button:hover {
+  background-color: #2b0000;
+}
+/* Create an active/current "tab button" class */
+.tab button.active {
+  background-color: #007bff4f;
+}
+
+
+
+   }
+
+
+
+        header {
+            background: linear-gradient(135deg, #005289, #6dd5ed);
+            color: #ffffff;
+            width: 100%;
+            padding: 0px;
+            text-align: center;
+            box-shadow: 0 25px 50px rgba(0, 0, 0, 0.5);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            transition: background 0.3s ease;
+        }
+
+        nav {
+            margin: 15px 0;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+
+        nav a {
+            background-color: #163449;
+            color: white;
+            padding: 10px 20px;
+            margin: 5px;
+            text-decoration: none;
+            border-radius: 5px;
+            box-shadow: 0 4px 10px rgba(52, 152, 219, 0.3);
+            transition: all 0.6s ease;
+            position: relative;
+            overflow: hidden;
+        }
+
+        nav a:hover {
+            background-color: #2980b9;
+            transform: translateY(-3px);
+        }
+
+        nav a::after {
+            content: '';
+            position: absolute;
+            background: rgba(255, 255, 255, 0.1);
+            height: 100%;
+            width: 100%;
+            left: 0;
+            top: 100%;
+            transition: all 0.3s ease;
+            z-index: 0;
+        }
+
+        nav a:hover::after {
+            top: 0;
+        }
+
+        .time {
+            font-size: 16px;
+            margin-top: 10px;
+            color: #white;
+        }
+
+        main {
+            width: 90%;
+            height: 350%;
+            max-width: 1200px;
+            margin: 20px auto;
+            background-color: #ecf0f1;
+            border-radius: 15px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.5);
+            padding: 20px;
+            animation: fadeIn 1.5s ease;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 20px;
+            transition: transform 0.3s;
+        }
+
+        th, td {
+            border: 1px solid #bdc3c7;
+            padding: 15px;
+            text-align: left;
+            background-color: #ffffff;
+            border-radius: 5px;
+            transition: background-color 0.3s, transform 0.3s;
+        }
+
+        tr {
+            transition: transform 0.3s, background-color 0.3s, box-shadow 0.3s;
+        }
+
+        tr:hover {
+            background-color: #f2f2f2;
+            transform: scale(1.05);
+            box-shadow: 0 4px 20px rgba(52, 152, 219, 0.7);
+        }
+
+        .button {
+            background-color: rgb(64, 171, 158, 0.0);
+            border-radius: 33px;
+            border: none;
+            color: black;
+            padding: 4px 10px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 12px;
+            margin: 4px 2px;
+            cursor: pointer;
+            -webkit-transition-duration: 0.4s; /* Safari */
+            transition-duration: 0.5s;
+        }
+
+        .button1:hover {
+            background-color: #005289;
+            box-shadow: 20px 12px 16px 18px rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);
+        }
+
+       pre {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            white-space: pre-wrap; /* Allows wrapping */
+            overflow-wrap: break-word; /* Breaks long words */
+            color: black; /* Change the text color */
+            background-color: #0c609426; /* Change the background color */
+            padding: 10px; /* Add padding for better readability */
+            border-radius: 5px; /* Add border radius for style */
+        }
+
+
+        footer {
+            margin: 20px 0;
+            text-align: center;
+            font-size: 12px;
+            color: #34495e;
+        }
+
+#theme-toggle {
+            background-color: #2980b9;
+            color: white;
+            border: none;
+            padding: 10px;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        #theme-toggle:hover {
+            background-color: #1f6f8b;
+        }
+        /* Mobile Responsiveness */
+        @media screen and (max-width: 768px) {
+            body { font-size: 14px; }
+            main { width: 95%; padding: 10px; margin: 10px auto; }
+            nav { flex-direction: column; align-items: center; }
+            nav a { width: 80%; text-align: center; margin: 5px 0; }
+            table { font-size: 13px; }
+            th, td { padding: 8px; font-size: 12px; }
+            .button { padding: 2px 8px; }
+            .button img { width: 24px !important; height: 20px !important; }
+            pre { font-size: 12px; padding: 8px; overflow-x: auto; }
+            header h1 { font-size: 18px; padding: 10px; }
+        }
+        
+        @media screen and (max-width: 480px) {
+            body { font-size: 12px; }
+            main { width: 98%; padding: 5px; }
+            nav a { width: 90%; font-size: 14px; }
+            th, td { padding: 6px; font-size: 11px; }
+            .button img { width: 20px !important; height: 18px !important; }
+            pre { font-size: 11px; padding: 5px; }
+            header h1 { font-size: 16px; }
+        }
+    </style>
+
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+
+
+
+/* Style the tab */
+.tab {
+  float: left;
+  background-color: #f1f1f1;
+  width: 300px;
+  height: 70px;
+}
+
+/* Style the buttons inside the tab */
+.tab button {
+  display: block;
+  background-color: #ffffff00;
+  color: black;
+  padding: 10px 14px;
+  width: 100%;
+  border: none;
+  outline: none;
+  text-align: left;
+  cursor: pointer;
+  font-size: 15px;
+}
+
+/* Change background color of buttons on hover */
+.tab button:hover {
+  background-color: #ffffff00;
+}
+
+/* Create an active/current "tab button" class */
+.tab button.active {
+  background-color: #007bff4f;
+}
+
+/* Style the tab content */
+.tabcontent {
+  float: left;
+  padding: 0px 12px;
+  width: 70%;
+  border-left: none;
+  height: 400px;
+  display: none;
+}
+
+/* Clear floats after the tab */
+.clearfix::after {
+  content: "";
+  clear: both;
+  display: table;
+}
+</style>
+    <style type="text/css">
+        a.nounderline {text-decoration: none; }
+    </style>
+
+
+</head>
+
+<body onload="startTime()">
+  <header>
+<h1>Help File Web Version</h1>
+        <nav>
+<a href="2CannedBasic.htm" target="_self";>Canned Basic</a>
+<a href="2WhatsAppBOT.htm" target="_self";>WhatsApp BOT</a>
+<a href="2internetbanking.htm" target="_self" style="background-color:#00a4ff; color:white";>New Alfa App</a>
+<a href="2linkscanned.htm" target="_self";>Links Canned</a>
+<a href="2orbitscanned.htm" target="_self";>Orbits Canned</a>
+<a href="2Walletcanned.htm" target="_self";>Wallet Canned</a>
+<a href="2cannedmemo.htm" target="_self">Canned Memo</a>
+<a href="2leadoffering.htm" target="_self";>Lead Offering</a>
+<a href="2socialmediaresponses.htm" target="_self">Social Media Responses</a>
+<a href="2othercanned.htm" target="_self";><img style="width:30px; height:25px;" src="bulb.gif"></a>
+</nav>
+    <button id="theme-toggle" style="position: absolute; top: 20px; right: 20px; padding: 10px;">Switch Theme</button>
+
+<div class="time" id="demo">TIME</div>
+   </header> 
+<main>
+
+<div class="tab" style="background-color:#ffffff00";>
+  <button class="tablinks" onmouseover="openCity(event, 'ib')">IB Registration Process (English)</button>
+  <button class="tablinks" onmouseover="openCity(event, 'ibu')">IB Registration Process (Urdu)</button>
+  <button class="tablinks" onmouseover="openCity(event, 'alfaapp')">Alfa App Registration Process (English)</button>
+  <button class="tablinks" onmouseover="openCity(event, 'alfaappu')">Alfa App Registration Process (Urdu)</button>
+  <button class="tablinks" onmouseover="openCity(event, 'reset')">Recover Username (English)</button>
+  <button class="tablinks" onmouseover="openCity(event, 'resetu')">Recover Username (Urdu)</button>
+  <button class="tablinks" onmouseover="openCity(event, 'passe')">Password Reset (English)</button>
+  <button class="tablinks" onmouseover="openCity(event, 'passu')">Password Reset (Urdu)</button>
+  <button class="tablinks" onmouseover="openCity(event, 'devicee')">Credit Card Queries (Alfa App)</button>
+  <button class="tablinks" onmouseover="openCity(event, 'deviceu')">Debit Card Queries (Alfa App)</button>
+  <button class="tablinks" onmouseover="openCity(event, 'sm')">SIDE MENU</button>
+</div>
+
+<div id="ib" class="tabcontent" style="color:midnightblue";>
+<hr><pre id="ire" style="font-size:14px; font-family: bahnschrift;">Dear Customer, to subscribe to Bank Alfalah's internet banking services, follow these steps:
+
+- Visit the internet banking registration page at https://netbanking.bankalfalah.com/ib/TermsConditions.aspx .
+- Review the terms and conditions and select your desired option from Credit Card Customers, Debit Card Customers, or Account Holder Customers.
+- Complete the required information, including account number or card number, CNIC/SCNIC/NICOP, date of birth, registered mobile number, and security question.
+- Submit the form and confirm the registered email ID.
+- Visit the ATM/CDM machine to or Bank Alfalah branch for biometric verification.
+- Upon successful verification, an OTAC will be generated and sent to your registered email and mobile number.
+- Use the OTAC to log in to internet banking.
+</pre> 
+<hr><button onclick="copy_to_clipboard('ire')" class="button button1"  data-sound="sound1"><img style="width:30px; height:25px;" src="copyiconn.jfif"></button><hr>
+</div>
+
+<div id="ibu" class="tabcontent" style="color:midnightblue";>
+<hr><pre id="iru" style="font-size:14px; font-family: bahnschrift;">Muaziz Sarif, Bank Alfalah ki internet banking services subscribe karne ke liye ye steps follow karein:
+
+- Internet banking registration page par jaiye https://netbanking.bankalfalah.com/ib/TermsConditions.aspx
+- Terms and conditions ko parh kar aur Credit Card Customers, Debit Card Customers, ya Account Holder Customers se apni pasand ki option select karein.
+- Zaruri information jaisay account number ya card number, CNIC/SCNIC/NICOP, janam din, registered mobile number aur security question ko complete karein.
+- Form submit karein aur registered email ID ko confirm karein.
+- Bank Alfalah ke branch par biometric verification ke liye jaiye ya phir ATM/CDM machine sy bhi kar skty hain.
+- Agar verification successful ho gayi to OTAC generate hoga jo apki registered email aur mobile number par bheja jayega.
+- OTAC ko use kar ke internet banking mein log in karein.
+</pre> 
+<hr><button onclick="copy_to_clipboard('iru')" class="button button1"  data-sound="sound1"><img style="width:30px; height:25px;" src="copyiconn.jfif"></button><hr>
+</div>
+
+<div id="alfaapp" class="tabcontent" style="color:midnightblue";>
+<hr><pre id="re" style="font-size:14px; font-family: bahnschrift;">Dear Customer, please follow the below steps to register on Alfa application.
+
+1-Download the Alfa app from the Play store or App store through the links:
+For Android Users https://play.google.com/store/apps/details?id=com.base.bankalfalah&amp;hl=en
+For iPhone Users https://itunes.apple.com/pk/app/alfa/id1050684372?mt=8
+2-Click on Sign Up.
+3-Click on Register with Alfa.
+4-Enter CNIC/Passport Number (Then press Get started button).
+5-Verify details via OTP Code (Allow auto-fetch to read and input OTP).
+6-Set up your login credentials.
+7-Validate username and password strength (Then press Continue button).
+8-Then you will see screen of "Credentials set successfully".
+9-Complete biometric requirements.
+10-Set your login PIN after successfull biometric verification.
+11-You will have an option feature of "Enable Touch/Face ID" after setting Login PIN.
+12-Click on Finish Up button.
+13-Your all existing relationships will appear.
+14-Choose relationships to register with Alfa.
+15-Mark default account for Alfa.
+16-Choose daily transaction limit and accept terms and conditions then press Continue button.
+17-Successfully register on Alfa.
+18-You will be able to access Alfa app after a two hours of cool off period.
+
+Please note: In-app biometric verification will let you use the app and conduct transactions but only with a limit of PKR 250,000 per day.
+Branch biometric verification will allow the user to have the full Alfa experience on per day limit (selected package limit).
+</pre> 
+<hr><button onclick="copy_to_clipboard('re')" class="button button1"  data-sound="sound1"><img style="width:30px; height:25px;" src="copyiconn.jfif"></button><hr>
+</div>
+
+<div id="alfaappu" class="tabcontent" style="color:midnightblue";>
+<hr><pre id="ru" style="font-size:14px; font-family: bahnschrift;">Muaziz Sarif, Alfa app men register krne k liye kindly niche diye gae steps ko follow kijiye.
+
+1-Alfa app ko Play Store ya App Store se download karen is link:
+For Android Users https://play.google.com/store/apps/details?id=com.base.bankalfalah&amp;hl=en
+For iPhone Users https://itunes.apple.com/pk/app/alfa/id1050684372?mt=8
+2-Sign Up pe click karen.
+3-Register with Alfa pe click karen.
+4-CNIC/Passport Number enter karne ke bad Get started ke button pe click karen.
+5-Phir apke pas OTP receive hoga aur apko auto fetch option ko allow karna hoga apne phone men.
+6-Alfa app men OTP automatically enter hojaega (Registered SIM same phone men hona zaruri he).
+7-Apna username aur password set karen.
+8-Biometric Verification complete karen.
+9-Login PIN set karen.
+10-Ap feature enable kar sakte hen "Enable Touch/Face ID".
+11-Phir Finish Up Button pe click karen.
+12-Apki Bank Alfalah ke sath exisint relationships show hojaengi.
+13-Relationship select karen jiske zariye ap registration karna chah rahe hen.
+14-Default account mark karen.
+15-Daily transaction limit select karen phir terms and conditions accept karke Continue ka button press karen.
+16-Apke pas next screen show hojaegi "Registration successful!".
+17-Phir ap 2 hours ke Cool off period ke bad Alfa app use kar sakenge.
+  
+Please note: In-app biometric verification k bd ap 250,000/-PKR rozana ki bunyad pr transaction kr skte hain, agr apne selected package k mutabik full limit chahte hain to phir apko nearest branch men visit kr ke biometric verification karwani hogi.
+</pre> 
+<hr><button onclick="copy_to_clipboard('ru')" class="button button1"  data-sound="sound1"><img style="width:30px; height:25px;" src="copyiconn.jfif"></button><hr>
+</div>
+
+
+<div id="reset" class="tabcontent" style="color:midnightblue";>
+<hr><pre id="recoverusername" style="font-size:14px; font-family: bahnschrift;">Dear Customer, if you have forgot your username of Alfa application please follow the below steps to recover username.
+
+1-Click on More.
+2-Click on Login with credentials.
+3-Click on Can't sign in.
+4-Click on Get Username.
+5-Enter CNIC and Mobile Number.
+6-Click on Continue.
+7-Verify your OTP.
+
+You will receive Username through SMS and Email. 
+</pre>
+<hr><button onclick="copy_to_clipboard('recoverusername')" class="button button1"  data-sound="sound1"><img style="width:30px; height:25px;" src="copyiconn.jfif"></button><hr> 
+</div>
+
+<div id="resetu" class="tabcontent" style="color:midnightblue";>
+<hr><pre id="recoverusernameu" style="font-size:14px; font-family: bahnschrift;">Muaziz Sarif, agar ap apna username recover krna chahte hain to neechay diye gaye steps ko follow karein.
+
+1-Alfa app open karne ke bad agar ap login PIN ki screen pe hen to kindly "More" ke option pe click karen.
+2-Click karen Login with credentials pe.
+3-Can't sign in pe click karen.
+4-Get Username pe click karen.
+5-CNIC aur Mobile number enter karen.
+6-Continue pe click karen.
+7-OTP verify karen.
+
+Phir apke pas SMS aur Email ke zariye Username receive hojaega.
+</pre> 
+<hr><button onclick="copy_to_clipboard('recoverusernameu')" class="button button1"  data-sound="sound1"><img style="width:30px; height:25px;" src="copyiconn.jfif"></button><hr> 
+</div>
+
+<div id="passe" class="tabcontent" style="color:midnightblue";>
+<hr><pre id="passworde" style="font-size:14px; font-family: bahnschrift;">Dear Customer, If you do not remember your password then kindly follow the below given steps.
+
+1-Click on More.
+2-Click on Login with credentials.
+3-Click on Can't sign in.
+4-Click on Reset Password.
+5-Enter CNIC and Username.
+6-Click on Continue.
+7-Verify your OTP.
+
+You will receive temporary Password through SMS and Email.
+</pre> 
+<hr><button onclick="copy_to_clipboard('passworde')" class="button button1"  data-sound="sound1"><img style="width:30px; height:25px;" src="copyiconn.jfif"></button><hr> 
+</div>
+
+<div id="passu" class="tabcontent" style="color:midnightblue";>
+<hr><pre id="passwordu" style="font-size:14px; font-family: bahnschrift;">Muaziz Sarif, agar aap apna password bhool gae hain to kindly niche diye gaye steps ko follow kijiye.
+
+1-Alfa app open karne ke bad agar ap login PIN ki screen pe hen to kindly "More" ke option pe click karen.
+2-Click karen Login with credentials pe.
+3-Can't sign in pe click karen.
+4-Reset Password pe click karen.
+5-CNIC aur Username enter karen.
+6-Continue pe click karen.
+7-OTP verify karen.
+
+Phir apke pas SMS aur Email ke zariye temporary Password receive hojaega.
+</pre> 
+<hr><button onclick="copy_to_clipboard('passwordu')" class="button button1"  data-sound="sound1"><img style="width:30px; height:25px;" src="copyiconn.jfif"></button><hr> 
+</div>
+
+<div id="devicee" class="tabcontent" style="color:midnightblue";>
+<pre style="font-size:14px; font-family: bahnschrift;">
+<b><u>Credit Card Statement through Alfa app:</u></b>
+Dear Customer, you can generate credit card statement through Alfa app/Internet banking or by calling our helpline 021/042 111 225 111.
+Please check below given steps to check your last 10 approved transactions.
+And you can also generate your credit card statement through Alfa app.
+1-Login Alfa App.
+2-Click on Overview option.
+3-Click on "Go to card management" option on your Card.
+4-Click on see statement.
+5-Click on Get credit card statement via Email.
+</pre> 
+<hr>
+<pre style="font-size:14px; font-family: bahnschrift;">
+<b><u>Instant Credit Card:</u></b>
+Dear Customer, in order to apply instant credit card through Alfa app please follow the below steps:
+1-Login Alfa App.
+2-Click on Overview option.
+3-Click on "Go to card management" option on your Card.
+4-Scroll down and you will see option for "Apply for an additional card".
+5-Click on Apply instant credit card.
+</pre> 
+
+<hr><pre style="font-size:14px; font-family: bahnschrift;">
+<b><u>Card Limit:</u></b>
+Dear Customer, in order to check your credit card available limit through Alfa app please follow the below steps:
+1-Login Alfa App.
+2-Click on Overview option.
+3-Click on "Go to card management" option on your Card.
+4-Card Limit will show.
+</pre>
+<hr>
+<pre style="font-size:14px; font-family: bahnschrift;">
+<b><u>Total Outstanding:</u></b>
+Dear Customer, in order to check your credit card total outstanding amount through Alfa app please follow the below steps:
+1-Login Alfa App.
+2-Click on Overview option.
+3-Click on "Go to card management" option on your Card.
+4-Total outstanding amount will show.
+</pre> 
+<hr>
+<pre style="font-size:14px; font-family: bahnschrift;">
+<b><u>Change Credit Card PIN:</u></b>
+Dear Customer, in order to change your credit card pin through Alfa app please follow the below given steps:
+1-Login Alfa App.
+2-Click on Overview option.
+3-Click on "Go to card management" option on your Card.
+4-Scroll down and you will see Manage Card option   .
+5-Then you will be able to change your credit card PIN.
+</pre> 
+<hr>
+<pre style="font-size:14px; font-family: bahnschrift;">
+<b><u>E-commerce/Online Transaction:</u></b>
+Dear Customer, you can activate your credit card for online/international transactions through our Alfa app or by calling our 24/7 service helpline 021/042 111 225 111.
+In order to enable/disable your credit card online transactions through Alfa app please follow the below given steps:
+1-Login Alfa App.
+2-Click on Overview option.
+3-Click on "Go to card management" option on your Card.
+4-Scroll down and you will see Manage Card option   .
+5-Then enable E-commerce payments.
+</pre> 
+<hr>
+<pre style="font-size:14px; font-family: bahnschrift;">
+<b><u>Credit Card Blocking:</u></b>
+Dear Customer, in order to block your credit card through Alfa app please follow the below given steps:
+1-Login Alfa App.
+2-Click on Overview option.
+3-Click on "Go to card management" option on your Card.
+4-Scroll down and you will see Manage Card option   .
+5-Then you will be able to block your card temporary/permanent.
+</pre> 
+<hr>
+<pre style="font-size:14px; font-family: bahnschrift;">
+<b><u>COP Through Alfa App:</u></b>
+Dear Customer, please call our 24/7 service helpline 021/042 111 225 111 to forward request in this regard.
+Or you can also initiate the request of Credit on Phone facility (COP) through our Alfa app, please follow the below given steps:
+1-Login Alfa App.
+2-Click on Overview option.
+3-Click on "Go to card management" option on your Card.
+4-Scroll down and you will see Manage Card option.
+5-Click on credit card facility.
+6-Click on Credit on phone.
+7-Select amount and tenure.
+8-Check the installment details.
+9-Click on Proceed.
+</pre> 
+<hr>
+<pre style="font-size:14px; font-family: bahnschrift;">
+<b><u>BTF Through Alfa App:</u></b>
+Dear Customer, please call our 24/7 service helpline 021/042 111 225 111 to forward request in this regard.
+Or you can also initiate the request of Balance Transfer facility (BTF) through our Alfa app, please follow the below given steps:
+1-Login Alfa App.
+2-Click on Overview option.
+3-Click on "Go to card management" option on your Card.
+4-Scroll down and you will see Manage Card option.
+5-Click on credit card facility.
+6-Click on Balance transfer facility.
+7-Select amount and tenure.
+8-Check the installment details.
+9-Click on Proceed.
+</pre> 
+<hr>
+<pre style="font-size:14px; font-family: bahnschrift;">
+<b><u>SBS Through Alfa App:</u></b>
+Dear Customer, please call our 24/7 service helpline 021/042 111 225 111 to forward request in this regard.
+Or you can also initiate the request of SBS through our Alfa app, please follow the below given steps:
+1-Login Alfa App.
+2-Click on Overview option.
+3-Click on "Go to card management" option on your Card.
+4-Scroll down and you will see Manage Card option.
+5-Click on credit card facility.
+6-Click on SBS.
+7-Select amount and tenure.
+8-Check the installment details.
+9-Click on Proceed.
+</pre> 
+<hr>
+<pre style="font-size:14px; font-family: bahnschrift;">
+<b><u>COP/BTF/SBS request track through Alfa App:</u></b>
+Dear Customer, in order to track your COP / BTF / SBS Request through Alfa app please follow the below steps:
+1-Login Alfa App.
+2-Click on Overview option.
+3-Click on "Go to card management" option on your Card.
+4-Scroll down and you will see Manage Card option.
+5-Click on credit card facility.
+6-Track your request.
+</pre> 
+<hr>
+<pre style="font-size:14px; font-family: bahnschrift;">
+<b><u>Deals and Discounts:</u></b>
+Dear Customer, in order to check available discounts and promotions on your card through Alfa app please follow the below given steps:
+1-Login Alfa App.
+2-Click on Overview option.
+3-Click on "Go to card management" option on your Card.
+4-Scroll down and you "Deals and discounts" option.
+</pre> 
+</div>
+
+<div id="deviceu" class="tabcontent" style="color:midnightblue";>
+<pre style="font-size:14px; font-family: bahnschrift;">
+<b><u>Debit Card Activation (English):</u></b>
+Dear Customer, you can activate your Debit Card through Alfa application, please follow the steps below:
+1-Login Alfa Application.
+2-Tap on "Overview".
+3-Tap on ‘Go to card management’.
+4-Tap on ‘Activate card now’.
+5-Enter card expiry (MM/YY).
+6-On next screen enter your card PIN.
+7-Again enter your card PIN for confirmation.
+8-On next screen Verify OTP (Tap on Allow button to Auto fetch OTP).
+Next screen will come with message "Card activated & PIN set successfully!".
+
+<b><u>Debit Card Activation (Urdu):</u></b>
+Muaziz Saarif, ap apna debit card diye gae steps ke zariye Alfa app se activate kar sakte hen.
+1-Login Alfa Application.
+2-Tap karen "Overview" pe.
+3-Tap karen ‘Go to card management’ pe.
+4-Tap karen ‘Activate card now’ pe.
+5-Enter card expiry (MM/YY).
+6-Next screen pe apne card ka PIN enter karen.
+7-Again enter PIN enter karen confirmation ke liye.
+8-Next screen "Verify OTP" show hogi (Tap karen Allow button pe, phir OTP Auto fetch hoga).
+Phir apke pas next screen pe message show hojaega "Card activated & PIN set successfully!".
+</pre> 
+<hr>
+<pre style="font-size:14px; font-family: bahnschrift;">
+<b><u>Change Debit Card PIN (English):</u></b>
+Dear Customer, in order to change your debit card pin through Alfa app please follow the below given steps:
+1-Login Alfa App.
+2-Click on Overview option.
+3-Click on "Go to card management" option on your Card.
+4-Scroll down and you will see Manage Card option.
+5-On next screen tap on Change PIN.
+6-Type PIN of your own choice.
+7-Type your same PIN again for confirmation.
+8-Verify OTP (Tap on Allow button OTP will auto fetch).
+Then your PIN will change on real time.
+
+<b><u>Change Debit Card PIN (Urdu):</u></b>
+Muaziz Saarif, diye gae steps follow karke ap apne debit card ka PIN Alfa app ke zariye change kar sakte hen:
+1-Login Alfa App.
+2-Click karen Overview option pe.
+3-Click karen "Go to card management" option pe.
+4-Scroll down karen aur phir apko Manage Card option miljaega.
+5-Next screen pe Change PIN ke option pe click karen.
+6-Phir ap apni marzi ka PIN number type karen.
+7-Same PIN number ap again type karen confirmation ke liye.
+8-Phir OTP verify karen Allow karne ka option show hoga apke pas, aur OTP auto fetch hojaega Alfa app men.
+Phir apka PIN change hojaega.
+</pre> 
+<hr>
+<pre style="font-size:14px; font-family: bahnschrift;">
+<b><u>E-commerce/Online Transaction (English):</u></b>
+Dear Customer, you can activate your debit card for online/international transactions through our Alfa app or by calling our 24/7 service helpline 021/042 111 225 111.
+In order to enable/disable your debit card online transactions through Alfa app please follow the below given steps:
+1-Login Alfa App.
+2-Click on Overview option.
+3-Click on "Go to card management" option on your Card.
+4-Scroll down and you will see Manage Card option.
+5-Then enable online payments.
+6-Verify OTP (Tap on Allow button OTP will auto fetch).
+
+<b><u>E-commerce/Online Transaction (Urdu):</u></b>
+Muaziz Saarif, ap apna debit card online/international transactions ke liye activate kar sakte hen Alfa app ke zariye, aur hamari 24/7 service helpline 021/042 111 225 111 ke zariye.
+Alfa app ke zariye online transactions enable/disable karne ke liye kindly diye gae steps follow karlen:
+1-Login Alfa App.
+2-Click karen Overview option pe.
+3-Click karen "Go to card management" option pe.
+4-Scroll down karen aur phir apko Manage Card option miljaega.
+5-Phir ap online transactions activate kar sakenge.
+6-Phir OTP verify karen Allow karne ka option show hoga apke pas, aur OTP auto fetch hojaega Alfa app men.
+</pre> 
+
+</div>
+<div id="sm" class="tabcontent" style="color:midnightblue";>
+<pre style="font-size:14px; font-family: bahnschrift;">
+<b>Note: Username, Contact Number, Email Address And Mailing Address can check through Show Profile option.</b>
+</pre>
+<pre style="font-size:14px; font-family: bahnschrift;">
+<b><u>Username:</u></b>
+Dear Customer, kindly follow below given steps to check your username through Alfa app.
+1-Login Alfa App.
+2-Side Menu.
+3-Show profile.
+4-Username will show.
+</pre>
+<hr>
+<pre style="font-size:14px; font-family: bahnschrift;">
+<b><u>Login PIN Change:</u></b>
+Dear Customer, you can change your login PIN through Alfa app.
+Kindly check below given step to change your login PIN.
+1-Login Alfa App.
+2-Side Menu.
+3-Login and security.
+4-Change login PIN.
+5-Press Continue button.
+</pre>
+<hr>
+<pre style="font-size:14px; font-family: bahnschrift;">
+<b><u>Limit Change: (English)</u></b>
+Dear Customer, kindly check below given steps to change your per day funds transfer limit through Alfa app.
+1-Login Alfa App.
+2-Side Menu.
+3-Limit management.
+4-Select any package as per your need.
+
+You can use the Alfa app to perform biometric verification and increase the daily transaction limit to Rs 250,000 only. However if you want to use a higher daily limit based on you Alfa/Internet banking package, you will need to visit in any Bank Alfalah branch for biometric verification.
+
+<b><u>Limit Change: (Urdu)</u></b>
+Muaziz Saarif, kindly diye gaye steps ka istemal karen apni daily funds transfer limit ko Alfa App ke zariye badalne ke liye:
+1-Alfa App mein login karein.
+2-Side Menu ko open karein.
+3-Limit Management par jayein.
+4-Apni zarurat ke hisaab se koi bhi package select karein.
+
+Alfa app se digital biometric verification kar ke Rs 250,000 tak ke transactions kar sakte hain in a day. Agar ap complete funds transfer limit avail karna chahte hain to phir nearest branch visit kar ke bhi biometric verification karwa sakte hain.
+</pre>
+<hr>
+
+
+
+
+
+
+
+</div>
+
+
+<div class="clearfix"></div>
+</main>
+<script>
+function openCity(evt, cityName) {
+  var i, tabcontent, tablinks;
+  tabcontent = document.getElementsByClassName("tabcontent");
+  for (i = 0; i < tabcontent.length; i++) {
+    tabcontent[i].style.display = "none";
+  }
+  tablinks = document.getElementsByClassName("tablinks");
+  for (i = 0; i < tablinks.length; i++) {
+    tablinks[i].className = tablinks[i].className.replace(" active", "");
+  }
+  document.getElementById(cityName).style.display = "block";
+  evt.currentTarget.className += " active";
+}
+</script>
+
+<audio id="sound1" src="\\10.144.66.128\Syed Danish\HELP FILE WEB VERSION\calc.mp3" preload="auto"></audio>
+		
+
+    <script>
+        const buttons = document.querySelectorAll('.button1');
+
+        buttons.forEach(button => {
+            button.addEventListener('click', () => {
+                const soundId = button.getAttribute('data-sound');
+                const sound = document.getElementById(soundId);
+                sound.currentTime = 0; // Reset sound to start
+                sound.play(); // Play the sound
+            });
+        });
+    </script>
+<footer>
+    <script>
+        // Theme Switcher Logic
+        const savedTheme = localStorage.getItem('theme');
+        if (savedTheme === 'dark') {
+            document.body.classList.add('dark-mode');
+        }
+
+        const themeToggleButton = document.getElementById('theme-toggle');
+        themeToggleButton.addEventListener('click', () => {
+            document.body.classList.toggle('dark-mode');
+            if (document.body.classList.contains('dark-mode')) {
+                localStorage.setItem('theme', 'dark');
+            } else {
+                localStorage.setItem('theme', 'light');
+            }
+        });
+
+        // Time Function
+        setInterval(myTimer, 1000);
+        function myTimer() {
+            const d = new Date();
+            document.getElementById("demo").innerHTML = d.toLocaleTimeString();
+        }
+
+        // Copy to Clipboard Function
+        function copy_to_clipboard(elm_id) {
+            const text = document.getElementById(elm_id).innerText;
+            navigator.clipboard.writeText(text);
+        }
+    </script>
+  </footer>
+
+<script src="js/discoCursor.js"></script>
+
+
+
+</body>
+</html>
+
+

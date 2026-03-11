@@ -1,0 +1,666 @@
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Help File Web Version</title>
+    <link rel="icon" type="image/x-icon" href="webicon.jfif">
+<link rel="stylesheet" href="Css/discoCursor.css">
+
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin: 0;
+            padding: 0;
+            background: linear-gradient(180deg, #d0e6f9, #a3c6e0);
+            color: #2c3e50;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: flex-start;
+            min-height: 100vh;
+            overflow-y: auto;
+            transition: background-color 0.3s ease;
+        }
+
+        body.dark-mode {
+            background: linear-gradient(180deg, #8b8787, #1e1e1e);
+            color: #ffffff;
+         
+   table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 20px;
+            transition: transform 0.3s;
+        }
+
+        body.dark-mode table {
+            background-color: transparent;
+        }
+
+        body.dark-mode th, td {
+            background-color: rgba(59, 59, 59, 0.85);
+            color: #ecf0f1;
+            border-color: #555;
+        }
+
+        body.dark-mode tr:hover {
+            background-color: #2c3e50;
+        }
+
+        body.dark-mode main {
+            background-color: rgba(35, 35, 37, 0.80);
+        }
+
+        body.dark-mode nav a {
+            background-color: #2c3e50;
+        }
+
+        body.dark-mode nav a:hover {
+            background-color: #34495e;
+        }
+ div.clearfix {
+            background-color: ;
+
+        }
+
+
+
+
+
+        th, td {
+            border: 1px solid #bdc3c7;
+            padding: 15px;
+            text-align: left;
+            background-color: #3b3b3b;
+            border-radius: 5px;
+            transition: background-color 0.3s, transform 0.3s;
+        }
+
+        tr {
+            transition: transform 0.3s, background-color 0.3s, box-shadow 0.3s;
+        }
+
+        tr:hover {
+            background-color: #f2f2f2;
+            transform: scale(1.05);
+            box-shadow: 0 4px 20px rgba(52, 152, 219, 0.7);
+        }
+
+ main {
+            width: 90%;
+            max-width: 1200px;
+            margin: 20px auto;
+            background-color: #232325;
+            border-radius: 15px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.5);
+            padding: 20px;
+            animation: fadeIn 1.5s ease;
+        }
+
+ header {
+            background: linear-gradient(135deg, #892d00, #194c6e);
+            color: #ffffff;
+            width: 100%;
+            padding: 0px;
+            text-align: center;
+            box-shadow: 0 25px 50px rgba(0, 0, 0, 0.5);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            transition: background 0.3s ease;
+        }
+pre {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            white-space: pre-wrap; /* Allows wrapping */
+            overflow-wrap: break-word; /* Breaks long words */
+            color: white; /* Change the text color */
+            background-color: #1e0a00; /* Change the background color */
+            padding: 10px; /* Add padding for better readability */
+            border-radius: 5px; /* Add border radius for style */
+        }
+
+.tab button {
+  display: block;
+  background-color: #ffffff00;
+  color: white;
+  padding: 10px 14px;
+  width: 100%;
+  border: none;
+  outline: none;
+  text-align: left;
+  cursor: pointer;
+  font-size: 15px;
+}
+.tab button:hover {
+  background-color: #2b0000;
+}
+
+
+
+   }
+
+      
+
+
+        header {
+            background: linear-gradient(135deg, #005289, #6dd5ed);
+            color: #ffffff;
+            width: 100%;
+            padding: 0px;
+            text-align: center;
+            box-shadow: 0 25px 50px rgba(0, 0, 0, 0.5);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            transition: background 0.3s ease;
+        }
+
+        nav {
+            margin: 15px 0;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+
+        nav a {
+            background-color: #163449;
+            color: white;
+            padding: 10px 20px;
+            margin: 5px;
+            text-decoration: none;
+            border-radius: 5px;
+            box-shadow: 0 4px 10px rgba(52, 152, 219, 0.3);
+            transition: all 0.6s ease;
+            position: relative;
+            overflow: hidden;
+        }
+
+        nav a:hover {
+            background-color: #2980b9;
+            transform: translateY(-3px);
+        }
+
+        nav a::after {
+            content: '';
+            position: absolute;
+            background: rgba(255, 255, 255, 0.1);
+            height: 100%;
+            width: 100%;
+            left: 0;
+            top: 100%;
+            transition: all 0.3s ease;
+            z-index: 0;
+        }
+
+        nav a:hover::after {
+            top: 0;
+        }
+
+        .time {
+            font-size: 16px;
+            margin-top: 10px;
+            color: #white;
+        }
+
+        main {
+            width: 90%;
+            max-width: 1200px;
+            margin: 20px auto;
+            background-color: #ecf0f1;
+            border-radius: 15px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.5);
+            padding: 20px;
+            animation: fadeIn 1.5s ease;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 20px;
+            transition: transform 0.3s;
+        }
+
+        th, td {
+            border: 1px solid #bdc3c7;
+            padding: 15px;
+            text-align: left;
+            background-color: #ffffff;
+            border-radius: 5px;
+            transition: background-color 0.3s, transform 0.3s;
+        }
+
+        tr {
+            transition: transform 0.3s, background-color 0.3s, box-shadow 0.3s;
+        }
+
+        tr:hover {
+            background-color: #f2f2f2;
+            transform: scale(1.05);
+            box-shadow: 0 4px 20px rgba(52, 152, 219, 0.7);
+        }
+
+        .button {
+            background-color: rgb(64, 171, 158, 0.0);
+            border-radius: 33px;
+            border: none;
+            color: black;
+            padding: 4px 10px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 12px;
+            margin: 4px 2px;
+            cursor: pointer;
+            -webkit-transition-duration: 0.4s; /* Safari */
+            transition-duration: 0.5s;
+        }
+
+        .button1:hover {
+            background-color: #005289;
+            box-shadow: 20px 12px 16px 18px rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);
+        }
+
+        pre {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            white-space: pre-wrap; /* Allows wrapping */
+            overflow-wrap: break-word; /* Breaks long words */
+            color: #34495e; /* Change the text color */
+            background-color: #ecf0f1; /* Change the background color */
+            padding: 10px; /* Add padding for better readability */
+            border-radius: 5px; /* Add border radius for style */
+        }
+
+        footer {
+            margin: 20px 0;
+            text-align: center;
+            font-size: 12px;
+            color: #34495e;
+        }
+
+
+#theme-toggle {
+            background-color: #2980b9;
+            color: white;
+            border: none;
+            padding: 10px;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        #theme-toggle:hover {
+            background-color: #1f6f8b;
+        }
+        /* Mobile Responsiveness */
+        @media screen and (max-width: 768px) {
+            body { font-size: 14px; }
+            main { width: 95%; padding: 10px; margin: 10px auto; }
+            nav { flex-direction: column; align-items: center; }
+            nav a { width: 80%; text-align: center; margin: 5px 0; }
+            table { font-size: 13px; }
+            th, td { padding: 8px; font-size: 12px; }
+            .button { padding: 2px 8px; }
+            .button img { width: 24px !important; height: 20px !important; }
+            pre { font-size: 12px; padding: 8px; overflow-x: auto; }
+            header h1 { font-size: 18px; padding: 10px; }
+        }
+        
+        @media screen and (max-width: 480px) {
+            body { font-size: 12px; }
+            main { width: 98%; padding: 5px; }
+            nav a { width: 90%; font-size: 14px; }
+            th, td { padding: 6px; font-size: 11px; }
+            .button img { width: 20px !important; height: 18px !important; }
+            pre { font-size: 11px; padding: 5px; }
+            header h1 { font-size: 16px; }
+        }
+    </style>
+    <style type="text/css">
+        a.nounderline {text-decoration: none; }
+    </style>
+
+<script>
+
+function Copy_to_clipboard( elm_id ) {
+
+    var text = document.getElementById( elm_id ).innerHTML;
+
+    navigator.clipboard.writeText( text );
+
+  }
+
+</script>
+
+
+</head>
+
+
+<body onload="startTime()">
+  <header>
+<h1>Help File Web Version</h1>
+<nav>
+<a href="2CannedBasic.htm" target="_self";>Canned Basic</a>
+<a href="2WhatsAppBOT.htm" target="_self";>WhatsApp BOT</a>
+<a href="2internetbanking.htm" target="_self";>New Alfa App</a>
+<a href="2linkscanned.htm" target="_self" style="background-color:#00a4ff; color:white";>Links Canned</a>
+<a href="2orbitscanned.htm" target="_self";>Orbits Canned</a>
+<a href="2Walletcanned.htm" target="_self";>Wallet Canned</a>
+<a href="2cannedmemo.htm" target="_self"">Canned Memo</a>
+<a href="2leadoffering.htm" target="_self";>Lead Offering</a>
+<a href="2socialmediaresponses.htm" target="_self">Social Media Responses</a>
+<a href="2othercanned.htm" target="_self";><img style="width:30px; height:25px;" src="bulb.gif"></a>
+</nav>
+    <button id="theme-toggle" style="position: absolute; top: 20px; right: 20px; padding: 10px;">Switch Theme</button>
+
+<div class="time" id="demo">TIME</div>
+   </header> 
+<main>
+<table> 
+
+<tr><td style="width:30px;"><button onclick="Copy_to_clipboard('1001')"  class="button button1"  data-sound="sound1"><img style="width:30px; height:25px;" src="copyiconn.jfif"></button></td><td><u><b style="font-size:18px">(-IB Login-)</b></u><br><b id="1001">Dear Customer, kindly visit the mentioned link to login through internet banking.
+https://netbanking.bankalfalah.com/ib/Login.aspx#</b></td></tr>
+
+<tr><td style="width:30px;"><button onclick="Copy_to_clipboard('42')"  class="button button1"  data-sound="sound1"><img style="width:30px; height:25px;" src="copyiconn.jfif"></button></td><td><u><b style="font-size:18px">(-IB Login Urdu-)</b></u><br><b id="42">Moazziz sarif, kindly diye gae link se aap Internet banking login Kar sakte hain apne login credentials kay sath.
+https://netbanking.bankalfalah.com/ib/Login.aspx#</b></td></tr>
+
+<tr><td style="width:30px;"><button onclick="Copy_to_clipboard('1')"  class="button button1"  data-sound="sound1"><img style="width:30px; height:25px;" src="copyiconn.jfif"></button></td><td><u><b style="font-size:18px">(-IBAN-)</b></u><br><b id="1">Dear Customer, to get your IBAN, you can follow the steps:
+-	Visit the website https://www.bankalfalah.com/accounts/ and generate your IBAN
+-	Login Alfa App > Overview.
+-	You can also get your IBAN if you are having cheque book.
+-	You can also contact the helpline at 042/021 111-225-111 for assistance in obtaining your IBAN incase for RDA and Premier account please contact at 0092 21 111 225 226.</b></td></tr>
+
+<tr><td style="width:30px;"><button onclick="Copy_to_clipboard('43')"  class="button button1"  data-sound="sound1"><img style="width:30px; height:25px;" src="copyiconn.jfif"></button></td><td><u><b style="font-size:18px">(-IBAN Urdu-)</b></u><br><b id="43">Muaziz Saarif, apna IBAN# hasil karnay kay liye aap yeh steps follow kar saktay hain:
+-	https://www.bankalfalah.com/accounts/ website par jaiye aur apna IBAN# generate karwaiye
+-	Alfa App login Karen &gt; overview per tap karen
+-	Agar aap ke pass cheque book hai to aap wahan se apna IBAN# hasil kar saktay hain
+-	Ap 042/021 111-225-111 helpline par rabta kar ke apna IBAN# hasil kar saktay hain mazeed RDA aur Premier account ka IBAN# janny ke liye 0092 21 111 225 226 par rabta kijiye.</b></td></tr>
+
+<tr><td style="width:30px;"><button onclick="Copy_to_clipboard('71')"  class="button button1"  data-sound="sound1"><img style="width:30px; height:25px;" src="copyiconn.jfif"></button></td><td><u><b style="font-size:18px">(-Alfa Business App-)</b></u><br><b id="71">Dear Customer, Alfa Business is a complete solution for your business needs. You can now register yourself digitally following simple four steps and begin accepting the digital payments via QR by generating instant dynamic QR codes within the App. Kindly visit the below mentioned link in order to get complete information in this regard. 
+https://www.bankalfalah.com/digital-banking/alfa-biz-app/</b></td></tr>
+
+<tr><td style="width:30px;"><button onclick="Copy_to_clipboard('72')"  class="button button1"  data-sound="sound1"><img style="width:30px; height:25px;" src="copyiconn.jfif"></button></td><td><u><b style="font-size:18px">(-Alfa Business App Urdu-)</b></u><br><b id="72">Moazziz sarif, Alfa Business aapke business ki zarooriyat ke liye ek mukammal hal (solution) hai. Ab aap 4 steps mein khud ko digitally register kar saktay hain aur App ke andar foran dynamic QR codes bana kar QR ke zariye digital payments receive kar saktay hain. Is hawale se complete information haasil karne ke kindly neeche mentioned link par visit kijiye.
+https://www.bankalfalah.com/digital-banking/alfa-biz-app/</b></td></tr>
+
+<tr><td style="width:30px;"><button onclick="Copy_to_clipboard('73')"  class="button button1"  data-sound="sound1"><img style="width:30px; height:25px;" src="copyiconn.jfif"></button></td><td><u><b style="font-size:18px">(-Alfa Payment Gateway APG-)</b></u><br><b id="73">Dear customer, You can collect your payments online easily and securely from anywhere in Pakistan through Alfa Payment Gateway. Kindly visit the mentioned link in order to get information of Bank Alfalah Alfa Payment Gateway.
+https://www.bankalfalah.com/digital-banking/alfa-payment-gateway/</b></td></tr>
+
+<tr><td style="width:30px;"><button onclick="Copy_to_clipboard('74')"  class="button button1"  data-sound="sound1"><img style="width:30px; height:25px;" src="copyiconn.jfif"></button></td><td><u><b style="font-size:18px">(-Alfa Payment Gateway APG Urdu-)</b></u><br><b id="74">Moazziz sarif, aap Alfa Payment Gateway ke zariye Pakistan mein kahin se bhi apni payments online aasani aur mehfooz tareeqay se jama (collect) kar saktay hain. Kindly visit kijiye neeche mentioned kiye gae link per jis mein aap tamam alfa payment gateway ki details check kar sakte hain. 
+https://www.bankalfalah.com/digital-banking/alfa-payment-gateway/</b></td></tr>
+
+<tr><td style="width:30px;"><button onclick="Copy_to_clipboard('76')"  class="button button1"  data-sound="sound1"><img style="width:30px; height:25px;" src="copyiconn.jfif"></button></td><td><u><b style="font-size:18px">(-Bank Alfalah Premier Conv.-)</b></u><br><b id="76">Dear customer, Kindly visit the mentioned link in order to get complete information of Bank Alfalah Premier Banking.
+https://www.bankalfalah.com/premier-banking/</b></td></tr>
+
+<tr><td style="width:30px;"><button onclick="Copy_to_clipboard('75')"  class="button button1"  data-sound="sound1"><img style="width:30px; height:25px;" src="copyiconn.jfif"></button></td><td><u><b style="font-size:18px">(-Bank Alfalah Premier Conv. Urdu-)</b></u><br><b id="75">Moazziz sarif, kindly diye gaye link ko check kijiye taa ke aapko Bank Alfalah Premier Banking ki mukammal maloomat mil sakain.
+https://www.bankalfalah.com/premier-banking/</b></td></tr>
+
+<tr><td style="width:50px;"><button onclick="Copy_to_clipboard('2')"  class="button button1"  data-sound="sound1"><img style="width:30px; height:25px;" src="copyiconn.jfif"></button></td><td><u><b style="font-size:18px">(-RDA Modifications-)</b></u><br><b id="2">Dear customer, please click on the link below to download the account modification form. Print and fill out the details you wish to update. After filling the form, scan it and email the soft copy to RDA@bankalfalah.com.
+https://invest.bankalfalah.com/ops/Forms.aspx </b></td></tr>
+
+<tr><td style="width:50px;"><button onclick="Copy_to_clipboard('44')"  class="button button1"  data-sound="sound1"><img style="width:30px; height:25px;" src="copyiconn.jfif"></button></td><td><u><b style="font-size:18px">(-RDA Modifications Urdu-)</b></u><br><b id="44">Moazziz sarif, neeche diye gae link mein click kijiye aur account modification form download kijiye aur print kar kay fill kijiye jo details aap update karna chahte hain. Form fill karne kay baad scan kijiye aur soft copy email kijiye RDA@bankalfalah.com per.
+https://invest.bankalfalah.com/ops/Forms.aspx </b></td></tr>
+
+<tr><td style="width:50px;"><button onclick="Copy_to_clipboard('3')"  class="button button1"  data-sound="sound1"><img style="width:30px; height:25px;" src="copyiconn.jfif"></button></td><td><u><b style="font-size:18px">(-Earn Orbits-)</b></u><br><b id="3">Dear customer, you can earn Orbits, Bonus Orbits, and Tier Bonus through the following products and services. For complete information in this regard, please visit the link below.
+https://www.bankalfalah.com/digital-banking/earn-orbit-rewards/</b></td></tr>
+
+<tr><td style="width:50px;"><button onclick="Copy_to_clipboard('46')"  class="button button1"  data-sound="sound1"><img style="width:30px; height:25px;" src="copyiconn.jfif"></button></td><td><u><b style="font-size:18px">(-Earn Orbits Urdu-)</b></u><br><b id="46">Moazziz sarif, aap Orbits, Bonus Orbits, aur Tier Bonus earn ke liye neeche diye gaye products aur services ka istemal kar sakte hain. Is hawale se complete information ke liye, kindly neeche diye gaye link par visit karein.
+https://www.bankalfalah.com/digital-banking/earn-orbit-rewards/</b></td></tr>
+
+<tr><td style="width:50px;"><button onclick="Copy_to_clipboard('45')"  class="button button1"  data-sound="sound1"><img style="width:30px; height:25px;" src="copyiconn.jfif"></button></td><td><u><b style="font-size:18px">(-Redeem Orbits-)</b></u><br><b id="45">Dear customer, multiple ways to earn means more Orbits to spend. You can use Orbits to top up your mobile, pay your bills, visit AlfaMall at https://alfamall.com/ for online shopping or pay by scanning a QR at select merchants. For complete information in this regard, kindly visit the below mentioned link.
+https://web.bankalfalah.com/digital-banking/orbit-redeem/</b></td></tr>
+
+<tr><td style="width:50px;"><button onclick="Copy_to_clipboard('47')"  class="button button1"  data-sound="sound1"><img style="width:30px; height:25px;" src="copyiconn.jfif"></button></td><td><u><b style="font-size:18px">(-Redeem Orbits Urdu-)</b></u><br><b id="47">Moazziz sarif, multiple ways to earn ka matlab hai zyada Orbits kamana taake aap zyada spend kar sakein. Aap Orbits ko apne mobile ko top up karne ke liye, apne bills pay karne ke liye, AlfaMall https://alfamall.com/ par online shopping ke liye, ya selected merchants par QR scan karke pay karne ke liye istemal kar sakte hain. Is hawale se complete information ke liye, kindly neeche diye gaye link par visit karein.
+https://web.bankalfalah.com/digital-banking/orbit-redeem/</b></td></tr>
+
+<tr><td style="width:50px;"><button onclick="Copy_to_clipboard('4')"  class="button button1"  data-sound="sound1"><img style="width:30px; height:25px;" src="copyiconn.jfif"></button></td><td><u><b style="font-size:18px">(-VISA Airport Companion (VAC)-)</b></u><br><b id="4">Dear Customer, kindly visit the mentioned link in order to get the details regarding VISA Airport Companion details and FAQs.
+https://www.bankalfalah.com/info/personal-banking/cards/visa-airport-companion </b></td></tr>
+
+<tr><td style="width:50px;"><button onclick="Copy_to_clipboard('48')"  class="button button1"  data-sound="sound1"><img style="width:30px; height:25px;" src="copyiconn.jfif"></button></td><td><u><b style="font-size:18px">(-VISA Airport Companion (VAC) Urdu-)</b></u><br><b id="48">Moazziz sarif, kindly diye gaye link par visit karein taake VISA Airport Companion ki tafseelat aur FAQs ki malumat hasil kar sakein.
+https://www.bankalfalah.com/info/personal-banking/cards/visa-airport-companion</b></td></tr>
+
+<tr><td style="width:50px;"><button onclick="Copy_to_clipboard('5')"  class="button button1"  data-sound="sound1"><img style="width:30px; height:25px;" src="copyiconn.jfif"></button></td><td><u><b style="font-size:18px">(-Credit Card-)</b></u><br><b id="5">Dear Customer, please find below-mentioned updated links in order to get the details of Credit card
+https://www.bankalfalah.com/personal-banking/credit-cards/</b></td></tr>
+
+<tr><td style="width:50px;"><button onclick="Copy_to_clipboard('49')"  class="button button1"  data-sound="sound1"><img style="width:30px; height:25px;" src="copyiconn.jfif"></button></td><td><u><b style="font-size:18px">(-Credit Card Urdu-)</b></u><br><b id="49">Moazziz sarif, credit card kay hawale se mazeed tafseelat aap diye gae link mein check kar sakte hain. 
+https://www.bankalfalah.com/personal-banking/credit-cards/</b></td></tr>
+
+<tr><td style="width:50px;"><button onclick="Copy_to_clipboard('6')"  class="button button1"  data-sound="sound1"><img style="width:30px; height:25px;" src="copyiconn.jfif"></button></td><td><u><b style="font-size:18px">(-Ultra Credit Card-)</b></u><br><b id="6">Dear Customer, kindly visit the mentioned link in order to get complete information in this regard.
+https://www.bankalfalah.com/personal-banking/credit-cards/visa-ultra-cashback-card </b></td></tr>
+
+<tr><td style="width:50px;"><button onclick="Copy_to_clipboard('50')"  class="button button1"  data-sound="sound1"><img style="width:30px; height:25px;" src="copyiconn.jfif"></button></td><td><u><b style="font-size:18px">(-Ultra Credit Card Urdu-)</b></u><br><b id="50">Moazziz sarif, ultra credit card kay hawale se complete information aap neeche diye gae link mein check kar sakte hain. 
+https://www.bankalfalah.com/personal-banking/credit-cards/visa-ultra-cashback-card </b></td></tr>
+
+<tr><td style="width:50px;"><button onclick="Copy_to_clipboard('7')"  class="button button1"  data-sound="sound1"><img style="width:30px; height:25px;" src="copyiconn.jfif"></button></td><td><u><b style="font-size:18px">(-Master Credit Card Details & Benefits-)</b></u><br><b id="7">Dear Customer, kindly visit the mentioned link in order to get complete information regarding Master Credit card and it’s offer. 
+For card information: https://www.bankalfalah.com/personal-banking/credit-cards/mastercard-optimus-credit-card
+MasterCard Offers : https://www.bankalfalah.com/personal-banking/cards/mastercard-offers/ </b></td></tr>
+
+<tr><td style="width:50px;"><button onclick="Copy_to_clipboard('51')"  class="button button1"  data-sound="sound1"><img style="width:30px; height:25px;" src="copyiconn.jfif"></button></td><td><u><b style="font-size:18px">(-Master Credit Card Details & Benefits Urdu-)</b></u><br><b id="51">Moazziz sarif, kindly diye gaye link par visit karein taake Master Credit Card aur uski offer ke mutaliq mukammal malumat hasil kar sakein.
+For card information: https://www.bankalfalah.com/personal-banking/credit-cards/mastercard-optimus-credit-card
+MasterCard Offers : https://www.bankalfalah.com/personal-banking/cards/mastercard-offers/ </b></td></tr>
+
+
+<tr><td style="width:50px;"><button onclick="Copy_to_clipboard('8')"  class="button button1"  data-sound="sound1"><img style="width:30px; height:25px;" src="copyiconn.jfif"></button></td><td><u><b style="font-size:18px">(-Career-)</b></u><br><b id="8">Dear Customer, for current openings, please visit the link below and apply for the vacant position.
+https://www.bankalfalah.com/careers/ </b></td></tr>
+
+<tr><td style="width:50px;"><button onclick="Copy_to_clipboard('9')"  class="button button1"  data-sound="sound1"><img style="width:30px; height:25px;" src="copyiconn.jfif"></button></td><td><u><b style="font-size:18px">(-Career Udu-)</b></u><br><b id="9">Moazziz sarif, current openings kay liye, kindly visit kijiye neeche diye gae link per aur vacant position ke liye apply karein.
+https://www.bankalfalah.com/careers/ </b></td></tr>
+
+<tr><td style="width:50px;"><button onclick="Copy_to_clipboard('10')"  class="button button1"  data-sound="sound1"><img style="width:30px; height:25px;" src="copyiconn.jfif"></button></td><td><u><b style="font-size:18px">(-Personal Loan-)</b></u><br><b id="10">Dear Customer, kindly visit the mentioned link in order to get complete information in this regard.
+Personal Loan: https://www.bankalfalah.com/personal-banking/loans/alfalah-personal-loan/ </b></td></tr>
+
+<tr><td style="width:50px;"><button onclick="Copy_to_clipboard('52')"  class="button button1"  data-sound="sound1"><img style="width:30px; height:25px;" src="copyiconn.jfif"></button></td><td><u><b style="font-size:18px">(-Personal Loan Urdu-)</b></u><br><b id="52">Moazziz sarif, personal loan kay hawale se complete tafsleeat kay liye neeche diye gae link mein details check karenge
+Personal Loan: https://www.bankalfalah.com/personal-banking/loans/alfalah-personal-loan/ </b></td></tr>
+
+<tr><td style="width:50px;"><button onclick="Copy_to_clipboard('11')"  class="button button1"  data-sound="sound1"><img style="width:30px; height:25px;" src="copyiconn.jfif"></button></td><td><u><b style="font-size:18px">(-Complaint & Banking Mohtasib Pakistan-)</b></u><br><b id="11">Dear Customer, you can lodge a complaint on our website. For details regarding Banking Mohtasib Pakistan, please visit the link below.
+
+https://www.bankalfalah.com/contact-us/</b></td></tr>
+
+<tr><td style="width:50px;"><button onclick="Copy_to_clipboard('12')"  class="button button1"  data-sound="sound1"><img style="width:30px; height:25px;" src="copyiconn.jfif"></button></td><td><u><b style="font-size:18px">(-Download Alfa App-)</b></u><br><b id="12">Dear Customer, kindly visit the mentioned link in order to download our Alfa App. 
+For Android Users https://play.google.com/store/apps/details?id=com.base.bankalfalah&hl=en
+For iPhone Users https://itunes.apple.com/pk/app/alfa/id1050684372?mt=8 </b></td></tr>
+
+<tr><td style="width:50px;"><button onclick="Copy_to_clipboard('60')"  class="button button1"  data-sound="sound1"><img style="width:30px; height:25px;" src="copyiconn.jfif"></button></td><td><u><b style="font-size:18px">(-Download Alfa App Urdu-)</b></u><br><b id="60">Moazziz sarif, aap Alfa App neeche diye gae links se download kar sakte hain.
+For Android Users https://play.google.com/store/apps/details?id=com.base.bankalfalah&hl=en
+For iPhone Users https://itunes.apple.com/pk/app/alfa/id1050684372?mt=8 </b></td></tr>
+
+<tr><td style="width:50px;"><button onclick="Copy_to_clipboard('13')"  class="button button1"  data-sound="sound1"><img style="width:30px; height:25px;" src="copyiconn.jfif"></button></td><td><u><b style="font-size:18px">(-Accounts Conv.-)</b></u><br><b id="13">Dear customer, kindly visit the mentioned link in order to open and get information of Conventional Accounts in Bank Alfalah.
+https://www.bankalfalah.com/accounts/</b></td></tr>
+
+<tr><td style="width:50px;"><button onclick="Copy_to_clipboard('58')"  class="button button1"  data-sound="sound1"><img style="width:30px; height:25px;" src="copyiconn.jfif"></button></td><td><u><b style="font-size:18px">(-Accounts Conv. Urdu-)</b></u><br><b id="58">Moazziz sarif, Bank Alfalah Conventional accounts ki complete information aur account open karne kay hawale se neeche diye gae link per visit karenge. 
+https://www.bankalfalah.com/accounts/</b></td></tr>
+
+<tr><td style="width:50px;"><button onclick="Copy_to_clipboard('59')"  class="button button1"  data-sound="sound1"><img style="width:30px; height:25px;" src="copyiconn.jfif"></button></td><td><u><b style="font-size:18px">(-Accounts Isl.-)</b></u><br><b id="59">Dear customer, kindly visit the mentioned link in order to open and get information of Islamic Accounts in Bank Alfalah.
+https://www.bankalfalah.com/islamic/accounts/</b></td></tr>
+
+<tr><td style="width:50px;"><button onclick="Copy_to_clipboard('71')"  class="button button1"  data-sound="sound1"><img style="width:30px; height:25px;" src="copyiconn.jfif"></button></td><td><u><b style="font-size:18px">(-Accounts Isl. Urdu-)</b></u><br><b id="71">Moazziz sarif, Bank Alfalah Islamic accounts ki complete information aur account open karne kay hawale se neeche diye gae link per visit karenge. 
+https://www.bankalfalah.com/islamic/accounts/</b></td></tr>
+
+<tr><td style="width:50px;"><button onclick="Copy_to_clipboard('14')"  class="button button1"  data-sound="sound1"><img style="width:30px; height:25px;" src="copyiconn.jfif"></button></td><td><u><b style="font-size:18px">(-Services & TAT-)</b></u><br><b id="14">Dear Customer, kindly visit the mentioned link in order to get complete information regarding services and TATs.
+https://bafblob.blob.core.windows.net/data/Bank-Alfalah-Service-Request-TATs-2025.pdf</b></td></tr>
+
+<tr><td style="width:50px;"><button onclick="Copy_to_clipboard('57')"  class="button button1"  data-sound="sound1"><img style="width:30px; height:25px;" src="copyiconn.jfif"></button></td><td><u><b style="font-size:18px">(-Services & TAT Urdu-)</b></u><br><b id="57">Moazziz sarif, services and TATs kay hawale se complete information hasil karne kay liye neeche diye gae link per visit kijiye.
+https://bafblob.blob.core.windows.net/data/Bank-Alfalah-Service-Request-TATs-2025.pdf</b></td></tr>
+
+<tr><td style="width:50px;"><button onclick="Copy_to_clipboard('15')"  class="button button1"  data-sound="sound1"><img style="width:30px; height:25px;" src="copyiconn.jfif"></button></td><td><u><b style="font-size:18px">(-Auto Loan Conv.-)</b></u><br><b id="15">Dear Customer, kindly visit the mentioned link in order to get complete information in this regard.
+https://www.bankalfalah.com/personal-banking/auto-loan/</b></td></tr>
+
+<tr><td style="width:50px;"><button onclick="Copy_to_clipboard('77')"  class="button button1"  data-sound="sound1"><img style="width:30px; height:25px;" src="copyiconn.jfif"></button></td><td><u><b style="font-size:18px">(-Auto Loan Conv. urdu-)</b></u><br><b id="77">Moazziz sarif, auto loan ki complete information neeche mentioned kiye gae link se hasil kar sakte hain.
+http://www.bankalfalah.com/personal-banking/loans/alfalah-auto-loan/</b></td></tr>
+
+<tr><td style="width:50px;"><button onclick="Copy_to_clipboard('53')"  class="button button1"  data-sound="sound1"><img style="width:30px; height:25px;" src="copyiconn.jfif"></button></td><td><u><b style="font-size:18px">(-Auto Loan Isl.-)</b></u><br><b id="53">Dear customer, kindly visit the mentioned link in order to apply and get information of Bank Alfalah Islamic Auto Finance.
+https://www.bankalfalah.com/islamic-banking/bank-alfalah-islamic-auto-finance/</b></td></tr>
+
+<tr><td style="width:50px;"><button onclick="Copy_to_clipboard('54')"  class="button button1"  data-sound="sound1"><img style="width:30px; height:25px;" src="copyiconn.jfif"></button></td><td><u><b style="font-size:18px">(-Auto Loan Isl. Urdu-)</b></u><br><b id="54">Moazziz sarif, apply karne ke liye aur Bank Alfalah Islamic Auto Finance ki malumat hasil karne ke liye diye gaye link par visit karein.
+https://www.bankalfalah.com/islamic-banking/bank-alfalah-islamic-auto-finance/</b></td></tr>
+
+<tr><td style="width:50px;"><button onclick="Copy_to_clipboard('16')"  class="button button1"  data-sound="sound1"><img style="width:30px; height:25px;" src="copyiconn.jfif"></button></td><td><u><b style="font-size:18px">(-Home Loan Conv.-)</b></u><br><b id="16">Dear customer, kindly visit the mentioned link in order to apply and get information of Bank Alfalah Home Finance.
+https://www.bankalfalah.com/personal-banking/loans/home-finance/</b></td></tr>
+
+<tr><td style="width:50px;"><button onclick="Copy_to_clipboard('55')"  class="button button1"  data-sound="sound1"><img style="width:30px; height:25px;" src="copyiconn.jfif"></button></td><td><u><b style="font-size:18px">(-Home Loan Conv. Urdu-)</b></u><br><b id="55">Moazziz sarif, apply karne ke liye aur Bank Alfalah Home Finance ki malumat hasil karne ke liye diye gaye link par visit karein.
+https://www.bankalfalah.com/personal-banking/loans/home-finance/</b></td></tr>
+
+<tr><td style="width:50px;"><button onclick="Copy_to_clipboard('16')"  class="button button1"  data-sound="sound1"><img style="width:30px; height:25px;" src="copyiconn.jfif"></button></td><td><u><b style="font-size:18px">(-Home Loan Isl.-)</b></u><br><b id="16">Dear customer, kindly visit the mentioned link in order to apply and get information of Bank Alfalah Islamic Home Finance.
+https://www.bankalfalah.com/islamic/home-musharakah/</b></td></tr>
+
+<tr><td style="width:50px;"><button onclick="Copy_to_clipboard('56')"  class="button button1"  data-sound="sound1"><img style="width:30px; height:25px;" src="copyiconn.jfif"></button></td><td><u><b style="font-size:18px">(-Home Loan Isl. Urdu-)</b></u><br><b id="56">Moazziz sarif, apply karne ke liye aur Bank Alfalah Islamic Home Finance ki malumat hasil karne ke liye diye gaye link par visit karein.
+https://www.bankalfalah.com/islamic/home-musharakah/</b></td></tr>
+
+<tr><td style="width:50px;"><button onclick="Copy_to_clipboard('17')"  class="button button1"  data-sound="sound1"><img style="width:30px; height:25px;" src="copyiconn.jfif"></button></td><td><u><b style="font-size:18px">(-Our Leadership-)</b></u><br><b id="17">Dear Customer, kindly visit the mentioned link in order to get complete information regarding our leadership
+https://www.bankalfalah.com/management/</b></td></tr>
+
+<tr><td style="width:50px;"><button onclick="Copy_to_clipboard('18')"  class="button button1"  data-sound="sound1"><img style="width:30px; height:25px;" src="copyiconn.jfif"></button></td><td><u><b style="font-size:18px">(-Discounts-)</b></u><br><b id="18">Dear Customer, please click on the link provided below to obtain detailed information regarding discounts offered by various merchants, applicable with your Bank Alfalah card. 
+https://www.bankalfalah.com/conventional/discounts-privileges/</b></td></tr>
+
+<tr><td style="width:50px;"><button onclick="Copy_to_clipboard('61')"  class="button button1"  data-sound="sound1"><img style="width:30px; height:25px;" src="copyiconn.jfif"></button></td><td><u><b style="font-size:18px">(-Discounts Urdu-)</b></u><br><b id="61">Moazziz sarif, kindly neeche diye gaye link par click karein taake aapko complete information hasil ho jaye ke Bank Alfalah card ke saath mukhtalif merchants ke taraf se kon se discounts available hain.
+https://www.bankalfalah.com/conventional/discounts-privileges/</b></td></tr>
+
+<tr><td style="width:50px;"><button onclick="Copy_to_clipboard('19')"  class="button button1"  data-sound="sound1"><img style="width:30px; height:25px;" src="copyiconn.jfif"></button></td><td><u><b style="font-size:18px">(-Profit Rates-)</b></u><br><b id="19">Dear Customer, please find below-mentioned updated links to the Profit Rates for Bank Alfalah’s Conventional and Islamic Banking.
+New Profit Rates Conventional Link:  https://www.bankalfalah.com/personal-banking/rate-sheet/
+
+New IBG Key fact statements and Profit Rates Link:  https://www.bankalfalah.com/islamic-banking/key-fact-statements/</b></td></tr>
+
+<tr><td style="width:50px;"><button onclick="Copy_to_clipboard('62')"  class="button button1"  data-sound="sound1"><img style="width:30px; height:25px;" src="copyiconn.jfif"></button></td><td><u><b style="font-size:18px">(-Profit Rates Urdu-)</b></u><br><b id="62">Moazziz sarif, kindly neeche diye gaye updated links Bank Alfalah ke Conventional aur Islamic Banking ke Profit Rates ke liye hain.
+New Profit Rates Conventional Link:  https://www.bankalfalah.com/personal-banking/rate-sheet/
+
+New IBG Key fact statements and Profit Rates Link:  https://www.bankalfalah.com/islamic-banking/key-fact-statements/</b></td></tr>
+
+<tr><td style="width:50px;"><button onclick="Copy_to_clipboard('20')"  class="button button1"  data-sound="sound1"><img style="width:30px; height:25px;" src="copyiconn.jfif"></button></td><td><u><b style="font-size:18px">(-SOC's-)</b></u><br><b id="20">Dear Customer, please find below-mentioned updated links in order to get the details of Bank Alfalah Schedule of charges.
+For Conventional Banking: https://www.bankalfalah.com/digital-banking/schedule-of-charges/ 
+For Islamic Banking: https://www.bankalfalah.com/islamic-banking/schedule-of-charges/</b></td></tr>
+
+<tr><td style="width:50px;"><button onclick="Copy_to_clipboard('63')"  class="button button1"  data-sound="sound1"><img style="width:30px; height:25px;" src="copyiconn.jfif"></button></td><td><u><b style="font-size:18px">(-SOC's Urdu-)</b></u><br><b id="63">Moazziz sarif, kindly neeche diye gaye updated links ko visit kijiye taake Bank Alfalah ke Schedule of Charges ki tafseelat hasil kar sakein.
+For Conventional Banking: https://www.bankalfalah.com/digital-banking/schedule-of-charges/ 
+For Islamic Banking: https://www.bankalfalah.com/islamic-banking/schedule-of-charges/</b></td></tr>
+
+<tr><td style="width:50px;"><button onclick="Copy_to_clipboard('21')"  class="button button1"  data-sound="sound1"><img style="width:30px; height:25px;" src="copyiconn.jfif"></button></td><td><u><b style="font-size:18px">(-Business Banking-)</b></u><br><b id="21">Dear Customer, kindly visit the mentioned link in order to get complete information regarding Business Accounts and Business Solutions.
+http://www.bankalfalah.com/business-banking/</b></td></tr>
+
+<tr><td style="width:50px;"><button onclick="Copy_to_clipboard('64')"  class="button button1"  data-sound="sound1"><img style="width:30px; height:25px;" src="copyiconn.jfif"></button></td><td><u><b style="font-size:18px">(-Business Banking Urdu-)</b></u><br><b id="64">Moazziz sarif, kindly diye gaye link par visit karein taa ke aap ko Business Accounts aur Business Solutions ke hawale complete information hasil kar saken.
+http://www.bankalfalah.com/business-banking/</b></td></tr>
+
+
+<tr><td style="width:50px;"><button onclick="Copy_to_clipboard('22')"  class="button button1"  data-sound="sound1"><img style="width:30px; height:25px;" src="copyiconn.jfif"></button></td><td><u><b style="font-size:18px">(-Financial Reports-)</b></u><br><b id="22">Dear Customer, kindly visit the mentioned link in order to get complete information regarding our financial reports
+https://www.bankalfalah.com/financial-reports</b></td></tr>
+
+<tr><td style="width:50px;"><button onclick="Copy_to_clipboard('23')"  class="button button1"  data-sound="sound1"><img style="width:30px; height:25px;" src="copyiconn.jfif"></button></td><td><u><b style="font-size:18px">(-Conv. Branch, ATM, CDM, Isl. Branch Locator-)</b></u><br><b id="23">Dear Customer, kindly use the link provided below to find the nearest Conventional Branch, ATM, CDM, or Islamic Branch.
+https://www.bankalfalah.com/branch-atm-locator/</b></td></tr>
+
+<tr><td style="width:50px;"><button onclick="Copy_to_clipboard('65')"  class="button button1"  data-sound="sound1"><img style="width:30px; height:25px;" src="copyiconn.jfif"></button></td><td><u><b style="font-size:18px">(-Conv. Branch, ATM, CDM, Isl. Branch Locator Urdu-)</b></u><br><b id="65">Moazziz sarif, kindly neeche diye gaye link ko use karein taa ke aap sab se qareebi Conventional Branch, ATM, CDM, ya Islamic Branch find kar sakein.
+http://www.bankalfalah.com/branch-atm-locator/</b></td></tr>
+
+<tr><td style="width:50px;"><button onclick="Copy_to_clipboard('24')"  class="button button1"  data-sound="sound1"><img style="width:30px; height:25px;" src="copyiconn.jfif"></button></td><td><u><b style="font-size:18px">(-Our Social media pages-)</b></u><br><b id="24">Dear Customer, please below have the links of our official pages:
+
+Facebook: https://www.facebook.com/BankAlfalahOfficial/
+LinkedIn: https://www.linkedin.com/company/bank-alfalah-limited/
+Instagram: https://www.instagram.com/bank_alfalah/
+Youtube: https://www.youtube.com/channel/UCeLrbPJV56Pr20lENYQ23NA
+Tiktok.Com/@Bank: https://www.tiktok.com/@bank.alfalah</b></td></tr>
+
+<tr><td style="width:50px;"><button onclick="Copy_to_clipboard('25')"  class="button button1"  data-sound="sound1"><img style="width:30px; height:25px;" src="copyiconn.jfif"></button></td><td><u><b style="font-size:18px">(-Terms and Conditions of Accounts-)</b></u><br><b id="25">Dear customer, please check the link provided in order the get the complete information regarding terms and conditions of accounts.
+https://www.bankalfalah.com/terms-and-conditions</b></td></tr>
+
+<tr><td style="width:50px;"><button onclick="Copy_to_clipboard('66')"  class="button button1"  data-sound="sound1"><img style="width:30px; height:25px;" src="copyiconn.jfif"></button></td><td><u><b style="font-size:18px">(-Terms and Conditions of Accounts Urdu-)</b></u><br><b id="66">Moazziz sarif, kindly diye gaye link ko check karein taa ke aap ko accounts ki terms and conditions ke mutalliq complete information mil sakay.
+https://www.bankalfalah.com/terms-and-conditions</b></td></tr>
+
+<tr><td style="width:50px;"><button onclick="Copy_to_clipboard('26')"  class="button button1"  data-sound="sound1"><img style="width:30px; height:25px;" src="copyiconn.jfif"></button></td><td><u><b style="font-size:18px">(-SME Conv.-)</b></u><br><b id="26">Dear customer, our Agri and SME loans provide the capital and flexibility you need to thrive in competitive markets. Please check the link provided in order the get the complete information regarding Agri & SME Loans.
+https://www.bankalfalah.com/business-banking/sme-loans/</b></td></tr>
+
+<tr><td style="width:50px;"><button onclick="Copy_to_clipboard('67')"  class="button button1"  data-sound="sound1"><img style="width:30px; height:25px;" src="copyiconn.jfif"></button></td><td><u><b style="font-size:18px">(-SME Conv.Urdu-)</b></u><br><b id="67">Moazziz sarif, humare Agri aur SME loans aapko woh capital aur flexibility dete hain jo aapko competitive markets mein kamyab hone ke liye zaroori hai. Agri aur SME loans ki mukammal maloomat hasil karne ke liye, baraye meherbani diye gaye link ko check karein.
+https://www.bankalfalah.com/business-banking/sme-loans/</b></td></tr>
+
+<tr><td style="width:50px;"><button onclick="Copy_to_clipboard('68')"  class="button button1"  data-sound="sound1"><img style="width:30px; height:25px;" src="copyiconn.jfif"></button></td><td><u><b style="font-size:18px">(-SME Isl.-)</b></u><br><b id="68">Dear customer, Bank Alfalah Islamic supports its SME customers with a full range of financing options, including short-term & medium-term financing for working capital requirements and long-term financing for infrastructure and industrial projects. Please check the link provided in order the get the complete information regarding Agri & SME Loans.
+https://www.bankalfalah.com/islamic-banking/smecommercial-banking/</b></td></tr>
+
+<tr><td style="width:50px;"><button onclick="Copy_to_clipboard('69')"  class="button button1"  data-sound="sound1"><img style="width:30px; height:25px;" src="copyiconn.jfif"></button></td><td><u><b style="font-size:18px">(-SME Isl. Urdu-)</b></u><br><b id="69">Moazziz sarif, Bank Alfalah Islamic apnay SME customers ko mukammal qism ki financing options ke saath support karta hai, jis mein working capital zarooriyat ke liye short-term aur medium-term financing aur infrastructure aur industrial projects ke liye long-term financing shaamil hain. Agri aur SME loans ke mutalliq mukammal maloomat haasil karne ke liye diye gaye link ko check karein.
+https://www.bankalfalah.com/islamic-banking/smecommercial-banking/</b></td></tr>
+
+<tr><td style="width:50px;"><button onclick="Copy_to_clipboard('28')"  class="button button1"  data-sound="sound1"><img style="width:30px; height:25px;" src="copyiconn.jfif"></button></td><td><u><b style="font-size:18px">(-Debit Cards-)</b></u><br><b id="28">Dear Customer, please find below-mentioned updated links in order to get the details of Debit Card.
+
+1.	VISA Classic Debit Card : https://www.bankalfalah.com/digital-banking/debit-cards/visa-classic-debit-card
+2.	PayPak Classic Debit Card : https://www.bankalfalah.com/digital-banking/debit-cards/pay-pak-classic-debit 
+3.	VISA Gold Debit Card : https://www.bankalfalah.com/digital-banking/debit-cards/visa-gold-debit 
+4.	VISA Platinum Debit Card : https://www.bankalfalah.com/digital-banking/debit-cards/visa-platinum-debit-card 
+5.	VISA Signature Debit Card : https://www.bankalfalah.com/digital-banking/debit-cards/visa-signature-debit 
+6.	VISA Pehchaan Debit Card : https://www.bankalfalah.com/digital-banking/debit-cards/pehchan-debit 
+7.	Master Virtual Debit Card : https://www.bankalfalah.com/digital-banking/virtual-debit-card/ 
+8.	Wallet Debit Cards : https://www.bankalfalah.com/digital-banking/wallet-debit-card/ </b></td></tr>
+
+<tr><td style="width:50px;"><button onclick="Copy_to_clipboard('70')"  class="button button1"  data-sound="sound1"><img style="width:30px; height:25px;" src="copyiconn.jfif"></button></td><td><u><b style="font-size:18px">(-Debit Card Urdu-)</b></u><br><b id="70">Moazziz sarif, Debit Card ki tafseelat (details) haasil karne ke liye Kindly neeche mentioned) updated links visit kijiye.
+
+1.	VISA Classic Debit Card : https://www.bankalfalah.com/digital-banking/debit-cards/visa-classic-debit-card
+2.	PayPak Classic Debit Card : https://www.bankalfalah.com/digital-banking/debit-cards/pay-pak-classic-debit 
+3.	VISA Gold Debit Card : https://www.bankalfalah.com/digital-banking/debit-cards/visa-gold-debit 
+4.	VISA Platinum Debit Card : https://www.bankalfalah.com/digital-banking/debit-cards/visa-platinum-debit-card 
+5.	VISA Signature Debit Card : https://www.bankalfalah.com/digital-banking/debit-cards/visa-signature-debit 
+6.	VISA Pehchaan Debit Card : https://www.bankalfalah.com/digital-banking/debit-cards/pehchan-debit 
+7.	Master Virtual Debit Card : https://www.bankalfalah.com/digital-banking/virtual-debit-card/ 
+8.	Wallet Debit Cards : https://www.bankalfalah.com/digital-banking/wallet-debit-card/ </b></td></tr>
+
+<tr><td style="width:50px;"><button onclick="Copy_to_clipboard('37')"  class="button button1"  data-sound="sound1"><img style="width:30px; height:25px;" src="copyiconn.jfif"></button></td><td><u><b style="font-size:18px">(-Debit Card Application - Demographic Update-)</b></u><br><b id="37">Dear Customer, kindly visit the mentioned link in order to get complete information in this regard.
+Debit Card Application - Demographic Update: https://invest.bankalfalah.com/ops/Documents/Debit_Card_Application_Demographic_Update.pdf</b></td></tr>
+
+<tr><td style="width:30px;"><button onclick="Copy_to_clipboard('40')"  class="button button1"  data-sound="sound1"><img style="width:30px; height:25px;" src="copyiconn.jfif"></button></td><td><u><b style="font-size:18px">(-Alfa Mall-)</b></u><br><b id="40">Dear Customer, kindly visit the mentioned link in order to access Alfa Mall.
+https://alfamall.com/</b></td></tr>
+
+</table>
+</main>
+
+<audio id="sound1" src="\\10.144.66.128\Syed Danish\HELP FILE WEB VERSION\calc.mp3" preload="auto"></audio>
+		
+
+    <script>
+        const buttons = document.querySelectorAll('.button1');
+
+        buttons.forEach(button => {
+            button.addEventListener('click', () => {
+                const soundId = button.getAttribute('data-sound');
+                const sound = document.getElementById(soundId);
+                sound.currentTime = 0; // Reset sound to start
+                sound.play(); // Play the sound
+            });
+        });
+    </script>
+
+<footer>
+    <script>
+        // Theme Switcher Logic
+        const savedTheme = localStorage.getItem('theme');
+        if (savedTheme === 'dark') {
+            document.body.classList.add('dark-mode');
+        }
+
+        const themeToggleButton = document.getElementById('theme-toggle');
+        themeToggleButton.addEventListener('click', () => {
+            document.body.classList.toggle('dark-mode');
+            if (document.body.classList.contains('dark-mode')) {
+                localStorage.setItem('theme', 'dark');
+            } else {
+                localStorage.setItem('theme', 'light');
+            }
+        });
+
+        // Time Function
+        setInterval(myTimer, 1000);
+        function myTimer() {
+            const d = new Date();
+            document.getElementById("demo").innerHTML = d.toLocaleTimeString();
+        }
+
+        // Copy to Clipboard Function
+        function copy_to_clipboard(elm_id) {
+            const text = document.getElementById(elm_id).innerText;
+            navigator.clipboard.writeText(text);
+        }
+    </script>
+  </footer>
+
+
+<script src="js/discoCursor.js"></script>
+
+</body>
+</html>
+
+

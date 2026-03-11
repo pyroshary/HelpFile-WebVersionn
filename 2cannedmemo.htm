@@ -1,0 +1,706 @@
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Help File Web Version</title>
+    <link rel="icon" type="image/x-icon" href="webicon.jfif">
+<link rel="stylesheet" href="Css/discoCursor.css">
+
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin: 0;
+            padding: 0;
+            background: linear-gradient(180deg, #d0e6f9, #a3c6e0);
+            color: #2c3e50;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: flex-start;
+            min-height: 100vh;
+            overflow-y: auto;
+            transition: background-color 0.3s ease;
+        }
+
+        body.dark-mode {
+            background: linear-gradient(180deg, #8b8787, #1e1e1e);
+            color: #ffffff;
+         
+   table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 20px;
+            transition: transform 0.3s;
+        }
+
+        body.dark-mode table {
+            background-color: transparent;
+        }
+
+        body.dark-mode th, td {
+            background-color: #3b3b3b;
+            color: #ecf0f1;
+            border-color: #555;
+        }
+
+        body.dark-mode tr:hover {
+            background-color: #2c3e50;
+        }
+
+        body.dark-mode main {
+            background-color: #232325;
+        }
+
+        body.dark-mode nav a {
+            background-color: #2c3e50;
+        }
+
+        body.dark-mode nav a:hover {
+            background-color: #34495e;
+        }
+
+        th, td {
+            border: 1px solid #bdc3c7;
+            padding: 15px;
+            text-align: left;
+            background-color: #3b3b3b;
+            border-radius: 5px;
+            transition: background-color 0.3s, transform 0.3s;
+        }
+
+        tr {
+            transition: transform 0.3s, background-color 0.3s, box-shadow 0.3s;
+        }
+
+        tr:hover {
+            background-color: #f2f2f2;
+            transform: scale(1.05);
+            box-shadow: 0 4px 20px rgba(52, 152, 219, 0.7);
+        }
+
+ main {
+            width: 90%;
+            max-width: 1200px;
+            margin: 20px auto;
+            background-color: #232325;
+            border-radius: 15px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.5);
+            padding: 20px;
+            animation: fadeIn 1.5s ease;
+        }
+
+ header {
+            background: linear-gradient(135deg, #892d00, #194c6e);
+            color: #ffffff;
+            width: 100%;
+            padding: 0px;
+            text-align: center;
+            box-shadow: 0 25px 50px rgba(0, 0, 0, 0.5);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            transition: background 0.3s ease;
+        }
+
+
+   }
+
+        * {
+            transition: all 0.3s ease;
+        }
+
+
+        header {
+            background: linear-gradient(135deg, #005289, #6dd5ed);
+            color: #ffffff;
+            width: 100%;
+            padding: 0px;
+            text-align: center;
+            box-shadow: 0 25px 50px rgba(0, 0, 0, 0.5);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            transition: background 0.3s ease;
+        }
+
+        nav {
+            margin: 15px 0;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+
+        nav a {
+            background-color: #163449;
+            color: white;
+            padding: 10px 20px;
+            margin: 5px;
+            text-decoration: none;
+            border-radius: 5px;
+            box-shadow: 0 4px 10px rgba(52, 152, 219, 0.3);
+            transition: all 0.6s ease;
+            position: relative;
+            overflow: hidden;
+        }
+
+        nav a:hover {
+            background-color: #2980b9;
+            transform: translateY(-3px);
+        }
+
+        nav a::after {
+            content: '';
+            position: absolute;
+            background: rgba(255, 255, 255, 0.1);
+            height: 100%;
+            width: 100%;
+            left: 0;
+            top: 100%;
+            transition: all 0.3s ease;
+            z-index: 0;
+        }
+
+        nav a:hover::after {
+            top: 0;
+        }
+
+        .time {
+            font-size: 16px;
+            margin-top: 10px;
+            color: white;
+        }
+
+        main {
+            width: 90%;
+            max-width: 1200px;
+            margin: 20px auto;
+            background-color: #ecf0f1;
+            border-radius: 15px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.5);
+            padding: 20px;
+            animation: fadeIn 1.5s ease;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 20px;
+            transition: transform 0.3s;
+        }
+
+        th, td {
+            border: 1px solid #bdc3c7;
+            padding: 15px;
+            text-align: left;
+            background-color: #ffffff;
+            border-radius: 5px;
+            transition: background-color 0.3s, transform 0.3s;
+        }
+
+        tr {
+            transition: transform 0.3s, background-color 0.3s, box-shadow 0.3s;
+        }
+
+        tr:hover {
+            background-color: #f2f2f2;
+            transform: scale(1.05);
+            box-shadow: 0 4px 20px rgba(52, 152, 219, 0.7);
+        }
+
+        .button {
+            background-color: rgb(64, 171, 158, 0.0);
+            border-radius: 33px;
+            border: none;
+            color: black;
+            padding: 4px 10px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 12px;
+            margin: 4px 2px;
+            cursor: pointer;
+            -webkit-transition-duration: 0.4s; /* Safari */
+            transition-duration: 0.5s;
+        }
+
+        .button1:hover {
+            background-color: #005289;
+            box-shadow: 20px 12px 16px 18px rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);
+        }
+
+        pre {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            white-space: pre-wrap; /* Allows wrapping */
+            overflow-wrap: break-word; /* Breaks long words */
+            color: black; /* Change the text color */
+            background-color: #90dbb5; /* Change the background color */
+            padding: 10px; /* Add padding for better readability */
+            border-radius: 5px; /* Add border radius for style */
+        }
+
+        footer {
+            margin: 20px 0;
+            text-align: center;
+            font-size: 12px;
+            color: #34495e;
+        }
+
+
+        #theme-toggle {
+            background-color: #2980b9;
+            color: white;
+            border: none;
+            padding: 10px;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        #theme-toggle:hover {
+            background-color: #1f6f8b;
+        }
+        /* Mobile Responsiveness */
+        @media screen and (max-width: 768px) {
+            body { font-size: 14px; }
+            main { width: 95%; padding: 10px; margin: 10px auto; }
+            nav { flex-direction: column; align-items: center; }
+            nav a { width: 80%; text-align: center; margin: 5px 0; }
+            table { font-size: 13px; }
+            th, td { padding: 8px; font-size: 12px; }
+            .button { padding: 2px 8px; }
+            .button img { width: 24px !important; height: 20px !important; }
+            pre { font-size: 12px; padding: 8px; overflow-x: auto; }
+            header h1 { font-size: 18px; padding: 10px; }
+        }
+        
+        @media screen and (max-width: 480px) {
+            body { font-size: 12px; }
+            main { width: 98%; padding: 5px; }
+            nav a { width: 90%; font-size: 14px; }
+            th, td { padding: 6px; font-size: 11px; }
+            .button img { width: 20px !important; height: 18px !important; }
+            pre { font-size: 11px; padding: 5px; }
+            header h1 { font-size: 16px; }
+        }
+    </style>
+    <style type="text/css">
+        a.nounderline {text-decoration: none; }
+    </style>
+
+</head>
+
+<body onload="startTime()">
+  <header>
+<h1>Help File Web Version</h1>
+        <nav>
+<a href="2CannedBasic.htm" target="_self";>Canned Basic</a>
+<a href="2WhatsAppBOT.htm" target="_self";>WhatsApp BOT</a>
+<a href="2internetbanking.htm" target="_self";>New Alfa App</a>
+<a href="2linkscanned.htm" target="_self";>Links Canned</a>
+<a href="2orbitscanned.htm" target="_self";>Orbits Canned</a>
+<a href="2Walletcanned.htm" target="_self";>Wallet Canned</a>
+<a href="2cannedmemo.htm" target="_self" style="background-color:#00a4ff; color:white";>Canned Memo</a>
+<a href="2leadoffering.htm" target="_self";>Lead Offering</a>
+<a href="2socialmediaresponses.htm" target="_self">Social Media Responses</a>
+<a href="2othercanned.htm" target="_self";><img style="width:30px; height:25px;" src="bulb.gif"></a>
+</nav>
+    <button id="theme-toggle" style="position: absolute; top: 20px; right: 20px; padding: 10px;">Switch Theme</button>
+
+<div class="time" id="demo">TIME</div>
+   </header> 
+<main>
+<table> 
+	<tr><td><button onclick="copy_to_clipboard('1')"  class="button button1"  data-sound="sound1"><img style="width:30px; height:25px;" src="copyiconn.jfif"></button></td><td><b id="1">Walaikum Assalam.</b></td></tr>
+<tr>
+    <td>
+        <button onclick="copy_to_clipboard('2')" class="button button1" data-sound="sound1">
+            <img style="width:30px; height:25px;" src="copyiconn.jfif">
+        </button>
+        <br><br>
+        <button onclick="copy_to_clipboard('92')" class="button button1" data-sound="sound1">
+            <img style="width:30px; height:25px;" src="copyiconn.jfif">
+        </button>
+    </td>
+    <td>
+        <b id="2">Assalam o Alikum. How may I help you?</b>
+        <br><br><br>
+        <b id="92">Assalam o Alikum. Hum apki kese madad kar saqte hain?</b>
+    </td>
+</tr>
+
+
+<tr>
+    <td>
+        <button onclick="copy_to_clipboard('93')" class="button button1" data-sound="sound1">
+            <img style="width:30px; height:25px;" src="copyiconn.jfif">
+        </button>
+        <br><br>
+        <button onclick="copy_to_clipboard('94')" class="button button1" data-sound="sound1">
+            <img style="width:30px; height:25px;" src="copyiconn.jfif">
+        </button>
+    </td>
+    <td>
+        <b id="93">Dear customer you are connected with live Human Agent.</b>
+        <br><br><br>
+        <b id="94">Moaziz Sarif, aap live agent se connect ho gaye hain.</b>
+    </td>
+</tr>
+
+
+	<tr><td><button onclick="copy_to_clipboard('3')"  class="button button1"  data-sound="sound1"><img style="width:30px; height:25px;" src="copyiconn.jfif"></button><br><br><button onclick="copy_to_clipboard('4')"  class="button button1"  data-sound="sound1"><img style="width:30px; height:25px;" src="copyiconn.jfif"></button></td><td><b id="3">Dear Customer, how can I help you?</b><br><br><br>
+<i id="4">Moaziz Sarif, Hum apki kesi madad kar sakty ha?</i></td></tr>
+
+	<tr><td><button onclick="copy_to_clipboard('5')"  class="button button1"  data-sound="sound1"><img style="width:30px; height:25px;" src="copyiconn.jfif"></button><br><br><button onclick="copy_to_clipboard('6')"  class="button button1"   data-sound="sound1"><img style="width:30px; height:25px;" src="copyiconn.jfif"></button></td><td><b id="5">Dear Customer, we have received your message, let us check and get back to you. Your patience would be highly appreciated.</b><br><br><br>
+<i id="6">Muaziz Sarif, apka message humay masool hogaya hai, hum kuch hi dair mai apko rehnumai faraham kartay hain, apke wait karne ka bauhat shukriya.</i></td></tr>
+
+	<tr><td><button onclick="copy_to_clipboard('7')"  class="button button1"  data-sound="sound1"><img style="width:30px; height:25px;" src="copyiconn.jfif"></button><br><br><br><button onclick="copy_to_clipboard('8')"  class="button button1"  data-sound="sound1"><img style="width:30px; height:25px;" src="copyiconn.jfif"></button></td><td><b id="7">Dear Customer, we regret the inconvenience you had to face, we have received your message, now you are connected with live assistance and we look forward to serve you better.</b><br><br><br>
+<i id="8">Muaziz Sarif, humay is takleef ka afsoos hai jiska apko samna karna para, apka message humay masool hogaya hai, ab ap live assistance per connected hain aur hum apko behter khidmat faraham karne kay muntazir hain.</i></td></tr>
+
+	<tr><td><button onclick="copy_to_clipboard('9')"  class="button button1"  data-sound="sound1"><img style="width:30px; height:25px;" src="copyiconn.jfif"></button></td><td><b id="9">Dear Customer, anything else I can assist you with?</b></td></tr>
+	<tr><td><button onclick="copy_to_clipboard('10')"  class="button button1"  data-sound="sound1"><img style="width:30px; height:25px;" src="copyiconn.jfif"></button><br><br><button onclick="copy_to_clipboard('11')"  class="button button1"  data-sound="sound1"><img style="width:30px; height:25px;" src="copyiconn.jfif"></button></td><td><b id="10">Dear Customer, Is there anything else that I can help you with?</b><br><br><br>
+<i id="11">Muaziz Saarif, mazeed kuch janna chahenge?</i></td></tr>
+
+	<tr><td><button onclick="copy_to_clipboard('12')" class="button button1"  data-sound="sound1"><img style="width:30px; height:25px;" src="copyiconn.jfif"></button><br><br><button onclick="copy_to_clipboard('13')" class="button button1"  data-sound="sound1"><img style="width:30px; height:25px;" src="copyiconn.jfif"></button></td><td><b id="12">Dear Customer, are you connected with us?</b><br><br><br>
+<i id="13">Muaziz Sarif, kia ap hamare sath connected hain?</i></td></tr>
+
+<tr><td><button onclick="copy_to_clipboard('1616')" class="button button1"  data-sound="sound1"><img style="width:30px; height:25px;" src="copyiconn.jfif"></button><br><br><br><br><br><br><br><br><br><br><button onclick="copy_to_clipboard('1717')" class="button button1"  data-sound="sound1"><img style="width:30px; height:25px;" src="copyiconn.jfif"></button></td><td><pre style="font-weight: bold; background-color:#ebc496;" id="1616">Thank you so much for approaching us through our Chat Channel. Please feel free to contact us in future in case of any query. Have a great day.
+
+Dear Customer, we would like to introduce our newly launched WhatsApp Channel. Get instant updates & exclusive offers — all at your fingertips!
+
+Follow & subscribe now: https://whatsapp.com/channel/0029VazEvfhAu3aPT3G2r61t
+
+Stay ahead with Bank Alfalah on WhatsApp
+</pre>
+<pre style="background-color:#ebc496;" id="1717">Chat channel ke zariye humse raabta karne ka shukriya. Mustaqbil main bhi aap kisi bhi qism ki rehnumai kay liye humse raabta kar sakty hain.
+
+Dear Customer, we would like to introduce our newly launched WhatsApp Channel. Get instant updates & exclusive offers — all at your fingertips!
+
+Follow & subscribe now: https://whatsapp.com/channel/0029VazEvfhAu3aPT3G2r61t
+
+Stay ahead with Bank Alfalah on WhatsApp
+</pre>
+</td></tr>
+
+<tr><td><button onclick="copy_to_clipboard('1414')" class="button button1"  data-sound="sound1"><img style="width:30px; height:25px;" src="copyiconn.jfif"></button><br><br><br><br><br><br><br><br><br><button onclick="copy_to_clipboard('1515')" class="button button1"  data-sound="sound1"><img style="width:30px; height:25px;" src="copyiconn.jfif"></button></td><td><pre style="font-weight: bold; background-color:#ebc496;" id="1414">Sorry, but it seems like you've been disconnected, we would like to close this chat now.
+Thank you so much for approaching us through our Chat Channel. Please feel free to contact us in future in case of any query. Have a great day.
+
+Dear Customer, we would like to introduce our newly launched WhatsApp Channel. Get instant updates & exclusive offers — all at your fingertips!
+
+Follow & subscribe now: https://whatsapp.com/channel/0029VazEvfhAu3aPT3G2r61t
+
+Stay ahead with Bank Alfalah on WhatsApp
+</pre>
+<pre style="background-color:#ebc496;" id="1515">Maazrat chahte hain, mumkin hai ke chat disconnect ho chuki hai, islye chat close ki ja rahi hai.
+Chat channel ke zariye humse raabta karne ka shukriya. Mustaqbil main bhi aap kisi bhi qism ki rehnumai kay liye humse raabta kar sakty hain.
+
+Dear Customer, we would like to introduce our newly launched WhatsApp Channel. Get instant updates & exclusive offers — all at your fingertips!
+
+Follow & subscribe now: https://whatsapp.com/channel/0029VazEvfhAu3aPT3G2r61t
+
+Stay ahead with Bank Alfalah on WhatsApp
+</pre>
+</td></tr>
+
+
+
+
+
+
+<tr><td><button onclick="copy_to_clipboard('16')" class="button button1"  data-sound="sound1"><img style="width:30px; height:25px;" src="copyiconn.jfif"></button><br><br><br><button onclick="copy_to_clipboard('17')" class="button button1"  data-sound="sound1"><img style="width:30px; height:25px;" src="copyiconn.jfif"></button></td><td><pre style="font-weight: bold; background-color:#f3c3f7;" id="16">Thank you so much for approaching us through our Chat Channel. Please feel free to contact us in future in case of any query. Have a great day.
+</pre>
+<pre style="background-color:#f3c3f7;" id="17">Chat channel ke zariye humse raabta karne ka shukriya. Mustaqbil main bhi aap kisi bhi qism ki rehnumai kay liye humse raabta kar sakty hain.
+</pre>
+</td></tr>
+
+<tr><td><button onclick="copy_to_clipboard('14')" class="button button1"  data-sound="sound1"><img style="width:30px; height:25px;" src="copyiconn.jfif"></button><br><br><br><button onclick="copy_to_clipboard('15')" class="button button1"  data-sound="sound1"><img style="width:30px; height:25px;" src="copyiconn.jfif"></button></td><td><pre style="font-weight: bold; background-color:#f3c3f7;" id="14">Sorry, but it seems like you've been disconnected, we would like to close this chat now.
+Thank you so much for approaching us through our Chat Channel. Please feel free to contact us in future in case of any query. Have a great day.
+</pre>
+<pre style="background-color:#f3c3f7;" id="15">Maazrat chahte hain, mumkin hai ke chat disconnect ho chuki hai, islye chat close ki ja rahi hai.
+Chat channel ke zariye humse raabta karne ka shukriya. Mustaqbil main bhi aap kisi bhi qism ki rehnumai kay liye humse raabta kar sakty hain.
+</pre>
+</td></tr>
+
+<tr><td><button onclick="copy_to_clipboard('new')" class="button button1"  data-sound="sound1"><img style="width:30px; height:25px;" src="copyiconn.jfif"></button><br><button onclick="copy_to_clipboard('new2')" class="button button1"  data-sound="sound1"><img style="width:30px; height:25px;" src="copyiconn.jfif"></button></td><td><b id="new">Dear Customer, please confirm do you want to check account balance or credit card balance?</b><br><br>
+<i id="new2">Muaziz Saarif, ap account balance check karna chah rahe hen ya phir credit card balance?</i>
+</td></tr>
+
+<tr><td><button onclick="copy_to_clipboard('new3')" class="button button1"  data-sound="sound1"><img style="width:30px; height:25px;" src="copyiconn.jfif"></button><br><button onclick="copy_to_clipboard('new4')" class="button button1"  data-sound="sound1"><img style="width:30px; height:25px;" src="copyiconn.jfif"></button></td><td><b id="new3">Dear Customer, you can generate account statement through Alfa app / Internet banking or by calling our helpline 021/042 111 225 111.</b><br><br>
+<i id="new4">Muaziz Saarif, ap account statement generate kar sakte hen Alfa app / Internet banking aur hamari helpline 021/042 111 225 111 ke zariye.</i>
+</td></tr>
+
+<tr><td><button onclick="copy_to_clipboard('18')" class="button button1"  data-sound="sound1"><img style="width:30px; height:25px;" src="copyiconn.jfif"></button><br><br><button onclick="copy_to_clipboard('19')" class="button button1"  data-sound="sound1"><img style="width:30px; height:25px;" src="copyiconn.jfif"></button></td><td><b id="18">I'm good, hope you are doing great too.</b><br><br><br>
+<i id="19">Kheriat se hen, umeed hai ap bhi kheriat se hounge.</i></td></tr>
+
+	<tr><td><button onclick="copy_to_clipboard('20')" class="button button1"  data-sound="sound1"><img style="width:30px; height:25px;" src="copyiconn.jfif"></button><br><br><button onclick="copy_to_clipboard('21')" class="button button1"  data-sound="sound1"><img style="width:30px; height:25px;" src="copyiconn.jfif"></button></td><td><b id="20">Dear Customer, please confirm what would you like to know?</b><br><br><br>
+<i id="21">Muaziz Saarif, kya janna chahengy ap?</i></td></tr>
+
+<tr><td><button onclick="copy_to_clipboard('22')" class="button button1"  data-sound="sound1"><img style="width:30px; height:25px;" src="copyiconn.jfif"></button><br><br><button onclick="copy_to_clipboard('23')" class="button button1"  data-sound="sound1"><img style="width:30px; height:25px;" src="copyiconn.jfif"></button></td><td><b id="22">Dear Customer, kindly check the below given attachment in order to get complete information in this regard.</b><br><br><br>
+<i id="23">Muaziz Saarif, kindly di gai attachment check karlen is hawale se tamam information hasil karne ke liye.</i></td></tr>
+
+<tr><td><button onclick="copy_to_clipboard('24')" class="button button1"  data-sound="sound1"><img style="width:30px; height:25px;" src="copyiconn.jfif"></button><br><br><button onclick="copy_to_clipboard('25')" class="button button1"  data-sound="sound1"><img style="width:30px; height:25px;" src="copyiconn.jfif"></button></td><td><b id="24">Dear Customer, we are sorry for the inconvenience caused.</b><br><br><br>
+<i id="25">Takleef ke lye bhut mazrat chahengy.</i></td></tr>
+
+<tr><td><button onclick="copy_to_clipboard('26')" class="button button1"  data-sound="sound1"><img style="width:30px; height:25px;" src="copyiconn.jfif"></button><br><button onclick="copy_to_clipboard('27')" class="button button1"  data-sound="sound1"><img style="width:30px; height:25px;" src="copyiconn.jfif"></button><br><br><button onclick="copy_to_clipboard('28')" class="button button1"  data-sound="sound1"><img style="width:30px; height:25px;" src="copyiconn.jfif"></button><br><button onclick="copy_to_clipboard('29')" class="button button1"  data-sound="sound1"><img style="width:30px; height:25px;" src="copyiconn.jfif"></button></td><td><b id="26">Kindly confirm against which product would you like to register alfa app?</b><br><br>
+<b id="27">Account/debit card/credit card/wallet or Roshan Digital Account?</b><br><br><br>
+<i id="28">Ap kis product ke against registration kar rahe hain?</i><br><br>
+<i id="29">Account/debit card/credit card/orbits/wallet or Roshan Digital Account?</i>
+</td></tr>
+
+<tr><td><button onclick="copy_to_clipboard('30')" class="button button1"  data-sound="sound1"><img style="width:30px; height:25px;" src="copyiconn.jfif"></button><br><button onclick="copy_to_clipboard('31')" class="button button1"  data-sound="sound1"><img style="width:30px; height:25px;" src="copyiconn.jfif"></button><br><br><br><button onclick="copy_to_clipboard('32')" class="button button1"  data-sound="sound1"><img style="width:30px; height:25px;" src="copyiconn.jfif"></button><br><button onclick="copy_to_clipboard('33')" class="button button1"  data-sound="sound1"><img style="width:30px; height:25px;" src="copyiconn.jfif"></button></td><td><b id="30">Dear Customer, can you please confirm against which product have you registered?</b><br><br>
+<b id="31">Account/debit card/credit card/wallet or Roshan Digital Account?</b><br><br><br><br>
+<i id="32">Muaziz Saarif, apne register kis product se kya tha alfa app pe?</i><br><br>
+<i id="33">Account/debit card/credit card/orbits /wallet or Roshan Digital Account?</i></td></tr>
+
+<tr><td><button onclick="copy_to_clipboard('34')" class="button button1"  data-sound="sound1"><img style="width:30px; height:25px;" src="copyiconn.jfif"></button><br><button onclick="copy_to_clipboard('35')" class="button button1"  data-sound="sound1"><img style="width:30px; height:25px;" src="copyiconn.jfif"></button></td><td><b id="34">Dear Customer, please confirm which account do you have in Bank Alfalah?</b><br><br>
+<i id="35">Muaziz Saarif, konsa account he apka Bank Alfalah men?</i></td></tr>
+
+<tr><td><button onclick="copy_to_clipboard('36')" class="button button1"  data-sound="sound1"><img style="width:30px; height:25px;" src="copyiconn.jfif"></button><br><button onclick="copy_to_clipboard('37')" class="button button1"  data-sound="sound1"><img style="width:30px; height:25px;" src="copyiconn.jfif"></button></td><td><b id="36">Dear Customer, please confirm the error that you are facing?</b><br><br>
+<i id="37">Muaziz Saarif, kya issue/ error arha hai?</i>
+</td></tr>
+
+	<tr><td><button onclick="copy_to_clipboard('38')" class="button button1"  data-sound="sound1"><img style="width:30px; height:25px;" src="copyiconn.jfif"></button><br><br><button onclick="copy_to_clipboard('39')" class="button button1"  data-sound="sound1"><img style="width:30px; height:25px;" src="copyiconn.jfif"></button></td><td><b id="38">Dear Customer, kindly clarify your query.</b><br><br>
+<i id="39">Muaziz Saarif, apna sawal wazeh kijiye.</i></td></tr>
+
+<tr><td><button onclick="copy_to_clipboard('40')" class="button button1"  data-sound="sound1"><img style="width:30px; height:25px;" src="copyiconn.jfif"></button><br><br><button onclick="copy_to_clipboard('41')" class="button button1"  data-sound="sound1"><img style="width:30px; height:25px;" src="copyiconn.jfif"></button></td><td><b id="40">Dear Customer, I request you to kindly call at our helpline in order to confirm the status in this regard. Our helpline number is 021/042 111 225 111.</b><br><br>
+<i id="41">Muaziz Saarif, ap kindly hamari helpline par raabta kar ke is bary men status confirm kijiye. Hamari helpline number hai 021/042 111 225 111.</i></td></tr>
+
+<tr><td><button onclick="copy_to_clipboard('42')" class="button button1"  data-sound="sound1"><img style="width:30px; height:25px;" src="copyiconn.jfif"></button><br><br><button onclick="copy_to_clipboard('43')" class="button button1"  data-sound="sound1"><img style="width:30px; height:25px;" src="copyiconn.jfif"></button></td><td><b id="42">Thank you for providing your details kindly wait our department/officer will contact you within 24 to 48 working hours in this regard.</b><br><br>
+<i id="43">Shukriya apni details provide krny ke lyae intizar kijiyga hamara concern department/officer apsy RDA account apply ke lye contact krelga 24 to 48 working hours ke doran.</i></td></tr>
+
+<tr><td><button onclick="copy_to_clipboard('44')" class="button button1"  data-sound="sound1"><img style="width:30px; height:25px;" src="copyiconn.jfif"></button><br><br><button onclick="copy_to_clipboard('45')" class="button button1"  data-sound="sound1"><img style="width:30px; height:25px;" src="copyiconn.jfif"></button></td><td><b id="44">Dear Customer, it could be a technical issue I request you to kindly change your web browser or try again after some time through the given link in order to resume your application.
+https://invest.bankalfalah.com/ops/ResumeApplication.aspx.</b><br><br>
+<i id="45">Muaziz Saarif, ye technical issue ki waja se ho sakta he ap apna web browser change karlen aur kuch der bad dubara try karen diye gae link ki madad se.
+https://invest.bankalfalah.com/ops/ResumeApplication.aspx </i></td></tr>
+
+<tr><td><button onclick="copy_to_clipboard('46')" class="button button1"  data-sound="sound1"><img style="width:30px; height:25px;" src="copyiconn.jfif"></button><br><button onclick="copy_to_clipboard('47')" class="button button1"  data-sound="sound1"><img style="width:30px; height:25px;" src="copyiconn.jfif"></button></td><td><b id="46">Dear Customer, you can open it online through our website www.bankalfalah.com .</b><br><br>
+<i id="47">Muaziz Saarif, ap online roshan digital account open kar sakte hen hamari web site ke zariye www.bankalfalah.com .</i></td></tr>
+
+<tr><td><button onclick="copy_to_clipboard('ibane')" class="button button1"  data-sound="sound1"><img style="width:30px; height:25px;" src="copyiconn.jfif"></button><br><br><br><br><br><br><button onclick="copy_to_clipboard('ibanu')" class="button button1"  data-sound="sound1"><img style="width:30px; height:25px;" src="copyiconn.jfif"></button></td><td><pre style="font-weight: bold;" id="ibane">Dear Customer, to get your IBAN, you can follow the steps:
+- Visit the website https: https://www.bankalfalah.com/accounts/ (Drop down, in the end of this page) then you will be able to generate IBAN number by entering your account number.
+- You can check IBAN number through alfa app / internet banking.
+- You can also get your IBAN number if you are having cheque book.
+- You can also call our helpline 021/042  111 225 111 to get your IBAN number.
+- You can also check by sending AD to 8287 via message
+
+In order to check your IBAN / Branch Details through Alfa app please follow the below steps:
+Login> click on Overview option> See details> Your IBAN and branch details will show on display.
+</pre>
+<pre id="ibanu">Muaziz Saarif, ap diye gae options ke zariye apna IBAN number hasil kar sakte hen:
+- Diye gae link ke zariye apna account number enter karke IBAN number generate kar sakte hen. IBAN: https://www.bankalfalah.com/accounts/ .
+- Ap alfa app/internet banking ke zariye bhi IBAN number check kar sakte hen.
+- Ap apni cheque book ke zariye bhi IBAN number hasil kar sakte hen.
+- Aur ap hamari helpline 021/042 111 225 111 ke zariye bhi IBAN number jan sakte hen.
+- Aur ap AD likh kar 8287 par bhej kar bhe check kar sakty ha.
+
+IBAN / Branch details Alfa app ke zariye check karne ke liye kindly below steps follow karlen:
+Login> click on Overview option> See details> Apkfa IBAN aur branch details show hojaengi.
+</pre></td></tr>
+
+<tr><td><button onclick="copy_to_clipboard('48')" class="button button1"  data-sound="sound1"><img style="width:30px; height:25px;" src="copyiconn.jfif"></button><br><br><button onclick="copy_to_clipboard('49')" class="button button1"  data-sound="sound1"><img style="width:30px; height:25px;" src="copyiconn.jfif"></button></td><td><b id="48">Dear Customer, as per State Bank, you can only transfer Rupees 25,000, without any fee. If you cross limit of Rupees 25,000 then Rupees 0.1% or Rupees 200 whichever is lowest will be charge.</b><br><br>
+<i id="49">Muaziz Saarif, as per state bank ap transfer kar sakte hen 25,000 without any charges. agar ap 25,000 se ziyafa ki transaction karenge to apko 0.1% ya 200 rupess whichever is lowest charge honge.</i></td></tr>
+
+	<tr><td><button onclick="copy_to_clipboard('50')" class="button button1"  data-sound="sound1"><img style="width:30px; height:25px;" src="copyiconn.jfif"></button></td><td><b id="50">We are arranging a call back for you in this regard, further you can also call at our helpline for service blocking. Moreover, it is to inform you that bank will not be liable in any case of misuse before blocking.</b></td></tr>
+
+	<tr><td><button onclick="copy_to_clipboard('51')" class="button button1"  data-sound="sound1"><img style="width:30px; height:25px;" src="copyiconn.jfif"></button><br></b><button onclick="copy_to_clipboard('52')" class="button button1"  data-sound="sound1"><img style="width:30px; height:25px;" src="copyiconn.jfif"></button><br><br><br><button onclick="copy_to_clipboard('53')" class="button button1"  data-sound="sound1"><img style="width:30px; height:25px;" src="copyiconn.jfif"></button><br><button onclick="copy_to_clipboard('54')" class="button button1"  data-sound="sound1"><img style="width:30px; height:25px;" src="copyiconn.jfif"></button></td><td><b id="51">Dear Customer, please confirm in which type of loan you are interested?</b><br><br>
+<b id="52">Home loan, Auto loan or Personal loan?</b><br><br><br><br>
+<i id="53">Muaziz Saarif, ap konsa loan hasil karna chah rahe hen?</i><br><br>
+<i id="54">Home loan, Auto loan ya phir Personal loan?</i>
+</td></tr>
+
+	<tr><td><button onclick="copy_to_clipboard('55')" class="button button1"  data-sound="sound1"><img style="width:30px; height:25px;" src="copyiconn.jfif"></button><br><button onclick="copy_to_clipboard('56')" class="button button1"  data-sound="sound1"><img style="width:30px; height:25px;" src="copyiconn.jfif"></button></td><td><b id="55">Dear Customer, please confirm which type of account do you want to open?</b><br><br>
+<i id="56">Muaziz Saarif, ap konsa account open karna chah rahe hen?</i>
+</td></tr>
+
+	<tr><td><button onclick="copy_to_clipboard('57')" class="button button1"  data-sound="sound1"><img style="width:30px; height:25px;" src="copyiconn.jfif"></button><br><button onclick="copy_to_clipboard('58')" class="button button1"  data-sound="sound1"><img style="width:30px; height:25px;" src="copyiconn.jfif"></button><br><br><br><button onclick="copy_to_clipboard('59')" class="button button1"  data-sound="sound1"><img style="width:30px; height:25px;" src="copyiconn.jfif"></button></td><td><b id="57">Dear Customer, if you want to go back in main menu then we have to close this live chat.</b><br><br>
+<b id="58">Should I close this chat for now?</b><br><br><br><br>
+<i id="59">Muaziz Saarif, agar ap main menu men jana chahte hen to phir apki ye live chat close karni hogi.</i>
+</td></tr>
+
+	<tr><td><button onclick="copy_to_clipboard('60')" class="button button1"  data-sound="sound1"><img style="width:30px; height:25px;" src="copyiconn.jfif"></button></td><td><b id="60">Please enter the first four digits after ALFH from your IBAN number then omit the "00". Then please enter the remaining last 10 digits of your IBAN number. A total of 14 digits must be entered.</b>
+</td></tr>
+
+
+	<tr><td><button onclick="copy_to_clipboard('61')" class="button button1"  data-sound="sound1"><img style="width:30px; height:25px;" src="copyiconn.jfif"></button><br><button onclick="copy_to_clipboard('62')" class="button button1"  data-sound="sound1"><img style="width:30px; height:25px;" src="copyiconn.jfif"></button></td><td><b id="61">Dear Customer, we don’t have access of this media kindly explain in text.</b><br><br>
+<i id="62">Muaziz Saarif, hamare pas audio check karne ki access nahi hoti he ap kindly type karke explain karen.</i>
+</td></tr>
+
+	<tr><td><button onclick="copy_to_clipboard('accounte')" class="button button1"  data-sound="sound1"><img style="width:30px; height:25px;" src="copyiconn.jfif"></button><br><br><br><br><br><br><br><br><br><button onclick="copy_to_clipboard('accountu')" class="button button1"  data-sound="sound1"><img style="width:30px; height:25px;" src="copyiconn.jfif"></button></td><td><pre style="font-weight: bold;" id="accounte">Dear Customer, you can visit the branch or use RAPID to open your account.
+For branchless banking you can use Alfa app, please go through the below link in order to know about range of accounts offered by Bank Alfalah. http://www.bankalfalah.com/personal-banking/deposit-accounts/
+
+For RAPID account, please use the following links.
+Conventional https://rapid.bankalfalah.com/AlfalahRapidPROD/Home.aspx
+Islamic https://rapid.bankalfalah.com/AlfalahRapidPROD/Index.aspx
+
+Moreover, if you want to open salaried and business account you need to visit branch. However, Roshan Digital Account can be opened online.
+Non-residents can apply for the product from the website https:www.bankalfalah.com and clicking “Open an account”, while residents can apply for it at the branch.</pre><hr>
+
+<pre id="accountu">Muaziz Saarif, Agar ap branch account open karna chahty hain to branch visit kr ke open kar skty hain ya Alfalah Rapid sy aur agar ap Alfa account kholna chahty hain to Alfa Application sy open ka skty hain. 
+Kindly diye gae link pe visit karlen is hawale se tafseelat hasil karne ke liye. http://www.bankalfalah.com/personal-banking/deposit-accounts/
+
+Aur Rapid ke through account open karny ke lye Conventional Banking and Islamic Banking ki link visit kjiye.
+CONV https://rapid.bankalfalah.com/AlfalahRapidPROD/Home.aspx
+IBG https://rapid.bankalfalah.com/AlfalahRapidPROD/Index.aspx
+
+Mazeed agar ap salaried ya business account open karna chahty hain to branch visit kijiye ya phir agar ap non-resident hain or Roshan Digital Account open krna chahty hain to link visit kijiye.
+https://invest.bankalfalah.com/ops/Index.html </pre></td></tr>
+
+	<tr><td><button onclick="copy_to_clipboard('63')" class="button button1"  data-sound="sound1"><img style="width:30px; height:25px;" src="copyiconn.jfif"></button><br><br><br><br><button onclick="copy_to_clipboard('64')" class="button button1"  data-sound="sound1"><img style="width:30px; height:25px;" src="copyiconn.jfif"></button></td><td><b id="63">Dear Customer, it could be your debit card delivery charges however I request you to kindly call at our helpline in order to confirm the status in this regard. Our 24/7 service helpline number is 0092 21 111 225 226.</b><br><br><br><br>
+<i id="64">Muaziz Saarif, ye apke debit card ke delivery charges ho sakte hen ap kindly hamari 24/7 service helpline 0092 21 111 225 226 ke zariye status confirm karlen.</i>
+</td></tr>
+
+	<tr><td><button onclick="copy_to_clipboard('65')" class="button button1"  data-sound="sound1"><img style="width:30px; height:25px;" src="copyiconn.jfif"></button><br><button onclick="copy_to_clipboard('66')" class="button button1"  data-sound="sound1"><img style="width:30px; height:25px;" src="copyiconn.jfif"></button></td><td><b id="65">Dear Customer, it could be a technical glitch in alfa app kindly uninstall your alfa app and download it again then try.</b><br><br>
+<i id="66">Muaziz Saarif, ye technical issue ki waja se ho sakta he kindly apni alfa app uninsall karke dubara download karlen phir try karen.</i>
+</td></tr>
+
+	<tr><td><button onclick="copy_to_clipboard('67')" class="button button1"  data-sound="sound1"><img style="width:30px; height:25px;" src="copyiconn.jfif"></button><br><br><button onclick="copy_to_clipboard('68')" class="button button1"  data-sound="sound1"><img style="width:30px; height:25px;" src="copyiconn.jfif"></button></td><td><b id="67">Dear Customer, you can increase per day funds transfer limit after login in alfa app. Kindly go to settings option then change your package.</b><br><br>
+<i id="68">Muaziz Saarif, ap per day funds transfer limit enhance kar sakte hen alfa app ke zariye. Login karne ke bad settings ke option se kindly apna package change karlen.</i>
+</td></tr>
+
+	<tr><td><button onclick="copy_to_clipboard('69')" class="button button1"  data-sound="sound1"><img style="width:30px; height:25px;" src="copyiconn.jfif"></button><br><br><br><br><button onclick="copy_to_clipboard('70')" class="button button1"  data-sound="sound1"><img style="width:30px; height:25px;" src="copyiconn.jfif"></button></td><td><b id="69">Dear Customers, you can use the Alfa app to perform biometric verification and increase the daily transaction limit to Rs 250,000 only. However if you want to use a higher daily limit based on you Alfa/Internet banking package, you will need to visit in Bank Alfalah branch for biometric verification.</b><br><br>
+<i id="70">Muaziz Saarif, alfa app se digital biometric verification kar ke Rs 250,000 tak ke transactions kar sakte hain in a day. Agar ap complete funds transfer limit avail karna chahte hain to phir nearest branch visit kar ke bhi biometric verification karwa sakte hain.</i>
+</td></tr>
+
+	<tr><td><button onclick="copy_to_clipboard('71')" class="button button1"  data-sound="sound1"><img style="width:30px; height:25px;" src="copyiconn.jfif"></button><br><br><button onclick="copy_to_clipboard('72')" class="button button1"  data-sound="sound1"><img style="width:30px; height:25px;" src="copyiconn.jfif"></button></td><td><b id="71">Dear Customer, SWIFT code is ALFHPKKAXXX and it is same for all branches.</b><br><br>
+<i id="72">Muaziz Saarif, SWIFT code he ALFHPKKAXXX.</i>
+</td></tr>
+
+	<tr><td><button onclick="copy_to_clipboard('73')" class="button button1"  data-sound="sound1"><img style="width:30px; height:25px;" src="copyiconn.jfif"></button><br><br><br><button onclick="copy_to_clipboard('74')" class="button button1"  data-sound="sound1"><img style="width:30px; height:25px;" src="copyiconn.jfif"></button></td><td><b id="73">Dear Customer, after login in alfa app kindly click on show quick balance then click on your account number, and then you will be able to check your mini statement.</b><br><br>
+<i id="74">Muaziz Saarif, alfa app men login karne ke bad "show quick balance" pe click karen phir apna account number pe click karen uske bad apke pas statement ka option show hojaega.</i>
+</td></tr>
+
+	<tr><td><button onclick="copy_to_clipboard('75')" class="button button1"  data-sound="sound80"><img style="width:30px; height:25px;" src="copyiconn.jfif"></button><br><br><button onclick="copy_to_clipboard('76')" class="button button1"  data-sound="sound1"><img style="width:30px; height:25px;" src="copyiconn.jfif"></button></td><td><b id="75">Dear Customer, please confirm do you have credit card or debit card?</b><br><br>
+<i id="76">Muaziz Saarif, apke pas credit card he ya phir debit card he?</i>
+</td></tr>
+
+	<tr><td><button onclick="copy_to_clipboard('expiry')" class="button button1"  data-sound="sound1"><img style="width:30px; height:25px;" src="copyiconn.jfif"></button><br><br><button onclick="copy_to_clipboard('expiry2')" class="button button1"  data-sound="sound1"><img style="width:30px; height:25px;" src="copyiconn.jfif"></button></td><td><b id="expiry">Dear Customer, you can type expiry date in below given format.
+For Example: 202709
+Year and month.
+2027 is year and 09 is month. </b>
+<p id="expiry2">Muaziz Saarif, ap expiry date below given format men type kar sakte hen.
+For Example: 202709
+Pehler year type karen phir month.</p>
+</td></tr>
+
+	<tr><td><button onclick="copy_to_clipboard('77')" class="button button1"  data-sound="sound1"><img style="width:30px; height:25px;" src="copyiconn.jfif"></button><br><br><br><button onclick="copy_to_clipboard('78')" class="button button1"  data-sound="sound1"><img style="width:30px; height:25px;" src="copyiconn.jfif"></button></td><td><b id="77">Dear Customer, I request you to kindly call at our helpline in order to confirm the status of your transaction or forward claim in this regard. Our helpline number is 021/042 111 225 111.</b><br><br>
+<i id="78">Muaziz Saarif, ap kindly hamari helpline par raabta kar ke is bary men status confirm kijiye apni transaction ka ya phir claim forward karwa sakte hen. Hamari helpline number hai 021/042 111 225 111.</i>
+</td></tr>
+
+	<tr><td><button onclick="copy_to_clipboard('79')" class="button button1"  data-sound="sound1"><img style="width:30px; height:25px;" src="copyiconn.jfif"></button><br><br><br><button onclick="copy_to_clipboard('80')" class="button button1"  data-sound="sound1"><img style="width:30px; height:25px;" src="copyiconn.jfif"></button></td><td><b id="79">Dear Customer, this issue has already been highlighted and our relevant team is working on it. Further, we cannot confirm any tentative timeline, but we ensure to resolve the issue on urgent basis. Your patience would be highly appreciated. For more information please call our helpline 021/042 111 225 111.</b><br><br>
+<i id="80">Muaziz Saarif, issue already highlighted he aur hamari team working kar rahi he, mazeed hum time ke hawale se confirm nahi kar sakte hen lekin umeed karte hen ke issue jald hi resolve hojaega. Mazeed malomat ke liye ap kindly hamari helpline 021/042 111 225 111 pe rabta karlen.</i>
+</td></tr>
+
+	<tr><td><button onclick="copy_to_clipboard('81')" class="button button1"  data-sound="sound1"><img style="width:30px; height:25px;" src="copyiconn.jfif"></button><br><br><br><button onclick="copy_to_clipboard('82')" class="button button1"  data-sound="sound1"><img style="width:30px; height:25px;" src="copyiconn.jfif"></button></td><td><b id="81">Dear Customer, you can check account number through alfa app / internet banking / Cheque book or you can also call our helpline 021/042 111 225 111 in this regard.</b><br><br>
+<i id="82">Muaziz Saarif, ap apna account number check kar sakte hen alfa app / internet banking / Cheque book ya phir hamari helpline 021/042 111 225 111 ke zariye.</i>
+</td></tr>
+
+	<tr><td><button onclick="copy_to_clipboard('83')" class="button button1"  data-sound="sound1"><img style="width:30px; height:25px;" src="copyiconn.jfif"></button><br><br><button onclick="copy_to_clipboard('84')" class="button button1"  data-sound="sound1"><img style="width:30px; height:25px;" src="copyiconn.jfif"></button></td><td><b id="83">Dear Customer, please confirm through which bank the money has been transferred?</b><br><br>
+<i id="84">Muaziz Saarif, konse bank ke zariye amount transfer ki gai he?</i>
+</td></tr>
+
+	<tr><td><button onclick="copy_to_clipboard('85')" class="button button1"  data-sound="sound1"><img style="width:30px; height:25px;" src="copyiconn.jfif"></button><br><br><button onclick="copy_to_clipboard('86')" class="button button1"  data-sound="sound1"><img style="width:30px; height:25px;" src="copyiconn.jfif"></button></td><td><b id="85">Dear Customer, kindly type MNP and send it to 8287, or you can also call our helpline 021/042 111 225 111 in order to update in record.</b><br><br>
+<i id="86">Muaziz Saarif, kindly MNP type karen aur 8287 pe send karden ya phir ap hamari helpline 021/042 111 225 111 ke zariye bhi network update karwa sakte.</i>
+</td></tr>
+
+	<tr><td><button onclick="copy_to_clipboard('87')" class="button button1"  data-sound="sound1"><img style="width:30px; height:25px;" src="copyiconn.jfif"></button><br><br><button onclick="copy_to_clipboard('88')" class="button button1"  data-sound="sound1"><img style="width:30px; height:25px;" src="copyiconn.jfif"></button></td><td><b id="87">Dear Customer, please confirm how many digits of account number you are trying to enter?</b><br><br>
+<i id="88">Muaziz Saarif, ap account number ke kitne digits enter kar rahe hen?</i>
+</td></tr>
+
+	<tr><td><button onclick="copy_to_clipboard('93')" class="button button1"  data-sound="sound1"><img style="width:30px; height:25px;" src="copyiconn.jfif"></button></td><td><pre id="93">Monday to Thursday 09:00am to 05:00pm.
+Friday 09:00am to 05:00pm (Break for Prayer / Lunch from 1:00pm to 2:30pm).
+Saturday 10:00am to 02:00pm.</pre>
+  </td></tr>
+	
+	<tr><td><button onclick="copy_to_clipboard('89')" class="button button1"  data-sound="sound1"><img style="width:30px; height:25px;" src="copyiconn.jfif"></button><br><br><button onclick="copy_to_clipboard('90')" class="button button1"  data-sound="sound1"><img style="width:30px; height:25px;" src="copyiconn.jfif"></button></td><td><b id="89">Dear Customer, kindly type NOSMS and send it to 8287 or you can also forward request through our helpline 021/042 111 225 111.</b><br><br>
+<i id="90">Muaziz Saarif, kindly NOSMS type karke 8287 pe SMS send karden iske ilawa ap hamari helpline 021/042 111 225 111 ke zariye bhi request forward karwa sakte hen.</i>
+</td></tr>
+
+	<tr><td><button onclick="copy_to_clipboard('91')" class="button button1"  data-sound="sound1"><img style="width:30px; height:25px;" src="copyiconn.jfif"></button></td><td><b id="91">Dear Customer, thank you for getting in touch. How may I assist you?</b>
+</td></tr>
+
+
+</table>
+</main>
+
+<pre id="92" style="font-size:15px; font-family: bahnschrift;">Please note that Withholding tax has been implemented on cash withdrawal transactions for Non-filer.
+The rate of 0.8% will be charged on cash withdrawal transactions (ATM and Cash over the counter) 
+those whose name is not appearing in the active taxpayers list on the total amount of cash withdrawal in a day, exceeding Rs. 50,000. 
+
+·Withholding tax will be charged on cash withdrawal made through credit cards and Debit cards from ATMs.
+·Withholding tax will be charged on cash over the counter transactions. 
+·This tax will be implemented on cash withdrawn from ATM outside Pakistan against credit card issued in Pakistan. 
+
+WHT will not be implemented on:
+
+·Withholding tax will not be applicable on payment of cash at the counter of the bank against home remittances received from abroad. 
+·Withholding tax will not be applicable on cash withdrawal from ATM in Pakistan against credit card issued outside Pakistan.
+·Withholding tax will not be applicable on Foreign Currency Accounts of Non-filer.   
+<button onclick="copy_to_clipboard('92')" class="button button1"  data-sound="sound1"><img style="width:30px; height:25px;" src="copyiconn.jfif"></button>
+
+Dear Customer, your funds will be automatically reversed in your account within 3 hours approximately. Your patience would be highly appreciated.
+
+<audio id="sound1" src="\\10.144.66.128\Syed Danish\HELP FILE WEB VERSION\calc.mp3" preload="auto"></audio>
+
+
+		
+
+    <script>
+        const buttons = document.querySelectorAll('.button1');
+
+        buttons.forEach(button => {
+            button.addEventListener('click', () => {
+                const soundId = button.getAttribute('data-sound');
+                const sound = document.getElementById(soundId);
+                sound.currentTime = 0; // Reset sound to start
+                sound.play(); // Play the sound
+            });
+        });
+
+
+    </script>
+<footer>
+    <script>
+        // Theme Switcher Logic
+        const savedTheme = localStorage.getItem('theme');
+        if (savedTheme === 'dark') {
+            document.body.classList.add('dark-mode');
+        }
+
+        const themeToggleButton = document.getElementById('theme-toggle');
+        themeToggleButton.addEventListener('click', () => {
+            document.body.classList.toggle('dark-mode');
+            if (document.body.classList.contains('dark-mode')) {
+                localStorage.setItem('theme', 'dark');
+            } else {
+                localStorage.setItem('theme', 'light');
+            }
+        });
+
+        // Time Function
+        setInterval(myTimer, 1000);
+        function myTimer() {
+            const d = new Date();
+            document.getElementById("demo").innerHTML = d.toLocaleTimeString();
+        }
+
+        // Copy to Clipboard Function
+        function copy_to_clipboard(elm_id) {
+            const text = document.getElementById(elm_id).innerText;
+            navigator.clipboard.writeText(text);
+ 		
+        }
+
+
+    </script>
+  </footer>
+<script src="js/discoCursor.js"></script>
+
+
+
+</body>
+</html>
+
+
