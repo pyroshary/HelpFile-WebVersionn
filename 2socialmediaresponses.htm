@@ -6,7 +6,7 @@
     <link rel="icon" type="image/x-icon" href="webicon.jfif">
 <link rel="stylesheet" href="Css/discoCursor.css">
 
-    <style>
+     <style>
         body {
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
             margin: 0;
@@ -32,6 +32,12 @@
             background-repeat: no-repeat;
             background-attachment: fixed;
             color: #ffffff;
+         
+   table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 20px;
+            transition: transform 0.3s;
         }
 
         body.dark-mode table {
@@ -59,19 +65,20 @@
         body.dark-mode nav a:hover {
             background-color: #34495e;
         }
+ div.clearfix {
+            background-color: ;
 
-        table {
-            width: 100%;
-            border-collapse: collapse;
-            margin-top: 20px;
-            transition: transform 0.3s;
         }
+
+
+
+
 
         th, td {
             border: 1px solid #bdc3c7;
             padding: 15px;
             text-align: left;
-            background-color: rgba(255, 255, 255, 0.85);
+            background-color: #3b3b3b;
             border-radius: 5px;
             transition: background-color 0.3s, transform 0.3s;
         }
@@ -86,16 +93,58 @@
             box-shadow: 0 4px 20px rgba(52, 152, 219, 0.7);
         }
 
-        main {
+ main {
             width: 90%;
             max-width: 1200px;
             margin: 20px auto;
-            background-color: rgba(236, 240, 241, 0.85);
+            background-color: #232325;
             border-radius: 15px;
             box-shadow: 0 2px 10px rgba(0, 0, 0, 0.5);
             padding: 20px;
             animation: fadeIn 1.5s ease;
         }
+
+ header {
+            background: linear-gradient(135deg, #892d00, #194c6e);
+            color: #ffffff;
+            width: 100%;
+            padding: 0px;
+            text-align: center;
+            box-shadow: 0 25px 50px rgba(0, 0, 0, 0.5);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            transition: background 0.3s ease;
+        }
+pre {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            white-space: pre-wrap; /* Allows wrapping */
+            overflow-wrap: break-word; /* Breaks long words */
+            color: white; /* Change the text color */
+            background-color: #1e0a00; /* Change the background color */
+            padding: 10px; /* Add padding for better readability */
+            border-radius: 5px; /* Add border radius for style */
+        }
+
+.tab button {
+  display: block;
+  background-color: #ffffff00;
+  color: white;
+  padding: 10px 14px;
+  width: 100%;
+  border: none;
+  outline: none;
+  text-align: left;
+  cursor: pointer;
+  font-size: 15px;
+}
+.tab button:hover {
+  background-color: #2b0000;
+}
+
+
+
+   }
 
         header {
             background: linear-gradient(135deg, #005289, #6dd5ed);
@@ -135,15 +184,68 @@
             transform: translateY(-3px);
         }
 
+        nav a::after {
+            content: '';
+            position: absolute;
+            background: rgba(255, 255, 255, 0.1);
+            height: 100%;
+            width: 100%;
+            left: 0;
+            top: 100%;
+            transition: all 0.3s ease;
+            z-index: 0;
+        }
+
+        nav a:hover::after {
+            top: 0;
+        }
+
         .time {
             font-size: 16px;
             margin-top: 10px;
             color: #white;
         }
 
+        main {
+            width: 90%;
+            max-width: 1200px;
+            margin: 20px auto;
+            background-color: rgba(236, 240, 241, 0.85);
+            border-radius: 15px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.5);
+            padding: 20px;
+            animation: fadeIn 1.5s ease;
+        }
+
         @keyframes fadeIn {
             from { opacity: 0; }
             to { opacity: 1; }
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 20px;
+            transition: transform 0.3s;
+        }
+
+        th, td {
+            border: 1px solid #bdc3c7;
+            padding: 15px;
+            text-align: left;
+            background-color: rgba(255, 255, 255, 0.85);
+            border-radius: 5px;
+            transition: background-color 0.3s, transform 0.3s;
+        }
+
+        tr {
+            transition: transform 0.3s, background-color 0.3s, box-shadow 0.3s;
+        }
+
+        tr:hover {
+            background-color: #f2f2f2;
+            transform: scale(1.05);
+            box-shadow: 0 4px 20px rgba(52, 152, 219, 0.7);
         }
 
         .button {
@@ -158,7 +260,7 @@
             font-size: 12px;
             margin: 4px 2px;
             cursor: pointer;
-            -webkit-transition-duration: 0.4s;
+            -webkit-transition-duration: 0.4s; /* Safari */
             transition-duration: 0.5s;
         }
 
@@ -167,14 +269,23 @@
             box-shadow: 20px 12px 16px 18px rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);
         }
 
+        pre {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            white-space: pre-wrap; /* Allows wrapping */
+            overflow-wrap: break-word; /* Breaks long words */
+            color: #34495e; /* Change the text color */
+            background-color: #ecf0f1; /* Change the background color */
+            padding: 10px; /* Add padding for better readability */
+            border-radius: 5px; /* Add border radius for style */
+        }
+
         footer {
             margin: 20px 0;
             text-align: center;
             font-size: 12px;
             color: #34495e;
         }
-
-        #theme-toggle {
+#theme-toggle {
             background-color: #2980b9;
             color: white;
             border: none;
@@ -187,27 +298,94 @@
             background-color: #1f6f8b;
         }
 
-        .category-header {
-            background: linear-gradient(135deg, #005289, #6dd5ed);
-            color: white;
-            padding: 10px 15px;
-            border-radius: 5px;
-            margin-top: 20px;
-            margin-bottom: 10px;
-            font-weight: bold;
-            font-size: 16px;
+        /* Mobile Responsiveness */
+        @media screen and (max-width: 768px) {
+            body {
+                font-size: 14px;
+            }
+            
+            main {
+                width: 95%;
+                padding: 10px;
+                margin: 10px auto;
+            }
+            
+            nav {
+                flex-direction: column;
+                align-items: center;
+            }
+            
+            nav a {
+                width: 80%;
+                text-align: center;
+                margin: 5px 0;
+            }
+            
+            table {
+                font-size: 13px;
+            }
+            
+            th, td {
+                padding: 8px;
+                font-size: 12px;
+            }
+            
+            .button {
+                padding: 2px 8px;
+            }
+            
+            .button img {
+                width: 24px !important;
+                height: 20px !important;
+            }
+            
+            pre {
+                font-size: 12px;
+                padding: 8px;
+                overflow-x: auto;
+            }
+            
+            header h1 {
+                font-size: 18px;
+                padding: 10px;
+            }
+        }
+        
+        @media screen and (max-width: 480px) {
+            body {
+                font-size: 12px;
+            }
+            
+            main {
+                width: 98%;
+                padding: 5px;
+            }
+            
+            nav a {
+                width: 90%;
+                font-size: 14px;
+            }
+            
+            th, td {
+                padding: 6px;
+                font-size: 11px;
+            }
+            
+            .button img {
+                width: 20px !important;
+                height: 18px !important;
+            }
+            
+            pre {
+                font-size: 11px;
+                padding: 5px;
+            }
+            
+            header h1 {
+                font-size: 16px;
+            }
         }
 
-        pre {
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            white-space: pre-wrap;
-            overflow-wrap: break-word;
-            color: #34495e;
-            background-color: #ecf0f1;
-            padding: 10px;
-            border-radius: 5px;
-            margin: 5px 0;
-        }
     </style>
     <style type="text/css">
         a.nounderline {text-decoration: none; }
@@ -228,6 +406,7 @@
         <a href="2cannedmemo.htm" target="_self">Canned Memo</a>
         <a href="2leadoffering.htm" target="_self">Lead Offering</a>
         <a href="2socialmediaresponses.htm" target="_self" style="background-color:#00a4ff; color:white;">Social Media Responses</a>
+        <a href="hrresponses.html" target="_self">HR Responses</a>
         <a href="2othercanned.htm" target="_self"><img style="width:30px; height:25px;" src="bulb.gif"></a>
     </nav>
     <button id="theme-toggle" style="position: absolute; top: 20px; right: 20px; padding: 10px;">Switch Theme</button>
